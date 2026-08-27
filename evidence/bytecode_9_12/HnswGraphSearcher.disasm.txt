@@ -1,0 +1,431 @@
+﻿Compiled from "HnswGraphSearcher.java"
+public class org.apache.lucene.util.hnsw.HnswGraphSearcher {
+  private final org.apache.lucene.util.hnsw.NeighborQueue candidates;
+
+  private org.apache.lucene.util.BitSet visited;
+
+  static final boolean $assertionsDisabled;
+
+  public org.apache.lucene.util.hnsw.HnswGraphSearcher(org.apache.lucene.util.hnsw.NeighborQueue, org.apache.lucene.util.BitSet);
+    Code:
+       0: aload_0
+       1: invokespecial #2                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #3                  // Field candidates:Lorg/apache/lucene/util/hnsw/NeighborQueue;
+       9: aload_0
+      10: aload_2
+      11: putfield      #4                  // Field visited:Lorg/apache/lucene/util/BitSet;
+      14: return
+
+  public static void search(org.apache.lucene.util.hnsw.RandomVectorScorer, org.apache.lucene.search.KnnCollector, org.apache.lucene.util.hnsw.HnswGraph, org.apache.lucene.util.Bits) throws java.io.IOException;
+    Code:
+       0: new           #5                  // class org/apache/lucene/util/hnsw/HnswGraphSearcher
+       3: dup
+       4: new           #6                  // class org/apache/lucene/util/hnsw/NeighborQueue
+       7: dup
+       8: aload_1
+       9: invokeinterface #7,  1            // InterfaceMethod org/apache/lucene/search/KnnCollector.k:()I
+      14: iconst_1
+      15: invokespecial #8                  // Method org/apache/lucene/util/hnsw/NeighborQueue."<init>":(IZ)V
+      18: new           #9                  // class org/apache/lucene/util/SparseFixedBitSet
+      21: dup
+      22: aload_2
+      23: invokestatic  #10                 // Method getGraphSize:(Lorg/apache/lucene/util/hnsw/HnswGraph;)I
+      26: invokespecial #11                 // Method org/apache/lucene/util/SparseFixedBitSet."<init>":(I)V
+      29: invokespecial #12                 // Method "<init>":(Lorg/apache/lucene/util/hnsw/NeighborQueue;Lorg/apache/lucene/util/BitSet;)V
+      32: astore        4
+      34: aload_0
+      35: aload_1
+      36: aload_2
+      37: aload         4
+      39: aload_3
+      40: invokestatic  #13                 // Method search:(Lorg/apache/lucene/util/hnsw/RandomVectorScorer;Lorg/apache/lucene/search/KnnCollector;Lorg/apache/lucene/util/hnsw/HnswGraph;Lorg/apache/lucene/util/hnsw/HnswGraphSearcher;Lorg/apache/lucene/util/Bits;)V
+      43: return
+
+  public static org.apache.lucene.search.KnnCollector search(org.apache.lucene.util.hnsw.RandomVectorScorer, int, org.apache.lucene.util.hnsw.OnHeapHnswGraph, org.apache.lucene.util.Bits, int) throws java.io.IOException;
+    Code:
+       0: new           #14                 // class org/apache/lucene/search/TopKnnCollector
+       3: dup
+       4: iload_1
+       5: iload         4
+       7: invokespecial #15                 // Method org/apache/lucene/search/TopKnnCollector."<init>":(II)V
+      10: astore        5
+      12: new           #16                 // class org/apache/lucene/util/hnsw/HnswGraphSearcher$OnHeapHnswGraphSearcher
+      15: dup
+      16: new           #6                  // class org/apache/lucene/util/hnsw/NeighborQueue
+      19: dup
+      20: iload_1
+      21: iconst_1
+      22: invokespecial #8                  // Method org/apache/lucene/util/hnsw/NeighborQueue."<init>":(IZ)V
+      25: new           #9                  // class org/apache/lucene/util/SparseFixedBitSet
+      28: dup
+      29: aload_2
+      30: invokestatic  #10                 // Method getGraphSize:(Lorg/apache/lucene/util/hnsw/HnswGraph;)I
+      33: invokespecial #11                 // Method org/apache/lucene/util/SparseFixedBitSet."<init>":(I)V
+      36: invokespecial #17                 // Method org/apache/lucene/util/hnsw/HnswGraphSearcher$OnHeapHnswGraphSearcher."<init>":(Lorg/apache/lucene/util/hnsw/NeighborQueue;Lorg/apache/lucene/util/BitSet;)V
+      39: astore        6
+      41: aload_0
+      42: aload         5
+      44: aload_2
+      45: aload         6
+      47: aload_3
+      48: invokestatic  #13                 // Method search:(Lorg/apache/lucene/util/hnsw/RandomVectorScorer;Lorg/apache/lucene/search/KnnCollector;Lorg/apache/lucene/util/hnsw/HnswGraph;Lorg/apache/lucene/util/hnsw/HnswGraphSearcher;Lorg/apache/lucene/util/Bits;)V
+      51: aload         5
+      53: areturn
+
+  private static void search(org.apache.lucene.util.hnsw.RandomVectorScorer, org.apache.lucene.search.KnnCollector, org.apache.lucene.util.hnsw.HnswGraph, org.apache.lucene.util.hnsw.HnswGraphSearcher, org.apache.lucene.util.Bits) throws java.io.IOException;
+    Code:
+       0: aload_3
+       1: aload_0
+       2: aload_2
+       3: aload_1
+       4: invokevirtual #18                 // Method findBestEntryPoint:(Lorg/apache/lucene/util/hnsw/RandomVectorScorer;Lorg/apache/lucene/util/hnsw/HnswGraph;Lorg/apache/lucene/search/KnnCollector;)I
+       7: istore        5
+       9: iload         5
+      11: iconst_m1
+      12: if_icmpeq     33
+      15: aload_3
+      16: aload_1
+      17: aload_0
+      18: iconst_0
+      19: iconst_1
+      20: newarray       int
+      22: dup
+      23: iconst_0
+      24: iload         5
+      26: iastore
+      27: aload_2
+      28: aload         4
+      30: invokevirtual #19                 // Method searchLevel:(Lorg/apache/lucene/search/KnnCollector;Lorg/apache/lucene/util/hnsw/RandomVectorScorer;I[ILorg/apache/lucene/util/hnsw/HnswGraph;Lorg/apache/lucene/util/Bits;)V
+      33: return
+
+  public org.apache.lucene.util.hnsw.HnswGraphBuilder$GraphBuilderKnnCollector searchLevel(org.apache.lucene.util.hnsw.RandomVectorScorer, int, int, int[], org.apache.lucene.util.hnsw.HnswGraph) throws java.io.IOException;
+    Code:
+       0: new           #20                 // class org/apache/lucene/util/hnsw/HnswGraphBuilder$GraphBuilderKnnCollector
+       3: dup
+       4: iload_2
+       5: invokespecial #21                 // Method org/apache/lucene/util/hnsw/HnswGraphBuilder$GraphBuilderKnnCollector."<init>":(I)V
+       8: astore        6
+      10: aload_0
+      11: aload         6
+      13: aload_1
+      14: iload_3
+      15: aload         4
+      17: aload         5
+      19: aconst_null
+      20: invokevirtual #19                 // Method searchLevel:(Lorg/apache/lucene/search/KnnCollector;Lorg/apache/lucene/util/hnsw/RandomVectorScorer;I[ILorg/apache/lucene/util/hnsw/HnswGraph;Lorg/apache/lucene/util/Bits;)V
+      23: aload         6
+      25: areturn
+
+  private int findBestEntryPoint(org.apache.lucene.util.hnsw.RandomVectorScorer, org.apache.lucene.util.hnsw.HnswGraph, org.apache.lucene.search.KnnCollector) throws java.io.IOException;
+    Code:
+       0: aload_2
+       1: invokevirtual #22                 // Method org/apache/lucene/util/hnsw/HnswGraph.entryNode:()I
+       4: istore        4
+       6: iload         4
+       8: iconst_m1
+       9: if_icmpeq     20
+      12: aload_2
+      13: invokevirtual #23                 // Method org/apache/lucene/util/hnsw/HnswGraph.numLevels:()I
+      16: iconst_1
+      17: if_icmpne     23
+      20: iload         4
+      22: ireturn
+      23: aload_2
+      24: invokestatic  #10                 // Method getGraphSize:(Lorg/apache/lucene/util/hnsw/HnswGraph;)I
+      27: istore        5
+      29: aload_0
+      30: iload         5
+      32: invokevirtual #24                 // Method prepareScratchState:(I)V
+      35: aload_1
+      36: iload         4
+      38: invokeinterface #25,  2           // InterfaceMethod org/apache/lucene/util/hnsw/RandomVectorScorer.score:(I)F
+      43: fstore        6
+      45: aload_3
+      46: iconst_1
+      47: invokeinterface #26,  2           // InterfaceMethod org/apache/lucene/search/KnnCollector.incVisitedCount:(I)V
+      52: aload_2
+      53: invokevirtual #23                 // Method org/apache/lucene/util/hnsw/HnswGraph.numLevels:()I
+      56: iconst_1
+      57: isub
+      58: istore        8
+      60: iload         8
+      62: iconst_1
+      63: if_icmplt     212
+      66: iconst_1
+      67: istore        7
+      69: aload_0
+      70: getfield      #4                  // Field visited:Lorg/apache/lucene/util/BitSet;
+      73: iload         4
+      75: invokevirtual #27                 // Method org/apache/lucene/util/BitSet.set:(I)V
+      78: iload         7
+      80: ifeq          206
+      83: iconst_0
+      84: istore        7
+      86: aload_0
+      87: aload_2
+      88: iload         8
+      90: iload         4
+      92: invokevirtual #28                 // Method graphSeek:(Lorg/apache/lucene/util/hnsw/HnswGraph;II)V
+      95: aload_0
+      96: aload_2
+      97: invokevirtual #29                 // Method graphNextNeighbor:(Lorg/apache/lucene/util/hnsw/HnswGraph;)I
+     100: dup
+     101: istore        9
+     103: ldc           #30                 // int 2147483647
+     105: if_icmpeq     203
+     108: getstatic     #31                 // Field $assertionsDisabled:Z
+     111: ifne          138
+     114: iload         9
+     116: iload         5
+     118: if_icmplt     138
+     121: new           #32                 // class java/lang/AssertionError
+     124: dup
+     125: iload         9
+     127: iload         5
+     129: invokedynamic #33,  0             // InvokeDynamic #0:makeConcatWithConstants:(II)Ljava/lang/String;
+     134: invokespecial #34                 // Method java/lang/AssertionError."<init>":(Ljava/lang/Object;)V
+     137: athrow
+     138: aload_0
+     139: getfield      #4                  // Field visited:Lorg/apache/lucene/util/BitSet;
+     142: iload         9
+     144: invokevirtual #35                 // Method org/apache/lucene/util/BitSet.getAndSet:(I)Z
+     147: ifeq          153
+     150: goto          95
+     153: aload_3
+     154: invokeinterface #36,  1           // InterfaceMethod org/apache/lucene/search/KnnCollector.earlyTerminated:()Z
+     159: ifeq          164
+     162: iconst_m1
+     163: ireturn
+     164: aload_1
+     165: iload         9
+     167: invokeinterface #25,  2           // InterfaceMethod org/apache/lucene/util/hnsw/RandomVectorScorer.score:(I)F
+     172: fstore        10
+     174: aload_3
+     175: iconst_1
+     176: invokeinterface #26,  2           // InterfaceMethod org/apache/lucene/search/KnnCollector.incVisitedCount:(I)V
+     181: fload         10
+     183: fload         6
+     185: fcmpl
+     186: ifle          200
+     189: fload         10
+     191: fstore        6
+     193: iload         9
+     195: istore        4
+     197: iconst_1
+     198: istore        7
+     200: goto          95
+     203: goto          78
+     206: iinc          8, -1
+     209: goto          60
+     212: aload_3
+     213: invokeinterface #36,  1           // InterfaceMethod org/apache/lucene/search/KnnCollector.earlyTerminated:()Z
+     218: ifeq          225
+     221: iconst_m1
+     222: goto          227
+     225: iload         4
+     227: ireturn
+
+  void searchLevel(org.apache.lucene.search.KnnCollector, org.apache.lucene.util.hnsw.RandomVectorScorer, int, int[], org.apache.lucene.util.hnsw.HnswGraph, org.apache.lucene.util.Bits) throws java.io.IOException;
+    Code:
+       0: aload         5
+       2: invokestatic  #10                 // Method getGraphSize:(Lorg/apache/lucene/util/hnsw/HnswGraph;)I
+       5: istore        7
+       7: aload_0
+       8: iload         7
+      10: invokevirtual #24                 // Method prepareScratchState:(I)V
+      13: aload         4
+      15: astore        8
+      17: aload         8
+      19: arraylength
+      20: istore        9
+      22: iconst_0
+      23: istore        10
+      25: iload         10
+      27: iload         9
+      29: if_icmpge     125
+      32: aload         8
+      34: iload         10
+      36: iaload
+      37: istore        11
+      39: aload_0
+      40: getfield      #4                  // Field visited:Lorg/apache/lucene/util/BitSet;
+      43: iload         11
+      45: invokevirtual #35                 // Method org/apache/lucene/util/BitSet.getAndSet:(I)Z
+      48: ifne          119
+      51: aload_1
+      52: invokeinterface #36,  1           // InterfaceMethod org/apache/lucene/search/KnnCollector.earlyTerminated:()Z
+      57: ifeq          63
+      60: goto          125
+      63: aload_2
+      64: iload         11
+      66: invokeinterface #25,  2           // InterfaceMethod org/apache/lucene/util/hnsw/RandomVectorScorer.score:(I)F
+      71: fstore        12
+      73: aload_1
+      74: iconst_1
+      75: invokeinterface #26,  2           // InterfaceMethod org/apache/lucene/search/KnnCollector.incVisitedCount:(I)V
+      80: aload_0
+      81: getfield      #3                  // Field candidates:Lorg/apache/lucene/util/hnsw/NeighborQueue;
+      84: iload         11
+      86: fload         12
+      88: invokevirtual #37                 // Method org/apache/lucene/util/hnsw/NeighborQueue.add:(IF)V
+      91: aload         6
+      93: ifnull        108
+      96: aload         6
+      98: iload         11
+     100: invokeinterface #38,  2           // InterfaceMethod org/apache/lucene/util/Bits.get:(I)Z
+     105: ifeq          119
+     108: aload_1
+     109: iload         11
+     111: fload         12
+     113: invokeinterface #39,  3           // InterfaceMethod org/apache/lucene/search/KnnCollector.collect:(IF)Z
+     118: pop
+     119: iinc          10, 1
+     122: goto          25
+     125: aload_1
+     126: invokeinterface #40,  1           // InterfaceMethod org/apache/lucene/search/KnnCollector.minCompetitiveSimilarity:()F
+     131: fstore        8
+     133: aload_0
+     134: getfield      #3                  // Field candidates:Lorg/apache/lucene/util/hnsw/NeighborQueue;
+     137: invokevirtual #41                 // Method org/apache/lucene/util/hnsw/NeighborQueue.size:()I
+     140: ifle          341
+     143: aload_1
+     144: invokeinterface #36,  1           // InterfaceMethod org/apache/lucene/search/KnnCollector.earlyTerminated:()Z
+     149: ifne          341
+     152: aload_0
+     153: getfield      #3                  // Field candidates:Lorg/apache/lucene/util/hnsw/NeighborQueue;
+     156: invokevirtual #42                 // Method org/apache/lucene/util/hnsw/NeighborQueue.topScore:()F
+     159: fstore        9
+     161: fload         9
+     163: fload         8
+     165: fcmpg
+     166: ifge          172
+     169: goto          341
+     172: aload_0
+     173: getfield      #3                  // Field candidates:Lorg/apache/lucene/util/hnsw/NeighborQueue;
+     176: invokevirtual #43                 // Method org/apache/lucene/util/hnsw/NeighborQueue.pop:()I
+     179: istore        10
+     181: aload_0
+     182: aload         5
+     184: iload_3
+     185: iload         10
+     187: invokevirtual #28                 // Method graphSeek:(Lorg/apache/lucene/util/hnsw/HnswGraph;II)V
+     190: aload_0
+     191: aload         5
+     193: invokevirtual #29                 // Method graphNextNeighbor:(Lorg/apache/lucene/util/hnsw/HnswGraph;)I
+     196: dup
+     197: istore        11
+     199: ldc           #30                 // int 2147483647
+     201: if_icmpeq     338
+     204: getstatic     #31                 // Field $assertionsDisabled:Z
+     207: ifne          234
+     210: iload         11
+     212: iload         7
+     214: if_icmplt     234
+     217: new           #32                 // class java/lang/AssertionError
+     220: dup
+     221: iload         11
+     223: iload         7
+     225: invokedynamic #33,  0             // InvokeDynamic #0:makeConcatWithConstants:(II)Ljava/lang/String;
+     230: invokespecial #34                 // Method java/lang/AssertionError."<init>":(Ljava/lang/Object;)V
+     233: athrow
+     234: aload_0
+     235: getfield      #4                  // Field visited:Lorg/apache/lucene/util/BitSet;
+     238: iload         11
+     240: invokevirtual #35                 // Method org/apache/lucene/util/BitSet.getAndSet:(I)Z
+     243: ifeq          249
+     246: goto          190
+     249: aload_1
+     250: invokeinterface #36,  1           // InterfaceMethod org/apache/lucene/search/KnnCollector.earlyTerminated:()Z
+     255: ifeq          261
+     258: goto          338
+     261: aload_2
+     262: iload         11
+     264: invokeinterface #25,  2           // InterfaceMethod org/apache/lucene/util/hnsw/RandomVectorScorer.score:(I)F
+     269: fstore        12
+     271: aload_1
+     272: iconst_1
+     273: invokeinterface #26,  2           // InterfaceMethod org/apache/lucene/search/KnnCollector.incVisitedCount:(I)V
+     278: fload         12
+     280: fload         8
+     282: fcmpl
+     283: ifle          335
+     286: aload_0
+     287: getfield      #3                  // Field candidates:Lorg/apache/lucene/util/hnsw/NeighborQueue;
+     290: iload         11
+     292: fload         12
+     294: invokevirtual #37                 // Method org/apache/lucene/util/hnsw/NeighborQueue.add:(IF)V
+     297: aload         6
+     299: ifnull        314
+     302: aload         6
+     304: iload         11
+     306: invokeinterface #38,  2           // InterfaceMethod org/apache/lucene/util/Bits.get:(I)Z
+     311: ifeq          335
+     314: aload_1
+     315: iload         11
+     317: fload         12
+     319: invokeinterface #39,  3           // InterfaceMethod org/apache/lucene/search/KnnCollector.collect:(IF)Z
+     324: ifeq          335
+     327: aload_1
+     328: invokeinterface #40,  1           // InterfaceMethod org/apache/lucene/search/KnnCollector.minCompetitiveSimilarity:()F
+     333: fstore        8
+     335: goto          190
+     338: goto          133
+     341: return
+
+  private void prepareScratchState(int);
+    Code:
+       0: aload_0
+       1: getfield      #3                  // Field candidates:Lorg/apache/lucene/util/hnsw/NeighborQueue;
+       4: invokevirtual #44                 // Method org/apache/lucene/util/hnsw/NeighborQueue.clear:()V
+       7: aload_0
+       8: getfield      #4                  // Field visited:Lorg/apache/lucene/util/BitSet;
+      11: invokevirtual #45                 // Method org/apache/lucene/util/BitSet.length:()I
+      14: iload_1
+      15: if_icmpge     33
+      18: aload_0
+      19: aload_0
+      20: getfield      #4                  // Field visited:Lorg/apache/lucene/util/BitSet;
+      23: checkcast     #46                 // class org/apache/lucene/util/FixedBitSet
+      26: iload_1
+      27: invokestatic  #47                 // Method org/apache/lucene/util/FixedBitSet.ensureCapacity:(Lorg/apache/lucene/util/FixedBitSet;I)Lorg/apache/lucene/util/FixedBitSet;
+      30: putfield      #4                  // Field visited:Lorg/apache/lucene/util/BitSet;
+      33: aload_0
+      34: getfield      #4                  // Field visited:Lorg/apache/lucene/util/BitSet;
+      37: invokevirtual #48                 // Method org/apache/lucene/util/BitSet.clear:()V
+      40: return
+
+  void graphSeek(org.apache.lucene.util.hnsw.HnswGraph, int, int) throws java.io.IOException;
+    Code:
+       0: aload_1
+       1: iload_2
+       2: iload_3
+       3: invokevirtual #49                 // Method org/apache/lucene/util/hnsw/HnswGraph.seek:(II)V
+       6: return
+
+  int graphNextNeighbor(org.apache.lucene.util.hnsw.HnswGraph) throws java.io.IOException;
+    Code:
+       0: aload_1
+       1: invokevirtual #50                 // Method org/apache/lucene/util/hnsw/HnswGraph.nextNeighbor:()I
+       4: ireturn
+
+  private static int getGraphSize(org.apache.lucene.util.hnsw.HnswGraph);
+    Code:
+       0: aload_0
+       1: invokevirtual #51                 // Method org/apache/lucene/util/hnsw/HnswGraph.maxNodeId:()I
+       4: iconst_1
+       5: iadd
+       6: ireturn
+
+  static {};
+    Code:
+       0: ldc           #5                  // class org/apache/lucene/util/hnsw/HnswGraphSearcher
+       2: invokevirtual #52                 // Method java/lang/Class.desiredAssertionStatus:()Z
+       5: ifne          12
+       8: iconst_1
+       9: goto          13
+      12: iconst_0
+      13: putstatic     #31                 // Field $assertionsDisabled:Z
+      16: return
+}

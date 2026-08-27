@@ -1,0 +1,11 @@
+# Python dependencies for hnsw-phase0 (external-review item 3: locked dependency list).
+# Core (all experiment scripts except the optional blocks below):
+numpy>=1.26
+faiss-cpu>=1.8        # faiss-*.py baselines (IndexHNSWFlat)
+# Data acquisition (T2I/SIFT/LAION mirrors from Hugging Face):
+huggingface_hub>=0.24 # ann-t2i-1m / qbo-odp-sift1m snapshot downloads
+# Optional — LAION-CLIP embedding recompute only (es95/compute-laion-*.py):
+# torch>=2.2
+# transformers>=4.40
+# pillow>=10.0
+# onnxruntime>=1.17   # alternative CLIP runtime (measured slower on this machine)
