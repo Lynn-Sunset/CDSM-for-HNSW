@@ -1,3 +1,4 @@
+Special thanks to 上海深至信息科技有限公司，especially engineer Chen Jiuxu.
 # Code artifact for "The Gate Is the Gap: Budget Recovery for Gated HNSW Engines via CDSM"
 
 Structured packaging of all code the paper relies on. Data (out/*.csv, indexes) and
