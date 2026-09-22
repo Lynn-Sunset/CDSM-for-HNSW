@@ -1,0 +1,142 @@
+{
+  "copied_sources": [
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\action-space-v10-20260920\\space.cpp",
+      "path": "vendor/action-space-v10-20260920/space.cpp",
+      "bytes": 9328,
+      "sha256": "c12373500f012737d90158c3fd2df4b32dc288f4ddb8a0f1621ea0eb9aa393d9",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\action-space-v10-20260920\\v9_reference.inc",
+      "path": "vendor/action-space-v10-20260920/v9_reference.inc",
+      "bytes": 16799,
+      "sha256": "714b7cfa1d03e38c4f8ecc7c2d0119056c88ee0b1a3415bb302ba4366369f58b",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\adaptive-selector-v1-20260920\\frozen_reference.inc",
+      "path": "vendor/adaptive-selector-v1-20260920/frozen_reference.inc",
+      "bytes": 16398,
+      "sha256": "02f2003c90246255745d6bf11b66574f2b11821476492af132ef8e3eb8f17563",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\diverse-resume-v3-20260920\\v2_reference.inc",
+      "path": "vendor/diverse-resume-v3-20260920/v2_reference.inc",
+      "bytes": 13437,
+      "sha256": "467f15d855fc42047dfcacd39460273d40de4f571839d3cae728bd8eca98680c",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\entrance-coverage-v5-20260920\\v4_reference.inc",
+      "path": "vendor/entrance-coverage-v5-20260920/v4_reference.inc",
+      "bytes": 19481,
+      "sha256": "05fb9e37cea7d380475c19c224329f0f852c32dc74da9a5f991556c2f1a8506a",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\frontier-fast-v7-20260920\\fast_checkpoint.inc",
+      "path": "vendor/frontier-fast-v7-20260920/fast_checkpoint.inc",
+      "bytes": 1131,
+      "sha256": "25bddd567b978bbb4b09f2940fd2ab5dbe91bde47a892e12b61975fd8e8b5bf7",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\frontier-fast-v7-20260920\\v6_reference.inc",
+      "path": "vendor/frontier-fast-v7-20260920/v6_reference.inc",
+      "bytes": 10870,
+      "sha256": "96ba9138e760ced9ee2ddffc234c77a6538f8bb57232ba35cf022c59f169dec5",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\main-compete-v8-20260920\\v7_reference.inc",
+      "path": "vendor/main-compete-v8-20260920/v7_reference.inc",
+      "bytes": 12135,
+      "sha256": "c70d2e00eb2c9de785413473d67c87e3359616b9ee15d385d8b6038aeeff712d",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\probe-gate-v6-20260920\\v5_reference.inc",
+      "path": "vendor/probe-gate-v6-20260920/v5_reference.inc",
+      "bytes": 14017,
+      "sha256": "06c99a2592bc1aaeaa8c8b58215d3093b8c99f960d7c4c6f91019f1711bff227",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\scout-progress-v2-20260920\\v1_reference.inc",
+      "path": "vendor/scout-progress-v2-20260920/v1_reference.inc",
+      "bytes": 12649,
+      "sha256": "5199746ede038f8efae5113f14787888c8bd13efc6139aef04a6425b461b9f84",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\scout-stop-audit-v4-20260920\\v3_reference.inc",
+      "path": "vendor/scout-stop-audit-v4-20260920/v3_reference.inc",
+      "bytes": 11055,
+      "sha256": "ef9254efdc016589a1a51307eeca87a7f9345c1ae2c6621090df4a21dd5e9e08",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\scout-value-v9-20260920\\v8_reference.inc",
+      "path": "vendor/scout-value-v9-20260920/v8_reference.inc",
+      "bytes": 12645,
+      "sha256": "9e2836614c27d5b115a955362cef18e3a6811fb7f9f8641da03215b7d36544b3",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\scout-value-v9-20260920\\value_model.inc",
+      "path": "vendor/scout-value-v9-20260920/value_model.inc",
+      "bytes": 719,
+      "sha256": "c2f99823f8b132cc2be6b6cedc6e8e0e76053895e514efa6fc46a0fa61c5497b",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\unfiltered-value-audit-20260920\\bench_io.h",
+      "path": "vendor/unfiltered-value-audit-20260920/bench_io.h",
+      "bytes": 2501,
+      "sha256": "77a4e872f46fe124432bc80cf73a7aa28d7b96fb632f76d4b246355fd34dc0b1",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\unfiltered-value-audit-20260920\\paid.h",
+      "path": "vendor/unfiltered-value-audit-20260920/paid.h",
+      "bytes": 6806,
+      "sha256": "f6cd012686b5b89d28a61490cb2a800591799deac22b9289ec363acd6b17063f",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\unfiltered-value-audit-20260920\\reference\\cdsm.h",
+      "path": "vendor/unfiltered-value-audit-20260920/reference/cdsm.h",
+      "bytes": 10083,
+      "sha256": "657bc48d41f16171ed1a470484f987a5210b44419df10849942ff3ba18aeac3f",
+      "byte_identical": true
+    },
+    {
+      "source": "D:\\HNSW改进\\hnsw-phase0\\research\\unfiltered-value-audit-20260920\\reference\\common.h",
+      "path": "vendor/unfiltered-value-audit-20260920/reference/common.h",
+      "bytes": 2440,
+      "sha256": "86f25ac1aa3a2b152ac1c1c0503150d493513bcc11d63bcd09ebdb269387167a",
+      "byte_identical": true
+    }
+  ],
+  "optional_missing_quoted_includes": [],
+  "fanng_adaptation": {
+    "source": "D:\\HNSW改进\\hnsw-phase0\\research\\fanng-search-comparison-20260922\\fanng_search.h",
+    "source_sha256": "f588ec7b51ae589762878008f94904314f387bb43e29c38db226705ff94b2652",
+    "path": "fanng_search.h",
+    "sha256": "d4757f65feceea24ae8eaed34a99e2c494a06b90989e6f44f28c1f533a7e61e1",
+    "only_change": "shared CDSM include redirected to byte-identical vendored header",
+    "original_include": "#include \"../fannbench-t2i-20260919/reference/cdsm.h\"",
+    "replacement_include": "#include \"vendor/unfiltered-value-audit-20260920/reference/cdsm.h\""
+  },
+  "space_entrypoint_adaptation": {
+    "source": "D:\\HNSW改进\\hnsw-phase0\\research\\action-space-v10-20260920\\space.cpp",
+    "source_sha256": "c12373500f012737d90158c3fd2df4b32dc288f4ddb8a0f1621ea0eb9aa393d9",
+    "path": "vendor/action-space-v10-20260920/space_body.inc",
+    "sha256": "bcf3a5c20da6276ba1f007f92b681c88085ea07b3af8b992bea5506cba7e8f64",
+    "only_change": "rename the one CLI main declaration; all other bytes unchanged; no macro",
+    "original_declaration": "int main(int n,char** v)",
+    "replacement_declaration": "int archived_family_space_v10_main(int n,char** v)"
+  }
+}

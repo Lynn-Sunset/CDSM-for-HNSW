@@ -1,0 +1,18 @@
+\section{Introduction}\label{sec:intro}
+HNSW uses upper layers to find an entrance and bottom-layer search to refine candidates~\cite{hnsw}. Even after construction, the search policy determines which opportunities receive computation before a query ends. Improving that allocation can benefit an existing index without rebuilding its edges.
+
+High average recall can hide severe misses. On one T2I graph, direct continuation achieves 99.06\% mean Recall@10, yet 32 of 8,000 queries retrieve fewer than five true top-ten neighbors, and ten retrieve none. We study whether a fixed computation allowance can better serve these queries while preserving average quality and accounting for execution time.
+
+Continuation gives all remaining computation to the existing frontier. Additional entrances create opportunities but immediately compete with a mature queue. Independent searches let routes develop, yet merging only their answers discards unfinished expansions. How can another route develop within a limited allowance while preserving paid progress?
+
+\cdsm{} pauses the main route, runs short local searches called \emph{scouts}, and feeds their unfinished work back into the main frontier. A scout uses its own result threshold, allowing a route to develop before competing with the main route's answers. Shared scores, discovery marks, and adjacency cursors preserve progress. Reintegrated candidates can redirect subsequent main expansions toward answers that neither the original continuation nor the scouts had scored. A global collector retains answers; frontier feedback preserves further discovery opportunities.
+
+The primary policy F uses a fixed entrance table and up to four scouts of 400 distance evaluations each, without a learned rescue predictor. Local queues, shared visitation, resumed search, and inter-path feedback have precedents, including iQAN~\cite{iqan}. Our contribution is how additional exploration is initiated, bounded, and integrated with an already progressed search under one budget.
+
+On four T2I graphs at exactly 10,240 distance evaluations, F reduces severe failures by 44--72\% and raises mean recall by 0.214--0.398 percentage points over continuation, with QPS changes of \rTwoQpsC{}. A same-framework grid compares one, four, eight, and sixteen entrances, including development selection, and scouts launched from the existing main frontier. F raises mean recall over every MEP size at this budget; its severe-failure advantage is less uniform, revealing competing uses of the same computation. Native Faiss, adaptive stopping, and a same-graph FANNG reconstruction provide further quality--cost context.
+
+At measured points, F at 10,240 evaluations also has higher mean recall, fewer severe failures, and 7.50--8.30\% higher throughput than C at 11,264. Thus another 10\% of continuation work does not eliminate the advantage there; this does not imply dominance at every budget.
+
+The T2I reference configuration is tested across query cohorts, graph constructions, budgets, and nearby scout depths. Fixed transfer to LAION and WebVid lowers mean recall despite some rescues; paid selection also supplies tradeoffs. These boundaries accompany the method's positive results.
+
+The paper contributes (1) a budgeted search method that redirects main-search expansion through bounded local exploration and shared unfinished state; (2) evidence of improved average and severe-failure quality on T2I, including equal-work and stronger-continuation controls with measured throughput; and (3) full-cohort ablations, execution interventions, and frozen transfer that establish the mechanism and the observed applicability of the method.

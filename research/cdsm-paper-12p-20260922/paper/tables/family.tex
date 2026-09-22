@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{T2I family at $E=3{,}200$. Graph order: Faiss M32, imported 42, 777, 1234; each count is out of 8,000. Ranges are per-graph differences from C, not pooled estimates.}
+\label{tab:family}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Method & Severe counts & Zero counts & Recall change (pp) & QPS change (\%) \\
+\midrule
+C & 37 / 40 / 52 / 55 & 12 / 21 / 24 / 27 & +0.000 to +0.000 & +0.00 to +0.00 \\
+FANNG & 37 / 40 / 51 / 55 & 12 / 21 / 23 / 27 & +0.005 to +0.009 & -52.40 to -51.86 \\
+F & 9 / 25 / 15 / 21 & 1 / 6 / 4 / 9 & +0.201 to +0.415 & -2.77 to -2.41 \\
+SCORE & 5 / 12 / 14 / 15 & 0 / 3 / 4 / 5 & +0.276 to +0.391 & -4.75 to -1.22 \\
+DIVERSE & 6 / 11 / 12 / 11 & 0 / 2 / 3 / 2 & +0.279 to +0.405 & -4.90 to -3.38 \\
+KEEP & 6 / 11 / 12 / 11 & 0 / 2 / 3 / 2 & +0.274 to +0.411 & -6.11 to -3.75 \\
+E64\_RAW & 5 / 11 / 9 / 11 & 0 / 1 / 2 / 1 & +0.246 to +0.399 & -6.90 to -4.91 \\
+\bottomrule
+\end{tabular}
+\end{table*}

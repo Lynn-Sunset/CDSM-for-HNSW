@@ -1,0 +1,86 @@
+% Generated from external CSV files by generate_figures.py.
+\documentclass[border=0pt]{standalone}
+\input{preamble.tex}
+% ===== TUNABLES: physical page, panel geometry, font, limits =====
+\def\figwidth{174mm}
+\def\figheight{82mm}
+\begin{document}
+\begin{tikzpicture}[font=\fontsize{8}{9.2}\selectfont]
+\path[use as bounding box] (0,0) rectangle (\figwidth,\figheight);
+\node[rotate=90,inner sep=0pt] at (2.2mm,60.25mm) {Mean Recall@10 (\%)};
+\begin{axis}[paperaxis,at={(14mm,47.5mm)},anchor=south west,width=35.5mm,height=25.5mm,xmin=7.85,xmax=13.1,xtick={8.192,10.24,12.8},xticklabels={8.192,10.24,12.8},ymin=98,ymax=99.8,ytick={98,98.5,99,99.5},xticklabels=\empty]
+\addplot[cstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Faiss-M32-C.csv};
+\addplot[rstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Faiss-M32-FRONTIER.csv};
+\addplot[mstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Faiss-M32-MEP_DEV.csv};
+\addplot[fstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Faiss-M32-F.csv};
+\end{axis}
+\node[anchor=north west,inner sep=1pt] at (15mm,72.5mm) {(a)};
+\node[anchor=south,inner sep=0pt] at (31.75mm,75mm) {Faiss-M32};
+\begin{axis}[paperaxis,at={(54mm,47.5mm)},anchor=south west,width=35.5mm,height=25.5mm,xmin=7.85,xmax=13.1,xtick={8.192,10.24,12.8},xticklabels={8.192,10.24,12.8},ymin=98,ymax=99.8,ytick={98,98.5,99,99.5},xticklabels=\empty,yticklabels=\empty]
+\addplot[cstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s42-C.csv};
+\addplot[rstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s42-FRONTIER.csv};
+\addplot[mstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s42-MEP_DEV.csv};
+\addplot[fstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s42-F.csv};
+\end{axis}
+\node[anchor=north west,inner sep=1pt] at (55mm,72.5mm) {(b)};
+\node[anchor=south,inner sep=0pt] at (71.75mm,75mm) {Imported-s42};
+\begin{axis}[paperaxis,at={(94mm,47.5mm)},anchor=south west,width=35.5mm,height=25.5mm,xmin=7.85,xmax=13.1,xtick={8.192,10.24,12.8},xticklabels={8.192,10.24,12.8},ymin=98,ymax=99.8,ytick={98,98.5,99,99.5},xticklabels=\empty,yticklabels=\empty]
+\addplot[cstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s777-C.csv};
+\addplot[rstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s777-FRONTIER.csv};
+\addplot[mstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s777-MEP_DEV.csv};
+\addplot[fstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s777-F.csv};
+\end{axis}
+\node[anchor=north west,inner sep=1pt] at (95mm,72.5mm) {(c)};
+\node[anchor=south,inner sep=0pt] at (111.75mm,75mm) {Imported-s777};
+\begin{axis}[paperaxis,at={(134mm,47.5mm)},anchor=south west,width=35.5mm,height=25.5mm,xmin=7.85,xmax=13.1,xtick={8.192,10.24,12.8},xticklabels={8.192,10.24,12.8},ymin=98,ymax=99.8,ytick={98,98.5,99,99.5},xticklabels=\empty,yticklabels=\empty]
+\addplot[cstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s1234-C.csv};
+\addplot[rstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s1234-FRONTIER.csv};
+\addplot[mstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s1234-MEP_DEV.csv};
+\addplot[fstyle] table[x=cap_k,y=recall_pct,col sep=comma] {budget-Imported-s1234-F.csv};
+\end{axis}
+\node[anchor=north west,inner sep=1pt] at (135mm,72.5mm) {(d)};
+\node[anchor=south,inner sep=0pt] at (151.75mm,75mm) {Imported-s1234};
+\node[rotate=90,inner sep=0pt] at (2.2mm,28.75mm) {Severe / 8,000};
+\begin{axis}[paperaxis,at={(14mm,16mm)},anchor=south west,width=35.5mm,height=25.5mm,xmin=7.85,xmax=13.1,xtick={8.192,10.24,12.8},xticklabels={8.192,10.24,12.8},ymin=0,ymax=66,ytick={0,20,40,60}]
+\addplot[cstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Faiss-M32-C.csv};
+\addplot[rstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Faiss-M32-FRONTIER.csv};
+\addplot[mstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Faiss-M32-MEP_DEV.csv};
+\addplot[fstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Faiss-M32-F.csv};
+\end{axis}
+\node[anchor=north east,inner sep=1pt] at (48.5mm,41mm) {(e)};
+\begin{axis}[paperaxis,at={(54mm,16mm)},anchor=south west,width=35.5mm,height=25.5mm,xmin=7.85,xmax=13.1,xtick={8.192,10.24,12.8},xticklabels={8.192,10.24,12.8},ymin=0,ymax=66,ytick={0,20,40,60},yticklabels=\empty]
+\addplot[cstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s42-C.csv};
+\addplot[rstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s42-FRONTIER.csv};
+\addplot[mstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s42-MEP_DEV.csv};
+\addplot[fstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s42-F.csv};
+\end{axis}
+\node[anchor=north east,inner sep=1pt] at (88.5mm,41mm) {(f)};
+\begin{axis}[paperaxis,at={(94mm,16mm)},anchor=south west,width=35.5mm,height=25.5mm,xmin=7.85,xmax=13.1,xtick={8.192,10.24,12.8},xticklabels={8.192,10.24,12.8},ymin=0,ymax=66,ytick={0,20,40,60},yticklabels=\empty]
+\addplot[cstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s777-C.csv};
+\addplot[rstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s777-FRONTIER.csv};
+\addplot[mstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s777-MEP_DEV.csv};
+\addplot[fstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s777-F.csv};
+\end{axis}
+\node[anchor=north east,inner sep=1pt] at (128.5mm,41mm) {(g)};
+\begin{axis}[paperaxis,at={(134mm,16mm)},anchor=south west,width=35.5mm,height=25.5mm,xmin=7.85,xmax=13.1,xtick={8.192,10.24,12.8},xticklabels={8.192,10.24,12.8},ymin=0,ymax=66,ytick={0,20,40,60},yticklabels=\empty]
+\addplot[cstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s1234-C.csv};
+\addplot[rstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s1234-FRONTIER.csv};
+\addplot[mstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s1234-MEP_DEV.csv};
+\addplot[fstyle] table[x=cap_k,y=severe,col sep=comma] {budget-Imported-s1234-F.csv};
+\end{axis}
+\node[anchor=north east,inner sep=1pt] at (168.5mm,41mm) {(h)};
+\node[inner sep=0pt] at (92mm,7.1mm) {Actual distance evaluations ($\times 10^3$)};
+\draw[cstyle] (22mm,2mm) -- ++(6mm,0) node[pos=.5]{};
+\draw[cstyle,only marks] plot coordinates {(25mm,2mm)};
+\node[anchor=west,inner sep=0pt] at (29.5mm,2mm) {C};
+\draw[fstyle] (44mm,2mm) -- ++(6mm,0) node[pos=.5]{};
+\draw[fstyle,only marks] plot coordinates {(47mm,2mm)};
+\node[anchor=west,inner sep=0pt] at (51.5mm,2mm) {CDSM-F};
+\draw[mstyle] (86mm,2mm) -- ++(6mm,0) node[pos=.5]{};
+\draw[mstyle,only marks] plot coordinates {(89mm,2mm)};
+\node[anchor=west,inner sep=0pt] at (93.5mm,2mm) {MEP-DEV};
+\draw[rstyle] (128mm,2mm) -- ++(6mm,0) node[pos=.5]{};
+\draw[rstyle,only marks] plot coordinates {(131mm,2mm)};
+\node[anchor=west,inner sep=0pt] at (135.5mm,2mm) {FRONTIER};
+\end{tikzpicture}
+\end{document}

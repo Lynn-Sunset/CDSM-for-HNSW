@@ -1,0 +1,4 @@
+graph,method,actual_policy,cap,cap_k,recall_pct,severe,queries
+Imported-s42,F,F,8192,8.192,98.27749999999999,37,8000
+Imported-s42,F,F,10240,10.24,98.84125,22,8000
+Imported-s42,F,F,12800,12.8,99.15875,11,8000

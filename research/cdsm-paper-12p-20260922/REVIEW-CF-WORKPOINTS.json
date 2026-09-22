@@ -1,0 +1,63 @@
+{
+  "scope": "Descriptive re-analysis of existing measured operating points, selected during manuscript review. Not a new ANN run, prespecified statistical test, strict equal-time comparison, or proof of full-curve dominance. QPS is from the historical native/ABS timing wave, using median round-level throughput.",
+  "source": "source-data/hnsw-adaptive-baselines-20260920/server-results/final-20260921-005721/results/SUMMARY.json",
+  "source_sha256": "db395126629323dc3b47a04619a557a53e1d5a9778ace849a6e499148af7b6d8",
+  "rows": [
+    {
+      "graph": "Faiss-M32",
+      "quality_queries": 8000,
+      "C_dc": 11264.0,
+      "F_dc": 10240.0,
+      "C_recall_pct": 99.23125,
+      "F_recall_pct": 99.35125,
+      "C_severe": 27,
+      "F_severe": 9,
+      "C_qps": 250.83413126675273,
+      "F_qps": 269.6429489556794,
+      "F_qps_gain_percent": 7.498508115278857,
+      "recall_gain_pp": 0.11999999999998678
+    },
+    {
+      "graph": "Imported-s42",
+      "quality_queries": 8000,
+      "C_dc": 11264.0,
+      "F_dc": 10240.0,
+      "C_recall_pct": 98.795,
+      "F_recall_pct": 98.84124999999999,
+      "C_severe": 34,
+      "F_severe": 22,
+      "C_qps": 235.54280325379312,
+      "F_qps": 255.0958483971444,
+      "F_qps_gain_percent": 8.301270458381715,
+      "recall_gain_pp": 0.04624999999999213
+    },
+    {
+      "graph": "Imported-s777",
+      "quality_queries": 8000,
+      "C_dc": 11264.0,
+      "F_dc": 10240.0,
+      "C_recall_pct": 98.7125,
+      "F_recall_pct": 98.915,
+      "C_severe": 39,
+      "F_severe": 14,
+      "C_qps": 236.53938948987835,
+      "F_qps": 255.4395908772228,
+      "F_qps_gain_percent": 7.99029769549362,
+      "recall_gain_pp": 0.20250000000000545
+    },
+    {
+      "graph": "Imported-s1234",
+      "quality_queries": 8000,
+      "C_dc": 11264.0,
+      "F_dc": 10240.0,
+      "C_recall_pct": 98.66125,
+      "F_recall_pct": 98.81,
+      "C_severe": 43,
+      "F_severe": 20,
+      "C_qps": 236.20446047534725,
+      "F_qps": 254.48382284351706,
+      "F_qps_gain_percent": 7.738787968433658,
+      "recall_gain_pp": 0.1487499999999975
+    }
+  ]
+}

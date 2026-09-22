@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Historical depth development: 2,000 T2I queries, three Lucene graphs, Java COSINE, $p+6{,}400$ actual work. $m/s$: maximum routes / per-route limit. $U$: routes exhausting their limit before bottom seeding (\%); S: severe events / 6,000. These are separate from the C++ results in Table~\ref{tab:fixed}.}
+\label{tab:depthhistory}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+$m/s$ & Scout DC & $U$ (\%) & Recall (\%) & S \\
+\midrule
+1/100 & 99.98 & 8.88 & 98.8350 & 22 \\
+1/400 & 341.23 & 0.00 & 98.9117 & 18 \\
+1/1600 & 382.64 & 0.00 & 98.9117 & 18 \\
+4/100 & 399.95 & 9.00 & 98.9167 & 17 \\
+4/400 & 1349.55 & 0.00 & 99.0067 & 13 \\
+4/1600 & 1519.81 & 0.00 & 99.0167 & 12 \\
+\bottomrule
+\end{tabular}
+\end{table}

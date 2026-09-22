@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "cases": 72,
+  "full_physical_traces": true,
+  "scope": "plain result/work equal diagnostic; two diagnostic full traces and rescored native bits equal; C/F/O/S original action workspace checked by old kernel"
+}

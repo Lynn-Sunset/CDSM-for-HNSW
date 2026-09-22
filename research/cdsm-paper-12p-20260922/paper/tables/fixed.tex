@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{T2I at exactly 10,240 evaluations per query. Each cell is mean Recall@10 (\%) / severe failures out of 8,000 / QPS. All times are remeasured together in the latest control wave. F (200/800) changes only the per-scout limit; F (400) is the frozen original.}
+\label{tab:fixed}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Policy & Faiss M32 & Imported 42 & Imported 777 & Imported 1234 \\
+\midrule
+C & 99.0587 / 32 / 281.0 & 98.6275 / 39 / 265.1 & 98.5175 / 49 / 265.4 & 98.4988 / 51 / 263.6 \\
+F (400) & 99.3513 / 9 / 271.8 & 98.8413 / 22 / 257.3 & 98.9150 / 14 / 257.8 & 98.8100 / 20 / 256.8 \\
+MEP-1 & 99.1262 / 27 / 281.3 & 98.6912 / 32 / 264.5 & 98.5600 / 44 / 265.2 & 98.5825 / 45 / 264.8 \\
+MEP-4 & 99.2300 / 17 / 284.5 & 98.7313 / 28 / 267.2 & 98.7200 / 30 / 268.0 & 98.6412 / 38 / 267.9 \\
+MEP-8 & 99.2362 / 16 / 289.0 & 98.7362 / 26 / 270.7 & 98.7738 / 25 / 270.6 & 98.7263 / 30 / 271.2 \\
+MEP-16 & 99.2788 / 6 / 298.1 & 98.8062 / 18 / 276.7 & 98.8675 / 16 / 277.4 & 98.7837 / 24 / 277.0 \\
+FRONTIER & 99.0750 / 29 / 203.7 & 98.6463 / 35 / 199.6 & 98.5237 / 46 / 199.0 & 98.5413 / 45 / 200.3 \\
+F (200) & 99.3313 / 11 / 280.7 & 98.8150 / 23 / 263.0 & 98.8263 / 21 / 263.8 & 98.7775 / 24 / 263.4 \\
+F (800) & 99.3637 / 8 / 266.2 & 98.8825 / 20 / 254.9 & 98.9087 / 14 / 255.7 & 98.8075 / 20 / 254.4 \\
+\bottomrule
+\end{tabular}
+\end{table*}

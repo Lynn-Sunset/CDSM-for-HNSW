@@ -1,0 +1,1 @@
+{"seed":42,"n":1000000,"dim":200,"normalize":true,"M":16,"efConstruction":100,"order":"original","merge":"serial","graph_sha256":"4dd0879f564bc1e662ff93739d5152140359641c636839760bb1652889a3f599","seconds":1227.343}

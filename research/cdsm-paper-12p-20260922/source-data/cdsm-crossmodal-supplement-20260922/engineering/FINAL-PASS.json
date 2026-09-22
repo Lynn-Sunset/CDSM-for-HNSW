@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "phase": "final",
+  "engineering": 1104,
+  "quality": 1104000,
+  "timing": 552000,
+  "legacy_CF_identical_records": 288000,
+  "datasets": {
+    "laion": {
+      "engineering": 552,
+      "quality": 552000,
+      "timing": 276000
+    },
+    "webvid": {
+      "engineering": 552,
+      "quality": 552000,
+      "timing": 276000
+    }
+  },
+  "absolute_physical_dc_equals_cap_every_row": true,
+  "family_physical_dc_equals_manifest_P_plus_E_every_row": true,
+  "family_primary_prefix_equals_manifest_every_non_FANNG_row": true,
+  "engineering_source_parity": "frozen family_check per graph; FANNG independent reference with --check 1",
+  "scope": "Engineering budget checks; full ground-truth and timing determinism audit uses frozen analyzers"
+}

@@ -1,0 +1,68 @@
+{
+  "scope": "Descriptive historical development: Java COSINE, 2000 previously used T2I queries, three Lucene graphs, total actual work p+6400. The pre-seed budget event does not isolate incomplete upper descent. Not a prospective proof that 400 is optimal.",
+  "sources": {
+    "depth-allocation-20260910/DEVELOPMENT-RESULTS.json": "866c6f32e58b4fd086faeefd41e761466ae1ad2127a88a3025db9d8c354b4267"
+  },
+  "rows": [
+    {
+      "policy": "fast-one-100",
+      "routes": 1,
+      "quota": 100,
+      "mean_scout_dc": 99.98383333333334,
+      "quota_before_seed_percent": 8.883333333333333,
+      "recall_percent": 98.83500000000001,
+      "severe": 22,
+      "events": 6000
+    },
+    {
+      "policy": "fast-one-400",
+      "routes": 1,
+      "quota": 400,
+      "mean_scout_dc": 341.22566666666665,
+      "quota_before_seed_percent": 0.0,
+      "recall_percent": 98.91166666666668,
+      "severe": 18,
+      "events": 6000
+    },
+    {
+      "policy": "fast-one-1600",
+      "routes": 1,
+      "quota": 1600,
+      "mean_scout_dc": 382.63783333333333,
+      "quota_before_seed_percent": 0.0,
+      "recall_percent": 98.91166666666668,
+      "severe": 18,
+      "events": 6000
+    },
+    {
+      "policy": "fast-four-100",
+      "routes": 4,
+      "quota": 100,
+      "mean_scout_dc": 399.9501666666667,
+      "quota_before_seed_percent": 9.004166666666666,
+      "recall_percent": 98.91666666666666,
+      "severe": 17,
+      "events": 6000
+    },
+    {
+      "policy": "fast-four-400",
+      "routes": 4,
+      "quota": 400,
+      "mean_scout_dc": 1349.5451666666668,
+      "quota_before_seed_percent": 0.0,
+      "recall_percent": 99.00666666666666,
+      "severe": 13,
+      "events": 6000
+    },
+    {
+      "policy": "fast-four-1600",
+      "routes": 4,
+      "quota": 1600,
+      "mean_scout_dc": 1519.8141666666668,
+      "quota_before_seed_percent": 0.0,
+      "recall_percent": 99.01666666666667,
+      "severe": 12,
+      "events": 6000
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "utc": "2026-09-22T10:44:05.710345+00:00",
+  "quality_total": 60,
+  "timing_total": 300,
+  "quality_records": 1104000,
+  "timing_records": 552000,
+  "datasets": {
+    "laion": {
+      "absolute": {
+        "quality_total": 9,
+        "timing_total": 45,
+        "quality_records": 216000,
+        "timing_records": 108000
+      },
+      "family": {
+        "quality_total": 21,
+        "timing_total": 105,
+        "quality_records": 336000,
+        "timing_records": 168000
+      }
+    },
+    "webvid": {
+      "absolute": {
+        "quality_total": 9,
+        "timing_total": 45,
+        "quality_records": 216000,
+        "timing_records": 108000
+      },
+      "family": {
+        "quality_total": 21,
+        "timing_total": 105,
+        "quality_records": 336000,
+        "timing_records": 168000
+      }
+    }
+  },
+  "reports": [
+    "laion/absolute/REPORT.zh-CN.md",
+    "laion/family/REPORT.zh-CN.md",
+    "webvid/absolute/REPORT.zh-CN.md",
+    "webvid/family/REPORT.zh-CN.md"
+  ],
+  "audit": "engineering/FINAL-PASS.json"
+}

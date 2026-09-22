@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "Independent stdlib raw-record aggregation, selection, exact McNemar/Holm and timing quantiles; no ANN, no bootstrap interval reimplementation.",
+  "bundle_sha256": "268f08847ce4fec5890d9a19bcb9491fb55f0d4eb3b4026992100565ceacfb4d",
+  "bundle_files_verified": 1818,
+  "development_records": 92000,
+  "evaluation_records": 736000,
+  "timing_records": 368000,
+  "cells_verified": 92,
+  "primary_tests_verified": 12,
+  "all_actual_dc_equal": true,
+  "source_quality_timing_parity": true,
+  "ground_truth_intersections_verified": 828000,
+  "summary_sha256": "498ecf7c2e513ea824ec4b1c147a2f2721a80663314e47f2a2faefa1869e0af0",
+  "audit_sha256": "8043612565434b1a09b63b1d038f62abe68bf911c4bea715bd38bbfe8d6c86eb"
+}

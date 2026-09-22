@@ -1,0 +1,262 @@
+{
+  "3200": {
+    "fixed_comparisons": {
+      "MEP->F": {
+        "recall_delta_pp": 0.11458333333333333,
+        "recall_delta_ci95_pp": [
+          0.0062500000000000125,
+          0.24791666666666667
+        ],
+        "failure_delta_pp": -0.16666666666666666,
+        "failure_delta_ci95_pp": [
+          -0.3125,
+          -0.041666666666666664
+        ],
+        "rescued": 8,
+        "harmed": 0,
+        "improved_events": 43,
+        "worse_events": 48
+      },
+      "F->SCORE": {
+        "recall_delta_pp": 0.10416666666666667,
+        "recall_delta_ci95_pp": [
+          -0.010416666666666671,
+          0.23541666666666666
+        ],
+        "failure_delta_pp": -0.04166666666666667,
+        "failure_delta_ci95_pp": [
+          -0.16666666666666666,
+          0.0625
+        ],
+        "rescued": 5,
+        "harmed": 3,
+        "improved_events": 63,
+        "worse_events": 47
+      },
+      "F->DIVERSE": {
+        "recall_delta_pp": 0.12500000000000003,
+        "recall_delta_ci95_pp": [
+          0.024947916666666667,
+          0.24796874999999974
+        ],
+        "failure_delta_pp": -0.08333333333333333,
+        "failure_delta_ci95_pp": [
+          -0.1875,
+          0.0
+        ],
+        "rescued": 5,
+        "harmed": 1,
+        "improved_events": 69,
+        "worse_events": 57
+      },
+      "C->SCORE": {
+        "recall_delta_pp": 0.32499999999999996,
+        "recall_delta_ci95_pp": [
+          0.11036458333333335,
+          0.5833333333333333
+        ],
+        "failure_delta_pp": -0.375,
+        "failure_delta_ci95_pp": [
+          -0.6458333333333333,
+          -0.14583333333333331
+        ],
+        "rescued": 19,
+        "harmed": 1,
+        "improved_events": 81,
+        "worse_events": 80
+      },
+      "C->DIVERSE": {
+        "recall_delta_pp": 0.3458333333333333,
+        "recall_delta_ci95_pp": [
+          0.12291666666666669,
+          0.60625
+        ],
+        "failure_delta_pp": -0.4166666666666667,
+        "failure_delta_ci95_pp": [
+          -0.7083333333333333,
+          -0.18749999999999997
+        ],
+        "rescued": 21,
+        "harmed": 1,
+        "improved_events": 88,
+        "worse_events": 92
+      }
+    },
+    "primary_stop_strata": {
+      "0": {
+        "C": {
+          "n": 2577,
+          "recall": 0.9775320139697323,
+          "severe": 22,
+          "zero": 9,
+          "mean_dc": 9600.0,
+          "incomplete": 0,
+          "truncated": 0
+        },
+        "F": {
+          "n": 2577,
+          "recall": 0.9817229336437718,
+          "severe": 7,
+          "zero": 3,
+          "mean_dc": 9600.0,
+          "incomplete": 0,
+          "truncated": 0
+        },
+        "rescued": 16,
+        "harmed": 1
+      },
+      "1": {
+        "C": {
+          "n": 2223,
+          "recall": 0.996941070625281,
+          "severe": 1,
+          "zero": 0,
+          "mean_dc": 6610.87314439946,
+          "incomplete": 0,
+          "truncated": 0
+        },
+        "F": {
+          "n": 2223,
+          "recall": 0.99685110211426,
+          "severe": 0,
+          "zero": 0,
+          "mean_dc": 6610.87314439946,
+          "incomplete": 0,
+          "truncated": 0
+        },
+        "rescued": 1,
+        "harmed": 0
+      }
+    }
+  },
+  "6400": {
+    "fixed_comparisons": {
+      "MEP->F": {
+        "recall_delta_pp": 0.05,
+        "recall_delta_ci95_pp": [
+          -0.03333333333333333,
+          0.15005208333333306
+        ],
+        "failure_delta_pp": -0.10416666666666667,
+        "failure_delta_ci95_pp": [
+          -0.22916666666666666,
+          -0.020833333333333332
+        ],
+        "rescued": 5,
+        "harmed": 0,
+        "improved_events": 21,
+        "worse_events": 24
+      },
+      "F->SCORE": {
+        "recall_delta_pp": 0.06875,
+        "recall_delta_ci95_pp": [
+          0.002083333333333333,
+          0.15630208333333306
+        ],
+        "failure_delta_pp": -0.041666666666666664,
+        "failure_delta_ci95_pp": [
+          -0.10416666666666667,
+          0.0
+        ],
+        "rescued": 3,
+        "harmed": 1,
+        "improved_events": 36,
+        "worse_events": 34
+      },
+      "F->DIVERSE": {
+        "recall_delta_pp": 0.06458333333333335,
+        "recall_delta_ci95_pp": [
+          -0.006249999999999998,
+          0.15416666666666667
+        ],
+        "failure_delta_pp": -0.041666666666666664,
+        "failure_delta_ci95_pp": [
+          -0.10416666666666667,
+          0.0
+        ],
+        "rescued": 3,
+        "harmed": 1,
+        "improved_events": 41,
+        "worse_events": 41
+      },
+      "C->SCORE": {
+        "recall_delta_pp": 0.21458333333333335,
+        "recall_delta_ci95_pp": [
+          0.04375,
+          0.4438020833333331
+        ],
+        "failure_delta_pp": -0.27083333333333337,
+        "failure_delta_ci95_pp": [
+          -0.5416666666666666,
+          -0.08333333333333333
+        ],
+        "rescued": 14,
+        "harmed": 1,
+        "improved_events": 51,
+        "worse_events": 46
+      },
+      "C->DIVERSE": {
+        "recall_delta_pp": 0.21041666666666664,
+        "recall_delta_ci95_pp": [
+          0.03958333333333334,
+          0.4416666666666667
+        ],
+        "failure_delta_pp": -0.27083333333333337,
+        "failure_delta_ci95_pp": [
+          -0.5416666666666666,
+          -0.08333333333333333
+        ],
+        "rescued": 14,
+        "harmed": 1,
+        "improved_events": 55,
+        "worse_events": 51
+      }
+    },
+    "primary_stop_strata": {
+      "0": {
+        "C": {
+          "n": 2577,
+          "recall": 0.9852929763290648,
+          "severe": 15,
+          "zero": 8,
+          "mean_dc": 12800.0,
+          "incomplete": 0,
+          "truncated": 0
+        },
+        "F": {
+          "n": 2577,
+          "recall": 0.9881257275902211,
+          "severe": 4,
+          "zero": 2,
+          "mean_dc": 12800.0,
+          "incomplete": 0,
+          "truncated": 0
+        },
+        "rescued": 11,
+        "harmed": 0
+      },
+      "1": {
+        "C": {
+          "n": 2223,
+          "recall": 0.9979757085020242,
+          "severe": 0,
+          "zero": 0,
+          "mean_dc": 9810.87314439946,
+          "incomplete": 0,
+          "truncated": 0
+        },
+        "F": {
+          "n": 2223,
+          "recall": 0.9978407557354926,
+          "severe": 0,
+          "zero": 0,
+          "mean_dc": 9810.87314439946,
+          "incomplete": 0,
+          "truncated": 0
+        },
+        "rescued": 0,
+        "harmed": 0
+      }
+    }
+  }
+}

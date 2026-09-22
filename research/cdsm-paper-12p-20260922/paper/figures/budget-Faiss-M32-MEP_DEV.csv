@@ -1,0 +1,4 @@
+graph,method,actual_policy,cap,cap_k,recall_pct,severe,queries
+Faiss-M32,MEP_DEV,MEP8,8192,8.192,98.91375,20,8000
+Faiss-M32,MEP_DEV,MEP8,10240,10.24,99.23625,16,8000
+Faiss-M32,MEP_DEV,MEP16,12800,12.8,99.5575,4,8000

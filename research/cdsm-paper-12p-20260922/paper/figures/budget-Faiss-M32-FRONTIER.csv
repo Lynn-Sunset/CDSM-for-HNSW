@@ -1,0 +1,4 @@
+graph,method,actual_policy,cap,cap_k,recall_pct,severe,queries
+Faiss-M32,FRONTIER,FRONTIER,8192,8.192,98.74875,37,8000
+Faiss-M32,FRONTIER,FRONTIER,10240,10.24,99.075,29,8000
+Faiss-M32,FRONTIER,FRONTIER,12800,12.8,99.42,19,8000

@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Build intermediates and local previews.
+research/cdsm-paper-12p-20260922/tmp/
+research/cdsm-paper-12p-20260922/qa/
+
+# Bulk experiment inputs and private connection helpers are not source artifacts.
+/datasets/
+*.fvecs
+*.ivecs
+*.fbin
+*.ibin
+server-evidence.tar.gz
+webvid_read_connection.py

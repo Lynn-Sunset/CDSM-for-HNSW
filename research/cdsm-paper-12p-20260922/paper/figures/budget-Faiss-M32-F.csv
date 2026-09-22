@@ -1,0 +1,4 @@
+graph,method,actual_policy,cap,cap_k,recall_pct,severe,queries
+Faiss-M32,F,F,8192,8.192,98.98125,12,8000
+Faiss-M32,F,F,10240,10.24,99.35125000000001,9,8000
+Faiss-M32,F,F,12800,12.8,99.595,5,8000

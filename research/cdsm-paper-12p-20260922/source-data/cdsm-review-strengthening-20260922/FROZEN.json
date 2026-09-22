@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "research/cdsm-review-strengthening-20260922/bench.cpp": "0f42efa2c272ac615fb73e3ea793fbda9c2359acc43fcffdfcf93fac2ea194ef",
+    "research/cdsm-review-strengthening-20260922/strengthen.h": "956a575bd9d66bc5faef0aa3e70c592a1c9827e29f8e124c99db84313825b2a4",
+    "research/cdsm-review-strengthening-20260922/check.cpp": "32d6e89db41a4e45544ec030ca9fe93c822e2d5671a790592b5ca47bc8fe3ded",
+    "research/cdsm-review-strengthening-20260922/compile.sh": "b9472378907ee079aae8a179a455567be239b2d9164ca1ee93aae35f079aa490",
+    "research/cdsm-review-strengthening-20260922/run_server.py": "b24956f793a0e20f76619c3ea40b9c0bb84323fe491aa8551a4095ee84e4b0f6",
+    "research/cdsm-review-strengthening-20260922/preflight.py": "fe52b5a2c61ca1492201317da484a33a4153ad7649c893668c0d02a2e12e1e25",
+    "research/cdsm-review-strengthening-20260922/analyze.py": "d68cde4b1c9a15b35fe9427257a81cf5105d35b2f1ce227bfd1a8500c0def0da",
+    "research/cdsm-review-strengthening-20260922/PLAN.json": "16b5c7429f7e75b7e77fc6a4e18732da9502ee03fbb98d136624965777f9a1e9",
+    "research/cdsm-review-strengthening-20260922/PROTOCOL.zh-CN.md": "b2c61748f4bea1b950d1738a11904e6810f6d81ba953bc249b5c30328cd7d5ed",
+    "research/cdsm-review-strengthening-20260922/DEPENDENCIES.json": "88d25f61ff3f3305d691d37b860e0524effd1e99a187e286d8c54c4412071233",
+    "research/cdsm-review-strengthening-20260922/runtime/r2_bench": "411ff07a430c7c3715eb78b181cb6620ea2699437b885396a90d3ddc1d40f4eb",
+    "research/cdsm-review-strengthening-20260922/runtime/r2_check": "74ee71c6eee7b5e9f3e31e3533489c40adf6e32201a63c738f940b162c0ebb7c",
+    "research/cdsm-review-strengthening-20260922/vendor/paid.h": "f6cd012686b5b89d28a61490cb2a800591799deac22b9289ec363acd6b17063f",
+    "research/cdsm-review-strengthening-20260922/vendor/bench_io.h": "77a4e872f46fe124432bc80cf73a7aa28d7b96fb632f76d4b246355fd34dc0b1",
+    "research/cdsm-review-strengthening-20260922/vendor/reference/common.h": "86f25ac1aa3a2b152ac1c1c0503150d493513bcc11d63bcd09ebdb269387167a",
+    "research/cdsm-review-strengthening-20260922/vendor/reference/cdsm.h": "657bc48d41f16171ed1a470484f987a5210b44419df10849942ff3ba18aeac3f",
+    "research/cdsm-review-strengthening-20260922/queries/engineering.txt": "4bf193805b7b08fcfdc781f8693189bb1ab31652a710ff12fb158c67cd9a6b33",
+    "research/cdsm-review-strengthening-20260922/queries/development.txt": "568b3529d16d73a30a17b8e8e1ad3176b07d2bcd7e49fea27358159d3a01541e",
+    "research/cdsm-review-strengthening-20260922/queries/evaluation.txt": "a856267adc260991a5b85aa703daf01977e335cafeafcb4bc617c009d2c75604",
+    "research/cdsm-review-strengthening-20260922/queries/timing-evaluation.txt": "11e5c7b906073bc7c2ae3ae6ab52e68e3bf03fd71fb9554d54457cb0a4f7fe10",
+    "research/hnsw-adaptive-baselines-20260920/resource_runner.py": "d5f3770b8023d682d934a1d269719c234e3feed14575f00fda65c09a82f5bb32",
+    "research/ann-systematic-comparison-20260919/build/faiss/libfaiss_avx2.a": "e8a251cfa10cfd3052dd22bdb0734a1adb1ad30982ef2b3a4b82c50eafe0f040"
+  }
+}

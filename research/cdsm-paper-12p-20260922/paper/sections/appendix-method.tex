@@ -1,0 +1,49 @@
+\subsection{Execution details}
+\label{app:execution}
+
+For a native graph, the entrance pool concatenates node IDs from successive
+upper layers, in increasing layer and ID order. A node on multiple upper
+layers occurs repeatedly in the pool. A Java-compatible pseudorandom
+generator seeded by the graph's node count samples that pool, rejecting
+already accepted IDs until 64 distinct nodes (or all eligible nodes) have
+been accepted. First acceptance determines table order. Imported graphs
+retain their saved table. The order is independent of the query; no
+recall or rescue label determines it.
+
+Queues and answers use $(\hbox{distance},\hbox{node ID})$ order.
+Admission compares $d<\tau$ before updating the local threshold;
+local stopping compares $d>\tau$ between expansions.
+An earlier admission may reach or exceed the tightened threshold, so
+these tie rules differ. Initial stopping uses $\geq(1+\gamma)^2\tau_A$;
+final continuation disables it.
+
+Score validity, bottom-layer discovery, adjacency opening, and completion
+are separate states. An upper-scored node can enter bottom traversal
+without another evaluation. An already discovered neighbor is skipped
+while the source cursor advances. Completion requires processing all
+neighbors; stale queue references to completed nodes are then discarded.
+
+F merges active, deferred, and current scout work into the main active
+queue without replacing the main current node. Shared bottom cursors
+preserve partial scans. F does not save an upper cursor if descent
+exhausts its allowance: no bottom seed is installed, but computed scores
+still contribute to the answer collector.
+
+\subsection{Admission and stopping factorial}\label{app:factorial}
+The six scout variants cross strict local admission (L) or all-neighbor
+admission (A) with LOCAL, GLOBAL, or NONE distance stopping. Under LOCAL,
+A and L have identical scored paths and answers on all 23,997 events;
+the same agreement holds under GLOBAL. Under NONE, A returns 99.17698\%
+mean recall, 24 severe events, and nine zero events, compared with
+99.17031\%, 24, and ten for L. The unchanged severe count contains one
+rescue and one harm. These retrospective results have descriptive
+query-cluster intervals, not multiplicity-adjusted confirmation or new
+timing. The original F policy is L\_LOCAL throughout the paper.
+
+\subsection{Recall distribution and threshold checks}\label{app:thresholds}
+\input{tables/thresholds}
+Table~\ref{tab:thresholds} recomputes saved hits from all 23,997 matched
+pairs and checks the frozen totals. Counts are events, not independent
+queries. Five remains the severe threshold; other cutoffs are descriptive,
+not additional significance tests. The artifact retains the complete
+zero-to-ten hit histograms and their source records.

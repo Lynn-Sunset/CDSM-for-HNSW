@@ -1,0 +1,161 @@
+{
+  "scope": "Unfiltered CDSM family and FANNG search on unchanged T2I HNSW graphs; controlled per-query physical distance work",
+  "graphs": [
+    {
+      "name": "Faiss-M32",
+      "index": "research/ann-systematic-comparison-20260919/indexes/HNSW-M32-efC200.faiss",
+      "origin": "existing Faiss M32 efConstruction200 graph; one build"
+    },
+    {
+      "name": "Imported-s42",
+      "index": "research/fannbench-t2i-20260919/data/t2i-s42.faiss",
+      "map": "research/fannbench-t2i-20260919/data/ord-to-canonical-s42.i32",
+      "table": "research/fannbench-t2i-20260919/data/entry-table-s42.i32",
+      "origin": "existing Lucene graph exported without changing edges; seed 42"
+    },
+    {
+      "name": "Imported-s777",
+      "index": "research/fannbench-t2i-20260919/data/t2i-s777.faiss",
+      "map": "research/fannbench-t2i-20260919/data/ord-to-canonical-s777.i32",
+      "table": "research/fannbench-t2i-20260919/data/entry-table-s777.i32",
+      "origin": "existing Lucene graph exported without changing edges; seed 777"
+    },
+    {
+      "name": "Imported-s1234",
+      "index": "research/fannbench-t2i-20260919/data/t2i-s1234.faiss",
+      "map": "research/fannbench-t2i-20260919/data/ord-to-canonical-s1234.i32",
+      "table": "research/fannbench-t2i-20260919/data/entry-table-s1234.i32",
+      "origin": "existing Lucene graph exported without changing edges; seed 1234"
+    }
+  ],
+  "data": {
+    "base": "research/fannbench-t2i-20260919/data/base.fbin",
+    "queries": "research/fannbench-t2i-20260919/data/query.fbin",
+    "gt": "research/fannbench-t2i-20260919/data/gt-1.ivecs",
+    "source_ids": "research/fannbench-t2i-20260919/data/query-source-ids.txt"
+  },
+  "inputs": [
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\base.fbin",
+      "path": "research/fannbench-t2i-20260919/data/base.fbin",
+      "bytes": 800000008,
+      "sha256": "30ce9707205832ffb5d73be1b5ba7b4e2b6c421c0ecf575b4a39f617551d997f"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\query.fbin",
+      "path": "research/fannbench-t2i-20260919/data/query.fbin",
+      "bytes": 8000008,
+      "sha256": "403ac514fea2cfd81281dac1a418d207d8d20bdea8c1c83205a1914dd2225dad"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\gt-1.ivecs",
+      "path": "research/fannbench-t2i-20260919/data/gt-1.ivecs",
+      "bytes": 440000,
+      "sha256": "a2c5199747d7d5ffcdb1bc5249a359a319c4f28bb065bb5cdaa5c217a02bc7e0"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\query-source-ids.txt",
+      "path": "research/fannbench-t2i-20260919/data/query-source-ids.txt",
+      "bytes": 70000,
+      "sha256": "e4545ba8d88ebb5995234949aecd4db591d64dcb0807a3cb98231b4238636725"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\t2i-s42.faiss",
+      "path": "research/fannbench-t2i-20260919/data/t2i-s42.faiss",
+      "bytes": 944289466,
+      "sha256": "b03a465475af0af59b90c334744cb0a45411d19b8596ba094362eb4d777a3261"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\ord-to-canonical-s42.i32",
+      "path": "research/fannbench-t2i-20260919/data/ord-to-canonical-s42.i32",
+      "bytes": 4000000,
+      "sha256": "02e21fa3c89fa7d7b61826918a8bd35d3127827b4ef3f3ee47ade5e64e3c2a80"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\entry-table-s42.i32",
+      "path": "research/fannbench-t2i-20260919/data/entry-table-s42.i32",
+      "bytes": 256,
+      "sha256": "000d8143c8b2cac05554c703cb181afbc691969f053e7831197e1e9524edca06"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\t2i-s777.faiss",
+      "path": "research/fannbench-t2i-20260919/data/t2i-s777.faiss",
+      "bytes": 944266810,
+      "sha256": "2da6ebb5b05e0ef58cc2aaf5a6e3766ff979948fe9bde7ff8ab15e2c163c9921"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\ord-to-canonical-s777.i32",
+      "path": "research/fannbench-t2i-20260919/data/ord-to-canonical-s777.i32",
+      "bytes": 4000000,
+      "sha256": "a7f0885ea1d3ede827228829b025ebda4a95d5548ee982c91204032ab7e673d9"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\entry-table-s777.i32",
+      "path": "research/fannbench-t2i-20260919/data/entry-table-s777.i32",
+      "bytes": 256,
+      "sha256": "e3982dd4eeb7c2ee46d1d5bb8f9719b78e90ca8c206ce177ce51e22bc3d724d5"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\t2i-s1234.faiss",
+      "path": "research/fannbench-t2i-20260919/data/t2i-s1234.faiss",
+      "bytes": 944247738,
+      "sha256": "ac616f129e7ed23450e021e1de6b140ba324592222f043c2b75dbe69a4c6fabc"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\ord-to-canonical-s1234.i32",
+      "path": "research/fannbench-t2i-20260919/data/ord-to-canonical-s1234.i32",
+      "bytes": 4000000,
+      "sha256": "02e21fa3c89fa7d7b61826918a8bd35d3127827b4ef3f3ee47ade5e64e3c2a80"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\fannbench-t2i-20260919\\data\\entry-table-s1234.i32",
+      "path": "research/fannbench-t2i-20260919/data/entry-table-s1234.i32",
+      "bytes": 256,
+      "sha256": "46cfc9b8f162bf0618da098f93368605d8e7f8f6c4be404ec4e07ec37b9f2f8b"
+    },
+    {
+      "local": "D:\\HNSW改进\\hnsw-phase0\\research\\ann-systematic-comparison-20260919\\indexes\\HNSW-M32-efC200.faiss",
+      "path": "research/ann-systematic-comparison-20260919/indexes/HNSW-M32-efC200.faiss",
+      "bytes": 1072112226,
+      "sha256": "4718a40a37a913ce1b8ac5560687e9010e17161a888b26984a21b0be3ba824bc"
+    }
+  ],
+  "policies": [
+    "C",
+    "FANNG",
+    "F",
+    "SCORE",
+    "DIVERSE",
+    "KEEP",
+    "E64_RAW"
+  ],
+  "quality_count": 8000,
+  "timing_count": 800,
+  "timing_rounds": 5,
+  "quality_cpus": [
+    16,
+    17,
+    18,
+    19
+  ],
+  "timing_cpu": 22,
+  "nice": 19,
+  "threads_per_query": 1,
+  "historical_query_exposure": true,
+  "parameter_selection": "no tuning; all fixed points retained",
+  "timing_warmup": "two passes of first 32 IDs before each extra, every timing process",
+  "interpret_qps_tolerance_percent": 1.5,
+  "CDSM_initial_stage_cap": 6400,
+  "auxiliary_counter_limits": {
+    "edges": "C/F counts a row on load, FANNG counts consumed edges; not a common work metric",
+    "primary": "C/F complete initial main stage; FANNG upper descent only"
+  },
+  "extras": [
+    3200,
+    6400
+  ],
+  "primary_extra": 3200,
+  "budget": "P(q)+extra, P from frozen offline common primary-prefix manifest",
+  "query_exposure": "historically exposed evaluation queries; not an unseen generalization claim",
+  "predecessor": "research/fanng-search-comparison-20260922"
+}

@@ -1,0 +1,13 @@
+{
+  "fanng-search-comparison-20260922/SUMMARY.json": "7926bbbef6496f8df2fd6c24f14aae5b6ca2814c480179d4acdca73b8f852dda",
+  "cdsm-review-strengthening-20260922/SUMMARY.json": "498ecf7c2e513ea824ec4b1c147a2f2721a80663314e47f2a2faefa1869e0af0",
+  "cdsm-family-comparison-20260922/SUMMARY.json": "7ad59769d3cb2c979613e2ff8acac16ef98becc7a6ad781e18992c14693d5a87",
+  "hnsw-adaptive-baselines-20260920/server-results/final-20260921-005721/results/SUMMARY.json": "db395126629323dc3b47a04619a557a53e1d5a9778ace849a6e499148af7b6d8",
+  "cdsm-crossmodal-supplement-20260922/laion/absolute/SUMMARY.json": "662d78223e44cb6bcbadeccc3498f2ec36fd6ccbea10b0dca959bec1c7384b91",
+  "cdsm-crossmodal-supplement-20260922/laion/family/SUMMARY.json": "b1478cc25af5e38a45cf662cdbdd1c55797d017587240615e45e89e3689447ae",
+  "cdsm-crossmodal-supplement-20260922/webvid/absolute/SUMMARY.json": "df1575b59c1cccb0a82b75cde94a26bee1af28d94bd5c087cd2759ec81e7c9be",
+  "cdsm-crossmodal-supplement-20260922/webvid/family/SUMMARY.json": "c2f67f7cf4b2df1b166d0528f4e3e94faa19bae3e79ce1c41d939a84680a1635",
+  "t2i-scout-factorial-20260913/analysis/RESULTS.json": "5959b3d34ee64a7c10e38b75d04d40368ab96ce26a15f230a50bdfc940386867",
+  "laion-abs-tail-20260922/TAIL.json": "afb1541b4cee5bc8bc5a53afca2eb18216dfe6af39afce21abb7b6b2ab1ea4e2",
+  "depth-allocation-20260910/DEVELOPMENT-RESULTS.json": "866c6f32e58b4fd086faeefd41e761466ae1ad2127a88a3025db9d8c354b4267"
+}

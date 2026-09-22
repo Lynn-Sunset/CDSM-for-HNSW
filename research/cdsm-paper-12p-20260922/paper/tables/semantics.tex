@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\caption{Search organization. C and MEP are controlled policies; FANNG is our same-graph search reconstruction. iQAN is a literature comparison, not a measured baseline in this study.}
+\label{tab:semantics}
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+Method & Where exploration starts & Allocation and coordination & What determines subsequent expansion \\
+\midrule
+C & Retained main-search state & All remaining budget to one route & Existing frontier and adjacency cursors \\
+MEP-$m$ & Up to $m$ backup upper entrances & Paid descent endpoints enter a shared queue; $m=1,4,8,16$ & Common queue order; no private scout interval \\
+FRONTIER & Up to four pending main-frontier candidates & F's local scouts, with cached roots and shared progress & Unfinished scout work returns to the main frontier \\
+FANNG search & Common upper-descent endpoint & One edge at a time under the distance budget & Query-prioritized source and remaining-edge cursor \\
+iQAN~\cite{iqan} & Multiple candidates from the search pool & Local queues, staged path expansion, adaptive synchronization & Local paths feed candidates back into global search \\
+CDSM-F & Backup entrances after a main-search prefix & Up to four local scouts; 400 new distances each & Active, deferred, and current scout work joins the main frontier with shared cursors \\
+\bottomrule
+\end{tabularx}
+\end{table*}

@@ -1,0 +1,20 @@
+\section{Related Work}
+\label{sec:related}
+
+
+
+\paragraph{Search organization on existing graphs.}
+HNSW combines hierarchical navigation and proximity-graph search~\cite{hnsw}; Faiss and Lucene implement it~\cite{faiss,lucene}. CDSM changes query allocation on existing edges. Local queues, visited state, and resumed expansion have precedents; the contribution is the specific bounded-exploration and reintegration policy.
+
+FANNG retains unexplored edges and backtracks under a distance budget~\cite{fanng}. CDSM additionally gives backup entrances local exploration before returning unfinished work. Our control adapts FANNG search, excluding native construction and system performance.
+
+\paragraph{Multiple paths and resumed execution.}
+iQAN uses multiple paths, local queues, shared visitation, and adaptive synchronization for intra-query parallelism~\cite{iqan}. Its feedback can affect global expansion, so that principle is not unique to CDSM. Table~\ref{tab:semantics} identifies our distinction: upper-entrance exploration after a main prefix, explicit local allowances, and unfinished-state integration into one budgeted continuation. The difference concerns exploration's source, timing, allocation, and integration, beyond sequential versus parallel execution. MEP does not reproduce iQAN.
+
+pgvector 0.8.0 retains discarded candidates and visitation to resume HNSW scans~\cite{pgvector}. CDSM first generates additional work through bounded backup exploration; resumption alone is not its novelty claim.
+
+\paragraph{Choosing entrances.}
+Oguri and Matsui select query-dependent starting points from representatives obtained by clustering~\cite{oguri}. GATE extracts hubs and learns a navigation structure using graph topology and query information~\cite{gate}. These approaches improve where exploration begins; CDSM specifies how alternative exploration and retained main-search work share a limited budget. The design dimensions are complementary, although their interaction requires evaluation. Our fixed entrance table and paid-selection extensions are not implementations of either selector, and original CDSM does not learn entrance quality.
+
+\paragraph{Budget, workload, and quality.}
+Adaptive Beam Search changes the distance-based termination rule and relates its guarantees to graph navigability~\cite{abs}. CDSM instead budgets exploratory and continuation work; its accounting limit does not imply a recall guarantee. Steiner-Hardness demonstrates the importance of graph-dependent query difficulty~\cite{steiner}, motivating evaluation beyond a workload average without making severe-failure measurement itself novel. RoarGraph addresses cross-modal workloads through query-guided index construction~\cite{roargraph}, whereas CDSM reuses existing edges. Our frozen-policy transfer results delimit its benefits: the T2I improvements do not establish a general advantage on LAION or WebVid. State interventions explain the method's behavior while its measured search-policy benefits remain the main contribution.

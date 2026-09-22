@@ -1,0 +1,142 @@
+{
+  "status": "passed",
+  "queries": 300,
+  "graphs": [
+    42,
+    777,
+    1234
+  ],
+  "formal_rows": 64800,
+  "warmup_rows": 10800,
+  "all_rows": 75600,
+  "effect_parity_rows": 75600,
+  "all_observations_retained": true,
+  "results": [
+    {
+      "policy": "C",
+      "mean_query_graph_median_ms": 8.646039166666666,
+      "query_mean_graph_median_p50_ms": 9.017533333333333,
+      "query_mean_graph_median_p95_ms": 11.541935,
+      "raw_formal_p50_ms": 8.72435,
+      "raw_formal_p95_ms": 14.99783,
+      "raw_formal_p99_ms": 19.212192000000005,
+      "raw_formal_max_ms": 239.7074
+    },
+    {
+      "policy": "F",
+      "mean_query_graph_median_ms": 8.727124833333335,
+      "query_mean_graph_median_p50_ms": 9.048933333333332,
+      "query_mean_graph_median_p95_ms": 11.283376666666665,
+      "raw_formal_p50_ms": 8.77875,
+      "raw_formal_p95_ms": 14.921204999999997,
+      "raw_formal_p99_ms": 18.765977000000046,
+      "raw_formal_max_ms": 234.156
+    },
+    {
+      "policy": "O",
+      "mean_query_graph_median_ms": 8.654603666666667,
+      "query_mean_graph_median_p50_ms": 8.994416666666668,
+      "query_mean_graph_median_p95_ms": 11.372245,
+      "raw_formal_p50_ms": 8.73145,
+      "raw_formal_p95_ms": 14.832294999999998,
+      "raw_formal_p99_ms": 19.217181,
+      "raw_formal_max_ms": 268.7093
+    },
+    {
+      "policy": "S",
+      "mean_query_graph_median_ms": 8.668616222222225,
+      "query_mean_graph_median_p50_ms": 9.022258333333331,
+      "query_mean_graph_median_p95_ms": 11.445938333333334,
+      "raw_formal_p50_ms": 8.75295,
+      "raw_formal_p95_ms": 14.982925,
+      "raw_formal_p99_ms": 19.108568,
+      "raw_formal_max_ms": 267.7423
+    },
+    {
+      "policy": "N",
+      "mean_query_graph_median_ms": 7.013121555555556,
+      "query_mean_graph_median_p50_ms": 7.259033333333334,
+      "query_mean_graph_median_p95_ms": 8.889535,
+      "raw_formal_p50_ms": 7.12005,
+      "raw_formal_p95_ms": 12.148004999999998,
+      "raw_formal_p99_ms": 15.064652000000004,
+      "raw_formal_max_ms": 284.6291
+    },
+    {
+      "policy": "D",
+      "mean_query_graph_median_ms": 8.471908666666666,
+      "query_mean_graph_median_p50_ms": 9.368133333333333,
+      "query_mean_graph_median_p95_ms": 11.805516666666668,
+      "raw_formal_p50_ms": 8.9982,
+      "raw_formal_p95_ms": 15.27073,
+      "raw_formal_p99_ms": 19.285198000000005,
+      "raw_formal_max_ms": 172.0153
+    }
+  ],
+  "primary_ratio": {
+    "reference": "D",
+    "estimate": 1.0232188003076,
+    "ci95": [
+      1.001069530434992,
+      1.0471959509791013
+    ],
+    "queries": 300,
+    "fixed_graphs": [
+      42,
+      777,
+      1234
+    ],
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 2026091207,
+    "generator": "PCG64",
+    "percentile_interpolation": "linear",
+    "aggregation": "per query/graph/arm median of 12 formal repetitions, then mean of three graphs, then mean across queries",
+    "S_faster_direction_condition_met": false
+  },
+  "timing_integrity": {
+    "eligible": true,
+    "graphs": [
+      {
+        "seed": 42,
+        "eligible": true,
+        "maximum_heartbeat_gap_seconds": 1.4690000000118744,
+        "total_suspended_clock_seconds": 0.0018119000014849007,
+        "maximum_interval_suspended_seconds": 0.013745400006882846,
+        "samples": 235,
+        "thresholds": {
+          "heartbeat_gap_seconds": 10,
+          "suspended_seconds": 2
+        },
+        "all_observations_retained": true
+      },
+      {
+        "seed": 777,
+        "eligible": true,
+        "maximum_heartbeat_gap_seconds": 1.0309999999881256,
+        "total_suspended_clock_seconds": 0.0,
+        "maximum_interval_suspended_seconds": 0.01499689999036491,
+        "samples": 233,
+        "thresholds": {
+          "heartbeat_gap_seconds": 10,
+          "suspended_seconds": 2
+        },
+        "all_observations_retained": true
+      },
+      {
+        "seed": 1234,
+        "eligible": true,
+        "maximum_heartbeat_gap_seconds": 1.0160000000032596,
+        "total_suspended_clock_seconds": 0.0016971999721135944,
+        "maximum_interval_suspended_seconds": 0.014508599968394265,
+        "samples": 214,
+        "thresholds": {
+          "heartbeat_gap_seconds": 10,
+          "suspended_seconds": 2
+        },
+        "all_observations_retained": true
+      }
+    ]
+  },
+  "performance_conclusion_available": true,
+  "scope": "warmed serial single-machine measurement; not cold start or service SLA; N and custom kernel allocation differ"
+}

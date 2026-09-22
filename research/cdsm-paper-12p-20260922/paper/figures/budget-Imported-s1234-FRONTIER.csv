@@ -1,0 +1,4 @@
+graph,method,actual_policy,cap,cap_k,recall_pct,severe,queries
+Imported-s1234,FRONTIER,FRONTIER,8192,8.192,98.05375,60,8000
+Imported-s1234,FRONTIER,FRONTIER,10240,10.24,98.54125,45,8000
+Imported-s1234,FRONTIER,FRONTIER,12800,12.8,98.9175,28,8000

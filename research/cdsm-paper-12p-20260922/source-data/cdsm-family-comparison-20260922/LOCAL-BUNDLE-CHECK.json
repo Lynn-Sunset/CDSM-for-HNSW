@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "sha256": "a414fc28a53fcc2d4920f947348d9af45d2f4ae8d17e3bf03ee03d1d8fcc2d89",
+  "raw_csv_files": 168,
+  "raw_query_records": 672000,
+  "each_raw_file_matches_final_analysis_receipt": true,
+  "extracted_files": false
+}

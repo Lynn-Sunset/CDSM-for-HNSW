@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Frozen transfer at 10,240 evaluations. Recall and mean time are equal-weight graph averages; severe counts retain seeds 42/777/1234 separately. The p99 range spans graph-level p99 values, not pooled query latencies.}
+\label{tab:transfer}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Dataset & Method & Recall (\%) & Severe / 8,000 & Mean (ms) & p99 range (ms) \\
+\midrule
+LAION & C & 95.3871 & 35 / 33 / 31 & 5.531 & 6.809--6.848 \\
+LAION & F & 95.2525 & 33 / 33 / 35 & 5.609 & 6.800--6.885 \\
+LAION & FANNG & 95.3875 & 35 / 32 / 32 & 9.867 & 13.483--13.784 \\
+WEBVID & C & 97.2738 & 20 / 25 / 18 & 5.603 & 6.890--6.943 \\
+WEBVID & F & 97.1996 & 21 / 20 / 19 & 5.667 & 6.803--6.821 \\
+WEBVID & FANNG & 97.2771 & 20 / 24 / 18 & 10.025 & 13.349--13.421 \\
+\bottomrule
+\end{tabular}
+\end{table*}

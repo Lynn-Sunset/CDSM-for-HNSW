@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "phase": "evaluation",
+  "legacy_CF_identical_records": 192000,
+  "legacy_fields": [
+    "hits",
+    "dc",
+    "primary",
+    "scout",
+    "upper_dc",
+    "logical",
+    "edges",
+    "expansions",
+    "stop",
+    "sequence",
+    "ids",
+    "distances"
+  ],
+  "engineering_records": 0,
+  "engineering_all_actual_dc_equal_cap": true
+}

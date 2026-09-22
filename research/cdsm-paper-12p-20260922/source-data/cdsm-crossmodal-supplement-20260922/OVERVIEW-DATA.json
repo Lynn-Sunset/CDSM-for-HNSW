@@ -1,0 +1,703 @@
+{
+  "completed_utc": "2026-09-22T10:44:05.710345+00:00",
+  "audited_records": [
+    1104000,
+    552000
+  ],
+  "sources": {
+    "laion\\absolute\\SUMMARY.json": "662d78223e44cb6bcbadeccc3498f2ec36fd6ccbea10b0dca959bec1c7384b91",
+    "laion\\absolute\\AUDIT.json": "2e6e6cea3b70cf64b907d810531ca0d0c0a6c5d7ea8ff68061234c26330e6d41",
+    "laion\\absolute\\REPORT.zh-CN.md": "46cae15bcc3e1263bd9031ac6fd3e8945b0eccf01835c924436a39018d146872",
+    "laion\\family\\SUMMARY.json": "b1478cc25af5e38a45cf662cdbdd1c55797d017587240615e45e89e3689447ae",
+    "laion\\family\\AUDIT.json": "7ea5a49e88d6473094c33c5c60c002a4e3ca3581cae39001a45db15aa5e213cd",
+    "laion\\family\\REPORT.zh-CN.md": "3c9ba3f1fb60c9e22be32b6066697c790579fe5475fc9e6882db6928164eb9de",
+    "webvid\\absolute\\SUMMARY.json": "df1575b59c1cccb0a82b75cde94a26bee1af28d94bd5c087cd2759ec81e7c9be",
+    "webvid\\absolute\\AUDIT.json": "524d4418edda0d8539c444dc2c7c792b59e60d13b8dbc81bd125f524eeaf2796",
+    "webvid\\absolute\\REPORT.zh-CN.md": "973fb33aa25d76e610d3a42444f3e549125c4ed78e78ff9674f54cc31e556a5d",
+    "webvid\\family\\SUMMARY.json": "c2f67f7cf4b2df1b166d0528f4e3e94faa19bae3e79ce1c41d939a84680a1635",
+    "webvid\\family\\AUDIT.json": "b1ee7f1f55e2c309abe99a24df493029889377e341560ea00cc5f447e6874b23",
+    "webvid\\family\\REPORT.zh-CN.md": "40763e828807d12a2dee1ed417276620cf57c0eeedbb7961ac281335265fa087"
+  },
+  "aggregates": [
+    {
+      "dataset": "laion",
+      "kind": "absolute",
+      "parameter": 10240,
+      "policy": "C",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.38708333333334,
+      "severe_by_graph": [
+        35,
+        33,
+        31
+      ],
+      "mean_time_ms": 5.531378156666667,
+      "graph_p99_min_ms": 6.809325139999999,
+      "graph_p99_max_ms": 6.84757378
+    },
+    {
+      "dataset": "laion",
+      "kind": "absolute",
+      "parameter": 10240,
+      "policy": "F",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.2525,
+      "severe_by_graph": [
+        33,
+        33,
+        35
+      ],
+      "mean_time_ms": 5.609055875,
+      "graph_p99_min_ms": 6.80044269,
+      "graph_p99_max_ms": 6.88496767
+    },
+    {
+      "dataset": "laion",
+      "kind": "absolute",
+      "parameter": 10240,
+      "policy": "FANNG",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.3875,
+      "severe_by_graph": [
+        35,
+        32,
+        32
+      ],
+      "mean_time_ms": 9.866855309166667,
+      "graph_p99_min_ms": 13.483476329999998,
+      "graph_p99_max_ms": 13.784011150000001
+    },
+    {
+      "dataset": "webvid",
+      "kind": "absolute",
+      "parameter": 10240,
+      "policy": "C",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.27375,
+      "severe_by_graph": [
+        20,
+        25,
+        18
+      ],
+      "mean_time_ms": 5.6032850241666665,
+      "graph_p99_min_ms": 6.889516990000001,
+      "graph_p99_max_ms": 6.942532770000001
+    },
+    {
+      "dataset": "webvid",
+      "kind": "absolute",
+      "parameter": 10240,
+      "policy": "F",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.19958333333334,
+      "severe_by_graph": [
+        21,
+        20,
+        19
+      ],
+      "mean_time_ms": 5.66704112,
+      "graph_p99_min_ms": 6.80303287,
+      "graph_p99_max_ms": 6.8208464
+    },
+    {
+      "dataset": "webvid",
+      "kind": "absolute",
+      "parameter": 10240,
+      "policy": "FANNG",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.27708333333334,
+      "severe_by_graph": [
+        20,
+        24,
+        18
+      ],
+      "mean_time_ms": 10.025064842083333,
+      "graph_p99_min_ms": 13.348581249999999,
+      "graph_p99_max_ms": 13.421138559999997
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "C",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.20166666666667,
+      "severe_by_graph": [
+        37,
+        36,
+        35
+      ],
+      "mean_time_ms": 5.3719474475,
+      "graph_p99_min_ms": 6.7204451700000005,
+      "graph_p99_max_ms": 6.82367689
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "FANNG",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.20375,
+      "severe_by_graph": [
+        37,
+        35,
+        36
+      ],
+      "mean_time_ms": 9.340665995416668,
+      "graph_p99_min_ms": 13.05075336,
+      "graph_p99_max_ms": 13.06367465
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "F",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.02291666666667,
+      "severe_by_graph": [
+        37,
+        39,
+        37
+      ],
+      "mean_time_ms": 5.434311727083333,
+      "graph_p99_min_ms": 6.64733331,
+      "graph_p99_max_ms": 6.737165289999999
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "SCORE",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 94.8825,
+      "severe_by_graph": [
+        40,
+        38,
+        45
+      ],
+      "mean_time_ms": 5.402076882083334,
+      "graph_p99_min_ms": 6.59064416,
+      "graph_p99_max_ms": 6.71814578
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "DIVERSE",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 94.85083333333333,
+      "severe_by_graph": [
+        41,
+        36,
+        44
+      ],
+      "mean_time_ms": 5.46132055875,
+      "graph_p99_min_ms": 6.670207909999999,
+      "graph_p99_max_ms": 6.70612169
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "KEEP",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 94.85,
+      "severe_by_graph": [
+        41,
+        36,
+        44
+      ],
+      "mean_time_ms": 5.464418225833333,
+      "graph_p99_min_ms": 6.668847179999999,
+      "graph_p99_max_ms": 6.6987831
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "E64_RAW",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 94.7975,
+      "severe_by_graph": [
+        42,
+        35,
+        45
+      ],
+      "mean_time_ms": 5.500047720416667,
+      "graph_p99_min_ms": 6.679256919999999,
+      "graph_p99_max_ms": 6.68487012
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "C",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.13833333333334,
+      "severe_by_graph": [
+        24,
+        27,
+        23
+      ],
+      "mean_time_ms": 5.438296614583334,
+      "graph_p99_min_ms": 6.71111059,
+      "graph_p99_max_ms": 6.7534971299999995
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "FANNG",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.14333333333333,
+      "severe_by_graph": [
+        24,
+        26,
+        23
+      ],
+      "mean_time_ms": 9.546323307083334,
+      "graph_p99_min_ms": 12.80604002,
+      "graph_p99_max_ms": 12.9307793
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "F",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.01875,
+      "severe_by_graph": [
+        23,
+        21,
+        23
+      ],
+      "mean_time_ms": 5.496289977916667,
+      "graph_p99_min_ms": 6.57526809,
+      "graph_p99_max_ms": 6.63719947
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "SCORE",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 96.89833333333334,
+      "severe_by_graph": [
+        24,
+        25,
+        21
+      ],
+      "mean_time_ms": 5.430123117916667,
+      "graph_p99_min_ms": 6.4790836899999995,
+      "graph_p99_max_ms": 6.50775651
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "DIVERSE",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 96.89375,
+      "severe_by_graph": [
+        24,
+        22,
+        19
+      ],
+      "mean_time_ms": 5.480446835,
+      "graph_p99_min_ms": 6.49897393,
+      "graph_p99_max_ms": 6.51483323
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "KEEP",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 96.89333333333333,
+      "severe_by_graph": [
+        24,
+        22,
+        19
+      ],
+      "mean_time_ms": 5.492837575,
+      "graph_p99_min_ms": 6.49745268,
+      "graph_p99_max_ms": 6.5646005999999995
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 3200,
+      "policy": "E64_RAW",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 96.84083333333334,
+      "severe_by_graph": [
+        24,
+        22,
+        19
+      ],
+      "mean_time_ms": 5.52914871375,
+      "graph_p99_min_ms": 6.5069278,
+      "graph_p99_max_ms": 6.523630089999999
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "C",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 96.01791666666666,
+      "severe_by_graph": [
+        25,
+        18,
+        23
+      ],
+      "mean_time_ms": 7.238566495,
+      "graph_p99_min_ms": 8.968908449999999,
+      "graph_p99_max_ms": 9.012937729999999
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "FANNG",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 96.01541666666667,
+      "severe_by_graph": [
+        25,
+        18,
+        24
+      ],
+      "mean_time_ms": 12.835420712916667,
+      "graph_p99_min_ms": 17.80820035,
+      "graph_p99_max_ms": 18.01040951
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "F",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.91708333333332,
+      "severe_by_graph": [
+        25,
+        18,
+        23
+      ],
+      "mean_time_ms": 7.307305876666667,
+      "graph_p99_min_ms": 8.92137367,
+      "graph_p99_max_ms": 9.061256239999999
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "SCORE",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.84041666666666,
+      "severe_by_graph": [
+        24,
+        21,
+        24
+      ],
+      "mean_time_ms": 7.291811167916666,
+      "graph_p99_min_ms": 8.83004793,
+      "graph_p99_max_ms": 9.12250789
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "DIVERSE",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.82041666666666,
+      "severe_by_graph": [
+        25,
+        21,
+        25
+      ],
+      "mean_time_ms": 7.341743954583333,
+      "graph_p99_min_ms": 8.97489988,
+      "graph_p99_max_ms": 9.099312399999999
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "KEEP",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.82083333333333,
+      "severe_by_graph": [
+        25,
+        21,
+        25
+      ],
+      "mean_time_ms": 7.34290534375,
+      "graph_p99_min_ms": 8.89481561,
+      "graph_p99_max_ms": 9.07728471
+    },
+    {
+      "dataset": "laion",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "E64_RAW",
+      "graphs": [
+        "Rebuilt-s42",
+        "Rebuilt-s777",
+        "Rebuilt-s1234"
+      ],
+      "mean_recall_percent": 95.78125,
+      "severe_by_graph": [
+        27,
+        21,
+        26
+      ],
+      "mean_time_ms": 7.385360899166667,
+      "graph_p99_min_ms": 8.93759843,
+      "graph_p99_max_ms": 9.11754778
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "C",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.70041666666667,
+      "severe_by_graph": [
+        16,
+        15,
+        12
+      ],
+      "mean_time_ms": 7.3519913924999996,
+      "graph_p99_min_ms": 8.98920566,
+      "graph_p99_max_ms": 9.05685937
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "FANNG",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.70125,
+      "severe_by_graph": [
+        16,
+        15,
+        12
+      ],
+      "mean_time_ms": 13.202866706666667,
+      "graph_p99_min_ms": 17.21578591,
+      "graph_p99_max_ms": 17.258841649999997
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "F",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.67708333333334,
+      "severe_by_graph": [
+        14,
+        16,
+        11
+      ],
+      "mean_time_ms": 7.426867913333333,
+      "graph_p99_min_ms": 9.01794275,
+      "graph_p99_max_ms": 9.08472682
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "SCORE",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.615,
+      "severe_by_graph": [
+        15,
+        17,
+        12
+      ],
+      "mean_time_ms": 7.355077029583334,
+      "graph_p99_min_ms": 8.92583477,
+      "graph_p99_max_ms": 8.969261340000001
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "DIVERSE",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.615,
+      "severe_by_graph": [
+        14,
+        17,
+        11
+      ],
+      "mean_time_ms": 7.399262645,
+      "graph_p99_min_ms": 8.947016119999999,
+      "graph_p99_max_ms": 9.004965200000001
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "KEEP",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.615,
+      "severe_by_graph": [
+        14,
+        17,
+        11
+      ],
+      "mean_time_ms": 7.414912823333333,
+      "graph_p99_min_ms": 8.978439269999999,
+      "graph_p99_max_ms": 9.023972070000001
+    },
+    {
+      "dataset": "webvid",
+      "kind": "family",
+      "parameter": 6400,
+      "policy": "E64_RAW",
+      "graphs": [
+        "WebVid-s42",
+        "WebVid-s777",
+        "WebVid-s1234"
+      ],
+      "mean_recall_percent": 97.59375,
+      "severe_by_graph": [
+        14,
+        17,
+        11
+      ],
+      "mean_time_ms": 7.451337635,
+      "graph_p99_min_ms": 8.96217098,
+      "graph_p99_max_ms": 9.07220578
+    }
+  ]
+}

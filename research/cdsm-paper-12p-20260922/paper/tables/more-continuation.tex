@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Allowing C 10\% more work: C at 11,264 versus F at 10,240 evaluations, each on 8,000 queries. Both points come from the earlier native timing wave. These descriptive points were identified retrospectively in its measured grid.}
+\label{tab:more}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Graph & Recall C / F (\%) & Severe C / F & QPS C / F & F QPS gain \\
+\midrule
+Faiss M32 & 99.23125 / 99.35125 & 27 / 9 & 250.83 / 269.64 & +7.50\% \\
+Imported 42 & 98.79500 / 98.84125 & 34 / 22 & 235.54 / 255.10 & +8.30\% \\
+Imported 777 & 98.71250 / 98.91500 & 39 / 14 & 236.54 / 255.44 & +7.99\% \\
+Imported 1234 & 98.66125 / 98.81000 & 43 / 20 & 236.20 / 254.48 & +7.74\% \\
+\bottomrule
+\end{tabular}
+\end{table*}

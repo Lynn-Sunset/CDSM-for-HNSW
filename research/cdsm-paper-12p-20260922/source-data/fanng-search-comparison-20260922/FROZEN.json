@@ -1,0 +1,30 @@
+{
+  "sources": {
+    "research/fanng-search-comparison-20260922/bench.cpp": "841341d73675905f7e4c282a24a937f0f0952dfc74f25963b2b8bf4004ffbea4",
+    "research/fanng-search-comparison-20260922/fanng_search.h": "f588ec7b51ae589762878008f94904314f387bb43e29c38db226705ff94b2652",
+    "research/fanng-search-comparison-20260922/fanng_check.cpp": "af697a417a7d2cec4b4b49d4f7891c2d6a82fc02ea9a092618a2ace6f04af1b3",
+    "research/fanng-search-comparison-20260922/compile.sh": "6a0b2dc9520c1262d92613a959ea07adc5697b88ab40acd87fa3c66ca16cf1b8",
+    "research/fanng-search-comparison-20260922/run_server.py": "48f0e62159fe8e98ea6b3fd49419838ab5e251324bdfb30bbc3a7b95c14aa7a8",
+    "research/fanng-search-comparison-20260922/preflight.py": "11e1f5fbf6effc108756c2f4ba44658b08d01fee84a8c2b98246ff95c8f703d5",
+    "research/fanng-search-comparison-20260922/analyze.py": "9c665958bad1e5cafd37327066420de6667f6f01c2ec87351b667c223f2f1f57",
+    "research/fanng-search-comparison-20260922/PLAN.json": "a8c7d72fdeb7ac43a13b2432c42ba0a3268cf0f27ad7b37c8e35a6e9c4de5379",
+    "research/fanng-search-comparison-20260922/PROTOCOL.zh-CN.md": "5841c5019ba3928440887f5b5b4f8602e228a7a4e44b013cbf8d8a5761233997",
+    "research/fanng-search-comparison-20260922/SEMANTICS.md": "e517ee4e0bfa73d3375cba6ee4bbe87c87c6e341c13ec5ba11090a79010a53d1",
+    "research/fanng-search-comparison-20260922/runtime/fanng_bench": "ee5b521810db007ae20fd2f85c9374f40f3e63573d23f0567ea77e43266cfaf7",
+    "research/fanng-search-comparison-20260922/runtime/check_fanng": "1cbe228cc78040a1fa1b12e812a3f62fc16fce6134d135527b06104e2e8c9eb8",
+    "research/fanng-search-comparison-20260922/queries/evaluation.txt": "a856267adc260991a5b85aa703daf01977e335cafeafcb4bc617c009d2c75604",
+    "research/fanng-search-comparison-20260922/queries/timing-evaluation.txt": "11e5c7b906073bc7c2ae3ae6ab52e68e3bf03fd71fb9554d54457cb0a4f7fe10",
+    "research/fanng-search-comparison-20260922/queries/engineering.txt": "4bf193805b7b08fcfdc781f8693189bb1ab31652a710ff12fb158c67cd9a6b33",
+    "research/hnsw-adaptive-baselines-20260920/resource_runner.py": "d5f3770b8023d682d934a1d269719c234e3feed14575f00fda65c09a82f5bb32",
+    "research/fannbench-t2i-20260919/paid.h": "f6cd012686b5b89d28a61490cb2a800591799deac22b9289ec363acd6b17063f",
+    "research/fannbench-t2i-20260919/bench_io.h": "77a4e872f46fe124432bc80cf73a7aa28d7b96fb632f76d4b246355fd34dc0b1",
+    "research/fannbench-t2i-20260919/reference/cdsm.h": "657bc48d41f16171ed1a470484f987a5210b44419df10849942ff3ba18aeac3f",
+    "research/fannbench-t2i-20260919/reference/common.h": "86f25ac1aa3a2b152ac1c1c0503150d493513bcc11d63bcd09ebdb269387167a"
+  },
+  "prepared": {
+    "Faiss-M32": "1800b7a1ef0d45eda18013e8426ffeca807016088218fef3a76d70cd0930bb83",
+    "Imported-s42": "2d31c3e7b73e72e4bf292d7c863ca8ec4c56ee839d681f5b0ea81559d6d7eec9",
+    "Imported-s777": "933d2b8250869cf219862e5119137b8c0826650ad8a6f1ef2292655392aaf319",
+    "Imported-s1234": "6571b110c830df74f5c9ce531bf2194b28139f83acc9951e32439eb45d973585"
+  }
+}

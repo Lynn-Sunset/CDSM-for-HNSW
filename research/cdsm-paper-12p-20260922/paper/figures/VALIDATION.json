@@ -1,0 +1,104 @@
+{
+  "visual_inspection": "All four vector figures inspected in the final 12-page manuscript; no clipping or overlap.",
+  "data": "48 latest-wave fixed-budget cells and 73 historical native cells; native zoom and full range use identical CSV values, without Pareto filtering.",
+  "figures": [
+    {
+      "file": "method-feedback.pdf",
+      "pages": 1,
+      "width_mm": 173.99987777777778,
+      "height_mm": 57.000069444444435,
+      "fonts": {
+        "/BKPFPI+CMBX8": true,
+        "/YGCMGM+CMR8": true,
+        "/PDQGUV+CMMI8": true,
+        "/WUNUSQ+CMSY8": true,
+        "/CRPSRL+CMEX8": true,
+        "/DBSJUW+CMMI6": true
+      },
+      "raster_images": 0,
+      "sha256": "a6962835c7afca08988bbadf207d391013f82e5cc49052a4d3fb65f05a2d05a1"
+    },
+    {
+      "file": "t2i-budget.pdf",
+      "pages": 1,
+      "width_mm": 173.99987777777778,
+      "height_mm": 82.00001944444445,
+      "fonts": {
+        "/VFWDFB+CMR8": true,
+        "/MNUQIJ+CMMI8": true,
+        "/KVFQUZ+CMSY8": true,
+        "/NBSLCY+CMR6": true
+      },
+      "raster_images": 0,
+      "sha256": "654524aff0ad13d4e7095cabf6b64dd1c405e356ac6aa484cdbbcffc6eebfec1"
+    },
+    {
+      "file": "native-tradeoff.pdf",
+      "pages": 1,
+      "width_mm": 173.99987777777778,
+      "height_mm": 83.99991666666666,
+      "fonts": {
+        "/BRVQZL+CMR8": true,
+        "/FJWFBN+CMMI8": true
+      },
+      "raster_images": 0,
+      "sha256": "49910860f4f6e9082cfc780adcd5de583718602a54ff61baacb3437eb20e1252"
+    },
+    {
+      "file": "native-full.pdf",
+      "pages": 1,
+      "width_mm": 173.99987777777778,
+      "height_mm": 82.00001944444445,
+      "fonts": {
+        "/BRVQZL+CMR8": true,
+        "/FJWFBN+CMMI8": true
+      },
+      "raster_images": 0,
+      "sha256": "63b76b87800dc04828fcb70a895e36449c47abb4a696472911aed62ee63b5b9a"
+    }
+  ],
+  "files": {
+    "budget-Faiss-M32-C.csv": "cdf1ca89058d3c15cf50f639b5f7ff9e167cf0dba40eddb69bf989bba8e2edc1",
+    "budget-Faiss-M32-F.csv": "94ec4fe0df8151251d1ce57b49518e00c4e169c7556929b371e6167885c35495",
+    "budget-Faiss-M32-FRONTIER.csv": "c579dc2e9c8a23767ad04be5930fbe14ba702c8911e3cf9663878ebc284f4790",
+    "budget-Faiss-M32-MEP_DEV.csv": "6b769b7d5dc066275f11ee016373f2b07558cdb663ffb87deefc3c7be166a7f5",
+    "budget-Imported-s1234-C.csv": "1543b5dad5d7261bdbbdc0cea402b1409e9c3ee84d55749102540bf1a42bd9c4",
+    "budget-Imported-s1234-F.csv": "f0755c1fd670a55b034f88110d8ba2270c7f7f5e37b025f202fa8a893f337761",
+    "budget-Imported-s1234-FRONTIER.csv": "ff00abbb039ec56aca81397d607953f32d9049fd8e823935b04f64dd8279a1cc",
+    "budget-Imported-s1234-MEP_DEV.csv": "70a5c42c37023d44f26e3bb4aa3c76e99e730fa929905276e28426b8a4d16d4f",
+    "budget-Imported-s42-C.csv": "76c39d31b751b64ce344fea8693d6ac8644200513bc02eaec97b3b764393d187",
+    "budget-Imported-s42-F.csv": "7d65812875b0d09d5d68f1dea10b49e4e97dbb9cd02f44f9256b05369898e356",
+    "budget-Imported-s42-FRONTIER.csv": "c739618a5560f850a37fcac5a762506f534a269c955869a4098a16e31ae70e0f",
+    "budget-Imported-s42-MEP_DEV.csv": "de0df469368b150711cc40281d8c88e69425fe3803191df3d234ae4f01931b27",
+    "budget-Imported-s777-C.csv": "3fee9354fe61e85e5d027ff7ee569812846d3e2e1c0fc6b92e3fbb201e47862b",
+    "budget-Imported-s777-F.csv": "893cb32ef74f2591182b18ac76f8eb0555ac54fb371a242959b723cd48326580",
+    "budget-Imported-s777-FRONTIER.csv": "8f25d87e8c2942891747014f433a78490361f5bd87b39d43f413bb765893cad5",
+    "budget-Imported-s777-MEP_DEV.csv": "e9eb7eeac6f25db956d79cbcd3c6ace153f8a37594d4867b5733aa848d9c8877",
+    "generate_figures.py": "ccb827d6c20dcaa7d1e2ca24af1b25269a70215a56ec71839e3b193d1f99759b",
+    "method-feedback.pdf": "a6962835c7afca08988bbadf207d391013f82e5cc49052a4d3fb65f05a2d05a1",
+    "method-feedback.preview.png": "52f4696de379805373096c93183ac3c67b2dc134af2f3386cd45d8cac085ea7e",
+    "method-feedback.tex": "f21382e2000ce292c0e4dea6190456abf03d8c9fd26c6b2ac15171e974e237d9",
+    "native-Faiss-M32-ABS.csv": "d950734f9064b67e11319121c15bd3fae8261dfc12f3050469bf8e4b2687b1c5",
+    "native-Faiss-M32-ABS_CAP.csv": "b66e626aaafbfd1d5904c4becc63da76c45c55a32bd4a1910dcf2a784c7877c6",
+    "native-Faiss-M32-C.csv": "df79a47a18d1c40113f838a98f410df58020355b21682f506215e51ddba37a2a",
+    "native-Faiss-M32-F.csv": "b515714f93fe0839b132f35abb00cb6ce90c9436e6a9e4ce22fc64e10199665d",
+    "native-Faiss-M32-NATIVE.csv": "6045d1883f93b1bd011f0166464b361a69f9a1119bc2b395ab443323887ed0df",
+    "native-full.pdf": "63b76b87800dc04828fcb70a895e36449c47abb4a696472911aed62ee63b5b9a",
+    "native-full.preview.png": "6fc631dba6845c4ca4c56bb6ceba16fe60ed83e285cebf8fae16b265a01d20de",
+    "native-full.tex": "921992ff3c0a304717bd7ccd7833e8318939bc45459046b326826f544aea286d",
+    "native-Imported-s777-ABS.csv": "105c1506df918ee27de7915cf6b53d683a59244db58b141229bb52439ac0fa26",
+    "native-Imported-s777-ABS_CAP.csv": "b408af44e6a77758094d2cd39f8b8aab8e4b96dda5208aece7e25414681ca620",
+    "native-Imported-s777-C.csv": "d781430fba0e0572506b90dc9c354322560b438b1d65f6156a8f5c17c061c58a",
+    "native-Imported-s777-F.csv": "86ee65a8983289ad170e85490a2d4318c529f98e1950f485ee73904bf5e75183",
+    "native-Imported-s777-NATIVE.csv": "8c0b0b690d775f563a58198d81408e56d36059d212263c978af1d7ff6e878ab2",
+    "native-tradeoff-data.csv": "8aba2b980818a41664ff6631aea5724df0b5a548c7feb1e2ea6ec820d1ce7274",
+    "native-tradeoff.pdf": "49910860f4f6e9082cfc780adcd5de583718602a54ff61baacb3437eb20e1252",
+    "native-tradeoff.preview.png": "bce972eed78806f51c64f271ba00fbdd91008b55edf7f525d22b4e3d1266be07",
+    "native-tradeoff.tex": "7e8ae194d8a421920b62276b75646876e8445719237ab0f4001bbab4aff6aa09",
+    "preamble.tex": "9c4518a309cae111ef4170030e58a75ceb7902880c228516ea7e48771eefb55e",
+    "t2i-budget-data.csv": "922636aaf21fb0eddca8afa26b1f4eab38ba211977210b8f596692d4f9a438e9",
+    "t2i-budget.pdf": "654524aff0ad13d4e7095cabf6b64dd1c405e356ac6aa484cdbbcffc6eebfec1",
+    "t2i-budget.preview.png": "58a0943996b9f22115690d21d1d09f3ac47c54b5bc40178578ca451d016f61b3",
+    "t2i-budget.tex": "2987dab6046b7f840e41a56337f7ddb07474e19ce009daca6c2b1329700a64d4"
+  }
+}

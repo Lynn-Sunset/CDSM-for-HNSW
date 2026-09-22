@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "engineering_rows": 448,
+  "policies": [
+    "C",
+    "FANNG",
+    "F",
+    "SCORE",
+    "DIVERSE",
+    "KEEP",
+    "E64_RAW"
+  ],
+  "exact_per_query_physical_budget": true,
+  "source_parity": "family-parity process logs and independent FANNG reference"
+}

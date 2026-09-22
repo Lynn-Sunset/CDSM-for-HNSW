@@ -1,0 +1,32 @@
+\subsection{Workspaces and reproducibility}\label{app:repro}
+The C++ executor allocates per-node score, query stamp, upper-descent stamp, adjacency-position, adjacency-end, and flag arrays. With 4-byte floats and integers and 1-byte flags, their payload is $21N$ bytes: 21.0\,MB (20.03\,MiB) for a million nodes. C and F instantiate the same workspace, so this is \emph{not} F's incremental memory over C. Dynamic heaps, adjacency storage, touched lists, vector capacity, objects, and the index are additional. F's local queues create dynamic work; static accounting does not establish peak RSS or concurrent-query costs. The FANNG sorted adjacency view is also separate preprocessing and storage, not charged as query distances.
+
+Input hashes bind the vectors, graph, canonical-ID map, entrance table, ground truth, query manifest, and budget manifest. The frozen source and binaries precede each evaluation. New comparisons audit every actual score count and repeated output, with engineering checks against archived execution paths. Quality runs and formal timing are separated. A global experiment lock and serialized timing avoid concurrent timing by this project; these are controlled process measurements, not a production-service workload.
+
+The LAION subset uses image embeddings from the first LAION-400M embedding shard and text queries from another shard~\cite{laionembeddings}. WebVid uses a fixed CLIP-WebVid video-embedding subset with separately encoded caption queries~\cite{clipwebvid,clip}. Exact subsets, query provenance, and executable versions are retained in the source manifests. No benefit is inferred simply from either dataset being cross-modal. The repeated transfer cohorts were already exposed in the preceding dataset evaluations.
+
+\subsection{Secondary budgets and statistical scope}\label{app:secondary}
+Tables~\ref{tab:secondary} and~\ref{tab:transferfamily} retain all seven methods at the secondary allowance and the transfer primary allowance. Each severe-count component is out of 8,000 queries; graph order is Faiss M32 then seeds 42/777/1234 for T2I, and seeds 42/777/1234 for transfer. Averages across graphs are descriptive because query identities repeat. The source package retains every primary and secondary per-graph metric and timing round; none is filtered to a Pareto frontier before presentation.
+
+The earlier C/F server study used 28 comparisons; FANNG used four and the extension study twenty. Each transfer dataset separately used three fixed-cap and fifteen family tests, with none passing Holm. The latest twelve-test MEP/FRONTIER family remains separate. These families do not provide a pooled cross-dataset guarantee. The 7,999-query F/C contrast is descriptive because its primary test concerned a conditional policy; the 1,600-query MEP intervals are unadjusted. Absence of significance does not establish equality.
+
+\paragraph{Historical parameter evidence.}
+Table~\ref{tab:depthhistory} explains why 400 is a retained engineering compromise. With four 100-evaluation routes, 2,161 of 24,000 route attempts exhaust their allowance before bottom seeding; none does so at 400. Increasing 400 to 1,600 raises final mean recall by only 0.01 percentage points. This retrospective Java evidence is not a selection protocol for the current C++ experiment. It also does not isolate a pure entrance-count advantage: equal total work does not equalize actual scout expenditure.
+
+\input{tables/depth-history}
+
+\subsection{Complete native operating range}\label{app:nativegrid}
+
+The native choices are ef 896 on Faiss M32 and ef 1,024 on the imported
+graphs; F selects cap 10,240. Restricted ABS selects $\gamma=0.058$;
+ABS\_CAP selects $\gamma=0.1$, cap 12,800. The ABS restriction is
+retrospective and old tests for unrestricted selections are not reused.
+Figure~\ref{fig:nativefull} includes the measured grid, while
+Table~\ref{tab:native} reports the development-selected comparison.
+
+The artifact rebuilds tables, vector figures, and this manuscript from
+bundled frozen summaries and the retained per-event hit records used for
+threshold analysis. Rebuilding the paper does not rerun ANN search.
+Full experimental reproduction additionally requires the indexed vectors,
+query sets, ground truth, graph files, binaries, and execution environment
+identified in the manifests; these large inputs are not all bundled.

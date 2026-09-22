@@ -1,0 +1,34 @@
+% Adapted from tikz-scientific-figures/assets/preamble.tex.
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{calc,plotmarks}
+% Okabe--Ito palette, with shapes and dash patterns for grayscale reading.
+\definecolor{cbBlue}{RGB}{0,114,178}
+\definecolor{cbGreen}{RGB}{0,158,115}
+\definecolor{cbVermillion}{RGB}{213,94,0}
+\definecolor{cbPurple}{RGB}{204,121,167}
+\definecolor{cbBlack}{RGB}{60,60,60}
+\tikzset{
+ cstyle/.style={cbBlack,dashed,line width=.65pt,mark=square,mark size=1.65pt,mark options={solid,fill=white}},
+ fstyle/.style={cbVermillion,line width=.95pt,mark=*,mark size=1.8pt},
+ fanstyle/.style={cbBlue,densely dotted,line width=.85pt,mark=diamond,mark size=2pt,mark options={solid,fill=white}},
+ mstyle/.style={cbBlue,densely dotted,line width=.85pt,mark=diamond,mark size=2pt,mark options={solid,fill=white}},
+ rstyle/.style={cbPurple,dashdotted,line width=.75pt,mark=triangle,mark size=2pt,mark options={solid,fill=white}},
+ nstyle/.style={cbBlue,line width=.7pt,mark=triangle,mark size=2pt,mark options={solid,fill=white}},
+ astyle/.style={cbGreen,dashdotted,line width=.7pt,mark=diamond*,mark size=1.75pt},
+ acstyle/.style={cbPurple,only marks,mark=x,mark size=2.5pt,line width=.85pt}
+}
+\pgfplotsset{paperaxis/.style={
+ scale only axis,font=\fontsize{8}{9.2}\selectfont,
+ tick label style={font=\fontsize{8}{9.2}\selectfont},
+ label style={font=\fontsize{8}{9.2}\selectfont},
+ y label style={at={(axis description cs:-.28,.5)},xshift=2.5mm},
+ line width=.45pt,tick style={line width=.4pt},tick align=outside,
+ grid=major,grid style={black!13,line width=.25pt},
+ scaled ticks=false,xticklabel style={/pgf/number format/1000 sep={}},
+ yticklabel style={/pgf/number format/1000 sep={}},
+ enlarge x limits=false,enlarge y limits=false,
+ axis on top=false,clip=true
+}}

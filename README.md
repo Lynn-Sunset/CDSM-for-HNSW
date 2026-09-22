@@ -1,40 +1,114 @@
-Special thanks to 上海深至信息科技有限公司，especially engineer Chen Jiuxu.
-# Code artifact for "The Gate Is the Gap: Budget Recovery for Gated HNSW Engines via CDSM"
+# CDSM: Budgeted Multi-Entry Search for Reducing Severe Recall Failures
 
-Structured packaging of all code the paper relies on. Data (out/*.csv, indexes) and
-figures are outputs, not packaged; every paper number traces to these runners.
+CDSM gives alternative entrances bounded local searches (**scouts**), then
+returns their unfinished state to the main frontier. This can change which nodes
+the main search expands next. Scouts and the main search share distance caches,
+visited state, adjacency-scan progress, and one query budget. Entrance scoring
+and upper-layer descent are charged.
 
-## Layout
-- java/            bytecode-faithful 9.12 port + all phase runners (compile against lucene-core-9.12.0)
-- faiss/           faiss baselines and the faiss transplant (negative result 1)
-- data_prep/       corpus ingestion / LAION image-embedding recompute (provenance, S2.2)
-- figs_gen/        figure generators (Figs 1-4, Fig 3 panels)
-- run_scripts/     PowerShell drivers used for the reported sweeps
-- analysis/        ground-truth / sanity checkers
-- evidence/        javap -c disassembly snapshots: bytecode_9_12 (S2.1 port verification),
-                   bytecode_10_5 (S6.9 ES 9.5.2 / Lucene 10.5.1 verification)
+This repository contains the current 12-page manuscript, frozen evidence and
+server experiment sources, alongside the earlier Java/Faiss artifact. Authors
+and publication metadata remain blank; the manuscript is a draft.
 
-## Paper -> code map
-| Paper item | Code |
+## Current manuscript and results — 2026-09-23
+
+- [Manuscript PDF: 12 pages including appendix and references](research/cdsm-paper-12p-20260922/output/pdf/cdsm-paper.pdf)
+- [Editable manuscript source archive](research/cdsm-paper-12p-20260922/output/cdsm-paper-source.zip)
+- [Latest revision report, definitions and comparisons (Chinese)](research/cdsm-paper-12p-20260922/R2-REVISION-RESPONSE.zh-CN.md)
+- [Paper build and evidence guide (Chinese)](research/cdsm-paper-12p-20260922/README.zh-CN.md)
+- [Server protocol](research/cdsm-paper-12p-20260922/source-data/cdsm-review-strengthening-20260922/PROTOCOL.zh-CN.md) and [runbook](research/cdsm-paper-12p-20260922/source-data/cdsm-review-strengthening-20260922/RUNBOOK.zh-CN.md)
+- [Results](research/cdsm-paper-12p-20260922/source-data/cdsm-review-strengthening-20260922/SUMMARY.json), [server audit](research/cdsm-paper-12p-20260922/source-data/cdsm-review-strengthening-20260922/AUDIT.json), and [local verification](research/cdsm-paper-12p-20260922/source-data/cdsm-review-strengthening-20260922/LOCAL-VERIFICATION.json)
+
+The latest supplement adds shared-queue multi-entry search with 1/4/8/16
+entrances (**MEP**), development-selected MEP, scouts rooted in the existing main
+frontier (**FRONTIER**), and neighboring scout quotas. Original CDSM **F** remains
+frozen at up to four scouts with a 400-distance quota each.
+
+The following ranges cover four fixed T2I graphs: Faiss M32 and imported Lucene
+M16 graphs with seeds 42, 777, and 1234. Each graph uses the same 8,000 evaluation
+queries and **exactly 10,240 actual distance computations per query** in this
+comparison. **C** spends the remaining budget continuing the original search in
+the same executor; it is not the separate native Faiss baseline.
+
+| Policy versus C | Mean Recall@10 gain, percentage points | Relative reduction in severe failures | QPS change |
+|---|---:|---:|---:|
+| F200: up to 200 distances per scout | +0.188 to +0.309 | 41% to 66% | -0.77% to -0.07% |
+| Original F: up to 400 distances per scout | +0.214 to +0.398 | 44% to 72% | -3.28% to -2.58% |
+
+A severe failure retrieves only 0–4 of the true top-10 neighbors. The 1.5% QPS
+tolerance is a practical reporting convention, not a statistical equivalence
+test. QPS is the inverse of mean per-query median latency over five timed rounds
+on 800 fixed evaluation queries. F200 is a predeclared depth check, not a
+replacement selected for the frozen original F.
+
+At the primary budget, F has higher mean recall than all four MEP sizes on all
+four graphs. Against development-selected MEP, F costs 3.70%–7.28% QPS; the severe
+failure difference survives the prespecified Holm correction on only one graph.
+MEP-16 has fewer severe failures than F on two graphs. FRONTIER is a custom
+control, not native iQAN, and its candidate-set construction affects its timing.
+The full report retains these tradeoffs and the other budget points.
+
+The supplement contains 92,000 development, 736,000 evaluation, and 368,000 timing
+records. These are repeated searches, not independent query counts. Development
+and evaluation identities are disjoint, but both were used in earlier work: this
+is a frozen-policy comparison, not fresh-query confirmation. The manuscript also
+retains the F → SCORE → DIVERSE → KEEP → E64_RAW series and negative transfer on
+LAION and WebVid. It does not claim universal gains across datasets or budgets.
+
+## Repository layout
+
+| Path | Contents |
 |---|---|
-| S2.1 bytecode-faithful port (two predicates, score-before-gate) | java/InstrumentedSearch.java, java/InstrumentedSimSearch.java |
-| S2.1 port == 9.12 bytecode | evidence/bytecode_9_12/HnswGraphSearcher.disasm.txt, NeighborQueue.disasm.txt |
-| S2.4/S3.3 kernel microbenchmark (Panama vs scalar vs faiss) | java/LuceneKernelBench.java |
-| S3.1/S6.3/S6.7 GIST port sweeps, CDSM family configs | java/Phase0Main.java, java/PhaseGISTLatency.java, java/PhaseGISTEndToEnd.java |
-| S3.2/S6.1/S6.2 T2I real-engine end-to-end (gate intact vs searcher-patch deleted) | java/PhaseT2IEndToEnd.java, java/PhaseT2ILatency.java |
-| S6.1/S6.2 LAION-CLIP real engine | java/PhaseLAIONEndToEnd.java, java/PhaseLAIONIndex.java |
-| S6.4 SIFT + segmented production shape | java/PhaseSIFT.java, java/PhaseSIFTLatency.java, java/PhaseSIFTSegLatency.java, faiss/faiss-seg-sift*.py |
-| S6.5 tail rescue | java/PhaseGISTLatency.java (catastrophic slicing), faiss/faiss-seg-sift2.py |
-| S6.7(1) faiss transplant (multi-entry on gate-free engine) | faiss/faiss-cdsm.py |
-| S6.7(5) eps[] proxy (shared visited + shared budget multi-seed) | java/InstrumentedSearch.java searchTwoSeed() |
-| S4/Fig 3 real-data panels (SIFT q2130 anatomy) | java/PhaseRealVis.java + figs_gen/make-realvis-figs.py |
-| Fig 3 schematic panels | figs_gen/make-theory-figs.py |
-| Figs 1/2/4 and theory data figs | figs_gen/make-figs.py |
-| S5 design-space sweeps (entry forms Lite/Far/Base, marks, budgets) | java/PhaseAEntry.java, java/PhaseAFair.java, java/PhaseAHetero.java, java/PhaseASplit.java, java/Phase1*.java |
-| S6.9 ES 9.5.2 / Lucene 10.5.1 verification | evidence/bytecode_10_5/*.disasm.txt (REST sweep protocol in supplemental) |
-| S2.2 corpora ingestion; LAION provenance (img_emb mislabel recompute) | data_prep/* |
+| `research/cdsm-paper-12p-20260922/paper/` | LaTeX manuscript, bibliography, vector figures, and tables |
+| `research/cdsm-paper-12p-20260922/source-data/` | 110 frozen source/evidence files and provenance |
+| `research/cdsm-paper-12p-20260922/source-data/cdsm-review-strengthening-20260922/` | Latest C++ executor and controls, analysis, query IDs, protocol, selection freeze, results, and audits |
+| `tools/verify_artifact.py` | Standard-library verification of package and evidence hashes |
+| `java/`, `faiss/`, `data_prep/`, `figs_gen/`, `run_scripts/`, `analysis/`, `evidence/` | Preserved earlier artifact; see its [original documentation](docs/legacy-artifact.md) |
 
-## Dependencies
-- Java 17+ with lucene-core 9.12.0 on the classpath (port and runners)
-- Python: faiss-cpu 1.14.3, numpy, pandas, matplotlib, networkx (figs), torch+transformers+PIL (LAION recompute), pylance (LAION shard read)
-See requirements.txt for the Python side.
+## Rebuild the paper and verify the artifact
+
+From the repository root, using Python 3:
+
+```text
+python tools/verify_artifact.py
+```
+
+To build the paper, run PowerShell in `research/cdsm-paper-12p-20260922/`:
+
+```powershell
+.\build.ps1
+# Optional: regenerate tables and figures from the bundled evidence.
+.\build.ps1 -RegenerateAssets -Python python
+```
+
+Building needs `pdflatex`, `bibtex`, and the required LaTeX packages. Figure
+regeneration also needs TikZ/PGFPlots and `standalone`. These commands do not run
+ANN. The delivered PDF and source package retain their original SHA-256
+identities. Git attributes preserve evidence bytes across operating systems.
+
+## Reproduce the server experiments
+
+Start with the [runbook](research/cdsm-paper-12p-20260922/source-data/cdsm-review-strengthening-20260922/RUNBOOK.zh-CN.md).
+The experiment sources archive the measured implementation; they are not a
+self-contained installation. Full replay also needs the listed vectors, queries,
+indexes, ground truth, Faiss library, compiler, Python environment, and historical
+parity-check records. Input identities and paths are in the plan and manifests.
+
+Use a new server directory for replay. The archived `compile.sh` contains the
+original absolute working directory: update that line in the new copy before
+building, then create new freeze records. Do not overwrite the original run or
+treat copied completion receipts as a new run. The common `resource_runner.py`
+dependency is included under the neighboring source-data directory.
+
+Large vectors/indexes and the 222,842,663-byte raw server archive are retained
+separately, not committed to Git. Its [manifest](research/cdsm-paper-12p-20260922/source-data/cdsm-review-strengthening-20260922/SERVER-BUNDLE.json)
+records all 1,818 archived files. Raw archive SHA-256:
+
+```text
+268f08847ce4fec5890d9a19bcb9491fb55f0d4eb3b4026992100565ceacfb4d
+```
+
+The legacy dependencies remain documented in the [earlier artifact README](docs/legacy-artifact.md)
+and `requirements.txt`; they do not alone describe the current C++ environment.
+
+Special thanks to 上海深至信息科技有限公司，especially engineer Chen Jiuxu.

@@ -1,0 +1,62 @@
+% Generated from external CSV files by generate_figures.py.
+\documentclass[border=0pt]{standalone}
+\input{preamble.tex}
+% ===== TUNABLES: physical page, panel geometry, font, limits =====
+\def\figwidth{174mm}
+\def\figheight{84mm}
+\begin{document}
+\begin{tikzpicture}[font=\fontsize{8}{9.2}\selectfont]
+\path[use as bounding box] (0,0) rectangle (\figwidth,\figheight);
+\node[rotate=90,inner sep=0pt] at (2.2mm,60.25mm) {Mean Recall@10 (\%)};
+\begin{axis}[paperaxis,at={(14mm,47.5mm)},anchor=south west,width=74mm,height=25.5mm,xmin=190,xmax=340,xtick={200,250,300},y label style={at={(axis description cs:-.14,.5)},xshift=2.5mm},ymin=98.2,ymax=99.8,ytick={98.2,98.6,99,99.4,99.8},xticklabels=\empty]
+\addplot[cstyle] table[x=qps,y=recall_pct,col sep=comma] {native-Faiss-M32-C.csv};
+\addplot[nstyle] table[x=qps,y=recall_pct,col sep=comma] {native-Faiss-M32-NATIVE.csv};
+\addplot[astyle] table[x=qps,y=recall_pct,col sep=comma] {native-Faiss-M32-ABS.csv};
+\addplot[acstyle] table[x=qps,y=recall_pct,col sep=comma] {native-Faiss-M32-ABS_CAP.csv};
+\addplot[fstyle] table[x=qps,y=recall_pct,col sep=comma] {native-Faiss-M32-F.csv};
+\end{axis}
+\node[anchor=north east,inner sep=1pt] at (87mm,72.5mm) {(a)};
+\node[anchor=south,inner sep=0pt] at (51mm,74.5mm) {Faiss-M32};
+\begin{axis}[paperaxis,at={(95mm,47.5mm)},anchor=south west,width=74mm,height=25.5mm,xmin=190,xmax=340,xtick={200,250,300},y label style={at={(axis description cs:-.14,.5)},xshift=2.5mm},ymin=98.2,ymax=99.8,ytick={98.2,98.6,99,99.4,99.8},xticklabels=\empty,yticklabels=\empty]
+\addplot[cstyle] table[x=qps,y=recall_pct,col sep=comma] {native-Imported-s777-C.csv};
+\addplot[nstyle] table[x=qps,y=recall_pct,col sep=comma] {native-Imported-s777-NATIVE.csv};
+\addplot[astyle] table[x=qps,y=recall_pct,col sep=comma] {native-Imported-s777-ABS.csv};
+\addplot[acstyle] table[x=qps,y=recall_pct,col sep=comma] {native-Imported-s777-ABS_CAP.csv};
+\addplot[fstyle] table[x=qps,y=recall_pct,col sep=comma] {native-Imported-s777-F.csv};
+\end{axis}
+\node[anchor=north east,inner sep=1pt] at (168mm,72.5mm) {(b)};
+\node[anchor=south,inner sep=0pt] at (132mm,74.5mm) {Imported-s777};
+\node[rotate=90,inner sep=0pt] at (2.2mm,27.75mm) {Severe / 8,000};
+\begin{axis}[paperaxis,at={(14mm,15mm)},anchor=south west,width=74mm,height=25.5mm,xmin=190,xmax=340,xtick={200,250,300},y label style={at={(axis description cs:-.14,.5)},xshift=2.5mm},ymin=0,ymax=65,ytick={0,20,40,60}]
+\addplot[cstyle] table[x=qps,y=severe,col sep=comma] {native-Faiss-M32-C.csv};
+\addplot[nstyle] table[x=qps,y=severe,col sep=comma] {native-Faiss-M32-NATIVE.csv};
+\addplot[astyle] table[x=qps,y=severe,col sep=comma] {native-Faiss-M32-ABS.csv};
+\addplot[acstyle] table[x=qps,y=severe,col sep=comma] {native-Faiss-M32-ABS_CAP.csv};
+\addplot[fstyle] table[x=qps,y=severe,col sep=comma] {native-Faiss-M32-F.csv};
+\end{axis}
+\node[anchor=north west,inner sep=1pt] at (15mm,40mm) {(c)};
+\begin{axis}[paperaxis,at={(95mm,15mm)},anchor=south west,width=74mm,height=25.5mm,xmin=190,xmax=340,xtick={200,250,300},y label style={at={(axis description cs:-.14,.5)},xshift=2.5mm},ymin=0,ymax=65,ytick={0,20,40,60},yticklabels=\empty]
+\addplot[cstyle] table[x=qps,y=severe,col sep=comma] {native-Imported-s777-C.csv};
+\addplot[nstyle] table[x=qps,y=severe,col sep=comma] {native-Imported-s777-NATIVE.csv};
+\addplot[astyle] table[x=qps,y=severe,col sep=comma] {native-Imported-s777-ABS.csv};
+\addplot[acstyle] table[x=qps,y=severe,col sep=comma] {native-Imported-s777-ABS_CAP.csv};
+\addplot[fstyle] table[x=qps,y=severe,col sep=comma] {native-Imported-s777-F.csv};
+\end{axis}
+\node[anchor=north west,inner sep=1pt] at (96mm,40mm) {(d)};
+\node[inner sep=0pt] at (92mm,6.4mm) {Throughput (queries/s)};
+\draw[cstyle] (10mm,81.5mm) -- ++(6mm,0) node[pos=.5]{};
+\draw[cstyle,only marks] plot coordinates {(13mm,81.5mm)};
+\node[anchor=west,inner sep=0pt] at (17.5mm,81.5mm) {C};
+\draw[fstyle] (29mm,81.5mm) -- ++(6mm,0) node[pos=.5]{};
+\draw[fstyle,only marks] plot coordinates {(32mm,81.5mm)};
+\node[anchor=west,inner sep=0pt] at (36.5mm,81.5mm) {CDSM-F};
+\draw[nstyle] (67mm,81.5mm) -- ++(6mm,0) node[pos=.5]{};
+\draw[nstyle,only marks] plot coordinates {(70mm,81.5mm)};
+\node[anchor=west,inner sep=0pt] at (74.5mm,81.5mm) {Native HNSW};
+\draw[astyle] (95mm,81.5mm) -- ++(6mm,0) node[pos=.5]{};
+\draw[astyle,only marks] plot coordinates {(98mm,81.5mm)};
+\node[anchor=west,inner sep=0pt] at (102.5mm,81.5mm) {ABS ($\gamma<0.06$)};
+\draw[acstyle,only marks] plot coordinates {(143mm,81.5mm)};
+\node[anchor=west,inner sep=0pt] at (147.5mm,81.5mm) {ABS with cap};
+\end{tikzpicture}
+\end{document}

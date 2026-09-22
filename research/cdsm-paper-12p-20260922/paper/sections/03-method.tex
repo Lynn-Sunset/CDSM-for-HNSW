@@ -1,0 +1,155 @@
+\section{CDSM}
+\label{sec:method}
+
+CDSM's primary policy F runs up to four local \emph{scouts}, each capped
+at 400 new distance evaluations, then continues from their reintegrated
+state. Local thresholds let routes develop before competing with the
+main answers. We describe squared L2, where smaller distances are better.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{method-feedback.pdf}
+\Description{Four stages show a paused main search, bounded local scouts, reintegration of active, deferred and partly expanded nodes, and main continuation. All stages share scores and traversal progress; the answer collector is distinct from executable frontier state.}
+\caption{CDSM-F's execution organization (conceptual, not a measured trajectory). Scouts return executable bottom-layer work to the main frontier. The suspended main current node resumes first; the merged candidates then compete by query distance, potentially redirecting later expansions. All new distance evaluations share the query limit $B_q$.}
+\label{fig:method}
+\end{figure*}
+
+\paragraph{Shared state.}
+One workspace shares a distance cache, global top-$k$ collector $A$,
+bottom-layer discovery/completion marks, and each opened node's next-neighbor
+cursor. Discovery means entering bottom traversal, distinct from being
+scored during upper descent. Main frontier $M$ retains active and deferred
+candidates plus an optional partially expanded current node. Each scout
+has a separate empty local frontier and top-$k$ set, while sharing the
+workspace. Every first physical score updates $A$: an upper-layer
+discovery can improve the answer without subsequent bottom exploration.
+
+\paragraph{Initial search and entrances.}
+The main search descends from the graph's ordinary HNSW entry point.
+It spends at most $P_{\max}=6400$ evaluations, including descent.
+Between node expansions, it can stop when the closest pending candidate's
+squared distance is at least $(1+\gamma)^2 \tau_A$, where $\gamma=0.075$
+and $\tau_A$ is the current global $k$th distance.
+This condition applies only after $A$ contains $k$ answers.
+The search retains its queues and any incomplete adjacency cursor.
+Let $p$ denote its actual evaluation count.
+
+A graph-specific table supplies up to 64 distinct upper-layer nodes in a
+query-independent, sampled order; imported graphs retain their saved table.
+Appendix~\ref{app:execution} gives the exact construction.
+The order is not a learned utility ranking.
+At each scout, F takes the first table node not previously used as a scout
+entrance and not already discovered by bottom-layer traversal.
+
+\paragraph{Local exploration.}
+For current distance count $d_c$, a scout receives the boundary
+$L=\min(B_q,d_c+400)$.
+Its upper descent begins at the selected node's highest layer and charges
+all new distances against $L$.
+After descent, the local top-$k$ set $T$ is cleared.
+If budget remains and the endpoint is not bottom-layer discovered, the
+endpoint seeds the local frontier and $T$.
+Thus upper-layer scores can improve $A$ without prematurely tightening
+the scout's local threshold.
+
+The scout resumes a partially expanded node before selecting another one.
+For an undiscovered neighbor, it reads the pre-update threshold
+$\tau=T_k$, or $\infty$ while $T$ is not full, and obtains its cached
+or newly computed distance $d$.
+It marks the neighbor discovered.
+If $d<\tau$, it inserts the neighbor into its active queue and updates $T$;
+otherwise it retains the neighbor in its deferred queue.
+Between expansions, deferred candidates with distance below the current
+$\tau$ become active, and completed nodes are discarded.
+The scout pauses when no eligible active candidate remains, when the
+best active distance exceeds $\tau$, or when $L$ is reached.
+A candidate farther than the global $k$th answer can still be locally
+promising and expose neighbors absent from the main route.
+
+\paragraph{Reintegration and continuation.}
+F inserts each scout's active, deferred, and unfinished current work into
+the main active queue, retaining shared cursors, then clears the local
+frontier for reuse. Scouts are not independently scheduled afterward.
+Continuation resumes the main suspended current node first, then orders
+merged candidates by distance. It skips completed nodes, admits new
+bottom discoveries without a local threshold, and disables initial
+distance stopping. Thus locally rejected work remains available for
+further discovery; reintegration retains more than scout answers.
+
+\paragraph{Budgeted execution.}
+Algorithm~\ref{alg:cdsm} summarizes the stages.
+The total limit is either a fixed $B_q$, known before initialization,
+or $B_q=p+E$ under an additional-allowance contract.
+With a fixed limit, the initial stage is also capped by $B_q$.
+
+\begin{algorithm}[t]
+\small
+\begin{algorithmic}[1]
+\Require Query $q$, graph $G$, entrance table $\mathcal E$, budget contract
+\State Initialize shared workspace $W$, answers $A$, frontier $M$
+\State $b_0\gets\min(6400,B)$ if absolute; otherwise $6400$
+\State Descend and run main search under $b_0$, $\gamma=0.075$
+\State Preserve $M$; $p\gets d_c$ \Comment{actual distance count}
+\State $B_q\gets B$ if absolute; otherwise $p+E$
+\For{$i=1,\ldots,4$ while $d_c<B_q$}
+  \State $e\gets$ first unused, bottom-undiscovered node in $\mathcal E$
+  \If{no such $e$} \State \textbf{break} \EndIf
+  \State Mark $e$ used; $L\gets\min(B_q,d_c+400)$
+  \State $v\gets\Call{UpperDescend}{e,L,W}$
+  \State Clear local frontier $S$ and local top-$k$ set $T$
+  \If{$d_c<L$ and $v$ is bottom-undiscovered}
+    \State Seed $v$ into $S,T$; mark $v$ bottom-discovered
+    \State $\Call{LocalExplore}{S,T,L,W}$ using the local rules
+  \EndIf
+  \State Insert $S$.active, $S$.deferred, $S$.current into $M$.active
+  \State Retain shared cursors and $M$.current; clear $S$
+\EndFor
+\State Resume $M$.current, then merged frontier under $B_q$
+\State Use unrestricted admission and no distance stopping
+\State \Return $A$
+\end{algorithmic}
+\caption{CDSM-F. Upper descent and local exploration check their limit before each new score. Final continuation stops at the limit or when recoverable work is exhausted.}
+\label{alg:cdsm}
+\end{algorithm}
+
+Traversal routines check the relevant boundary before every new scoring
+operation. Cache hits do not spend a physical evaluation.
+If scout $i$ spends $s_i$ and final continuation spends $c$, then
+$p+\sum_i s_i+c\leq B_q$.
+Early scout stops leave more budget for continuation; they do not enlarge
+another scout's 400-evaluation limit.
+F neither adds filler work nor guarantees that every graph permits
+exhausting $B_q$.
+Equal actual evaluations therefore require measurement, and do not imply
+equal queue work or latency.
+
+Paid-selection and scheduling extensions are evaluated separately in
+Section~\ref{sec:family}; their selection work uses the same query budget.
+
+\paragraph{Reference configuration and parameter meaning.}
+Table~\ref{tab:parameters} fixes the retained development settings for T2I
+and transfer, without claiming optimality or a newly preregistered selection.
+We test other graphs, allowances, and neighboring scout depths; dimension-
+or size-based parameter scaling remains unvalidated.
+
+\begin{table}[t]
+\centering\small
+\caption{Frozen F parameters and query-dependent quantities.}
+\label{tab:parameters}
+\begin{tabularx}{\columnwidth}{@{}llY@{}}
+\toprule
+Symbol & Value & Meaning \\
+\midrule
+$k$ & 10 & Returned answers; local threshold size \\
+$P_{\max}$ & 6,400 & Initial upper and bottom scoring limit \\
+$\gamma$ & 0.075 & Initial stopping slack; disabled in final phase \\
+$m,s$ & 4, 400 & Maximum scouts and new distances per scout \\
+$|\mathcal E|$ & $\leq64$ & Distinct upper-layer entrance table \\
+$p$ & Measured & Actual initial expenditure for this query \\
+$B_q$ & $B$ or $p+E$ & Total allowed new distances \\
+$\tau_A,\tau$ & Dynamic & Global and scout-local $k$th distances \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\input{tables/semantics}

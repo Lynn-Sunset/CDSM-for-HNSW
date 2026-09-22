@@ -1,0 +1,176 @@
+{
+  "created_utc": "2026-09-22T16:38:15.731903+00:00",
+  "file": "output/pdf/cdsm-paper.pdf",
+  "sha256": "f98f123f8c8119354dae61d660a6d031b60b3df31278910e0b6a06b6bf89046f",
+  "pages": 12,
+  "page_limit_including_references": 12,
+  "passed": true,
+  "author_status": "Intentionally blank at user request.",
+  "main_sections": 8,
+  "appendix_sections": 6,
+  "figures": 4,
+  "tables": 14,
+  "algorithms": 1,
+  "bibliography_entries": 17,
+  "cited_entries": 17,
+  "compile": {
+    "overfull_boxes": 0,
+    "undefined_references": 0,
+    "fonts_all_embedded": true,
+    "fonts": {
+      "/CVVUUZ+LinBiolinumTB": true,
+      "/MYBNEB+LinLibertineTB": true,
+      "/IIIOHX+LinLibertineT": true,
+      "/SPADHY+txsys": true,
+      "/AVCORV+LibertineMathMI": true,
+      "/MLHSEJ+LinLibertineTI": true,
+      "/OGYQFN+txmiaX": true,
+      "/QHVSPP+LibertineMathMI7": true,
+      "/FXPKEJ+LibertineMathMI5": true,
+      "/KQFFYG+NewTXMI7": true,
+      "/ZMKHJD+NewTXMI": true,
+      "/WPHYYM+txexs": true,
+      "/BKPFPI+CMBX8": true,
+      "/BBAZIQ+CMR8": true,
+      "/WDJFQI+CMMI8": true,
+      "/WUNUSQ+CMSY8": true,
+      "/CRPSRL+CMEX8": true,
+      "/DBSJUW+CMMI6": true,
+      "/NBSLCY+CMR6": true
+    },
+    "raster_images": 0,
+    "benign_warnings": [
+      "ACM balance warning; final columns visually checked."
+    ]
+  },
+  "numeric_provenance": {
+    "bundled_source_files": 110,
+    "original_64_hashes_unchanged": true,
+    "source_and_table_hashes_pass": true,
+    "revision_sources_verified": 5,
+    "actual_dc_matched_events": 23997,
+    "paired_primary_numbers_verified": true,
+    "graph_construction_metadata_verified": true
+  },
+  "styles": [
+    {
+      "file": "acmart.cls",
+      "sha256": "2f949e6e3f2a79f2cdc218b9dcdbaa7dd451adb4ee0be1af6dc7ebe00b318ea7",
+      "unchanged_from_existing_official_template": true
+    },
+    {
+      "file": "pvldb.sty",
+      "sha256": "52ad3948f3231b31d2ac90f470c1759e7f96add7b577ec4e267dfbdc87fc4eb2",
+      "unchanged_from_existing_official_template": true
+    },
+    {
+      "file": "ACM-Reference-Format.bst",
+      "sha256": "8ec002c927068bfc5b3cfe71b66aa4767b9e485530ac3c67ba5c064df4c2e6ac",
+      "unchanged_from_installed_acmart_bibliography_style": true
+    }
+  ],
+  "new_ANN_experiments": true,
+  "new_analyses": "Frozen server MEP/FRONTIER controls and 200/800-depth checks: 92000 development, 736000 evaluation and 368000 timing records. Twelve-test Holm family on historically exposed queries; separate descriptive historical depth and native-grid analyses.",
+  "latest_server_audit": {
+    "development_records": 92000,
+    "evaluation_records": 736000,
+    "timing_records": 368000,
+    "all_actual_dc_equal": true,
+    "legacy_CF_identical_records": 192000,
+    "independent_raw_reaggregation": true,
+    "summary_sha256": "498ecf7c2e513ea824ec4b1c147a2f2721a80663314e47f2a2faefa1869e0af0"
+  },
+  "visual_review": {
+    "reviewed_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "reviewer": "primary agent",
+    "clipping_or_overlap_found": false,
+    "all_appendix_floats_precede_references": true
+  },
+  "page_details": [
+    {
+      "page": 1,
+      "text_characters": 5943,
+      "raster_sha256": "4a9e8c330f8d2670fc73a6ff95eb45962b09857274cc865c98ef0ca0814027fa",
+      "visually_inspected": true
+    },
+    {
+      "page": 2,
+      "text_characters": 6166,
+      "raster_sha256": "a7e87aacd4950b746afa68069a04cc28c7a1878a7286c6f477e65795f64819aa",
+      "visually_inspected": true
+    },
+    {
+      "page": 3,
+      "text_characters": 4775,
+      "raster_sha256": "18e12737529790424617fb19ff56e880e4de6856e5c05e79e42adadf5491c6bc",
+      "visually_inspected": true
+    },
+    {
+      "page": 4,
+      "text_characters": 5955,
+      "raster_sha256": "1c19a9108047b3c033b441f461d3dd7dfd05ea688f6b9c4e887487e6135f67a4",
+      "visually_inspected": true
+    },
+    {
+      "page": 5,
+      "text_characters": 2658,
+      "raster_sha256": "531a43208e4bcacdc49af68d06e0e933bb58ab1a465fe657ef80191b30618228",
+      "visually_inspected": true
+    },
+    {
+      "page": 6,
+      "text_characters": 6443,
+      "raster_sha256": "fcb17e344e7248d40675b79fc43b1a30ffd7721b9599f8b7f3e1740fce2f7ce2",
+      "visually_inspected": true
+    },
+    {
+      "page": 7,
+      "text_characters": 2469,
+      "raster_sha256": "28fec0b399c3729350137e42ce508a136732db4ae33a30f42752fd6bd57be48e",
+      "visually_inspected": true
+    },
+    {
+      "page": 8,
+      "text_characters": 5901,
+      "raster_sha256": "982451122c4cf084ba656aade278ade7e5564e523f2a609254f157d012c847ef",
+      "visually_inspected": true
+    },
+    {
+      "page": 9,
+      "text_characters": 5215,
+      "raster_sha256": "a1ee2ee1b5d9966a10561c64fc7251cbd1c4bd94f02a76ba5434157b9c11ded8",
+      "visually_inspected": true
+    },
+    {
+      "page": 10,
+      "text_characters": 6351,
+      "raster_sha256": "048b61c0b9cd7b77db1ecabb336ef157cd176a5a4e5c39eeea6e10f950556e93",
+      "visually_inspected": true
+    },
+    {
+      "page": 11,
+      "text_characters": 2298,
+      "raster_sha256": "bdd1c69a0c2208ff0232c15c724cf0b8f8ca67d07c9801fb5044ad2d1a635170",
+      "visually_inspected": true
+    },
+    {
+      "page": 12,
+      "text_characters": 6576,
+      "raster_sha256": "1ec49758e501fa3c776f354b02b27fdc63acb272a06144c36674f7302694948a",
+      "visually_inspected": true
+    }
+  ]
+}

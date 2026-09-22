@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "new_rows": 167979,
+  "arms": 7,
+  "events_per_arm": 23997,
+  "regressions": {
+    "C": 23997,
+    "L_LOCAL": 23997,
+    "A_GLOBAL": 23997
+  },
+  "all_new_primary_prefixes_equal": true,
+  "first_entry_identity_equal": true,
+  "formal_timing": false,
+  "retrospective": true,
+  "predefined_comparisons": 16
+}

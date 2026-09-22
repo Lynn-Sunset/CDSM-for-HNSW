@@ -1,0 +1,1345 @@
+{
+  "scope": "Retrospective whole-grid descriptive comparison; no new ANN runs, new tests, interpolation, or equal-work/equal-time claim.",
+  "source": "source-data/hnsw-adaptive-baselines-20260920/server-results/final-20260921-005721/results/SUMMARY.json",
+  "source_sha256": "db395126629323dc3b47a04619a557a53e1d5a9778ace849a6e499148af7b6d8",
+  "selection_rule": "For every reference grid point, choose the fastest measured candidate with mean recall >= reference and severe count <= reference; retain all references including unmatched ones.",
+  "timing": "All points from the same earlier native wave; qps is its recorded median round-level throughput. p99 is a quantile of per-query median latency, not raw service latency.",
+  "evaluation_exposure": "Historical evaluation queries; these point comparisons are not independent confirmation or development-selected deployment choices.",
+  "graphs": {
+    "Faiss-M32": {
+      "native_references_to_F": [
+        {
+          "reference": {
+            "parameter": 256,
+            "queries": 8000,
+            "recall": 0.9733625,
+            "severe": 88,
+            "zero": 39,
+            "qps": 931.34170705689,
+            "mean_ms": 1.0732649600000002,
+            "p99_ms": 1.6430227999999998,
+            "mean_dc": 4581.389125
+          },
+          "candidate": {
+            "parameter": 6400,
+            "queries": 8000,
+            "recall": 0.9816625,
+            "severe": 52,
+            "zero": 20,
+            "qps": 453.52270544275973,
+            "mean_ms": 2.2027205825,
+            "p99_ms": 2.74197408,
+            "mean_dc": 6400.0
+          },
+          "qps_change_percent": -51.30437067229323,
+          "recall_change_pp": 0.8299999999999974,
+          "severe_change": -36
+        },
+        {
+          "reference": {
+            "parameter": 512,
+            "queries": 8000,
+            "recall": 0.98855,
+            "severe": 41,
+            "zero": 15,
+            "qps": 487.93312948674486,
+            "mean_ms": 2.04853179375,
+            "p99_ms": 3.09681438,
+            "mean_dc": 7943.746625
+          },
+          "candidate": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.9898125,
+            "severe": 12,
+            "zero": 1,
+            "qps": 340.7810836107739,
+            "mean_ms": 2.93345163125,
+            "p99_ms": 3.65084037,
+            "mean_dc": 8192.0
+          },
+          "qps_change_percent": -30.158240337310083,
+          "recall_change_pp": 0.12624999999999442,
+          "severe_change": -29
+        },
+        {
+          "reference": {
+            "parameter": 768,
+            "queries": 8000,
+            "recall": 0.9932624999999999,
+            "severe": 27,
+            "zero": 9,
+            "qps": 322.80731160433066,
+            "mean_ms": 3.097531825,
+            "p99_ms": 4.600338079999999,
+            "mean_dc": 10998.402125
+          },
+          "candidate": {
+            "parameter": 10240,
+            "queries": 8000,
+            "recall": 0.9935124999999999,
+            "severe": 9,
+            "zero": 1,
+            "qps": 269.6429489556794,
+            "mean_ms": 3.7014166425000004,
+            "p99_ms": 4.57836117,
+            "mean_dc": 10240.0
+          },
+          "qps_change_percent": -16.469379948188887,
+          "recall_change_pp": 0.024999999999997247,
+          "severe_change": -18
+        },
+        {
+          "reference": {
+            "parameter": 896,
+            "queries": 8000,
+            "recall": 0.9946125,
+            "severe": 21,
+            "zero": 7,
+            "qps": 274.1037834598339,
+            "mean_ms": 3.645827425,
+            "p99_ms": 5.337205139999999,
+            "mean_dc": 12453.15175
+          },
+          "candidate": {
+            "parameter": 12800,
+            "queries": 8000,
+            "recall": 0.99595,
+            "severe": 5,
+            "zero": 0,
+            "qps": 213.5536801275519,
+            "mean_ms": 4.67880306375,
+            "p99_ms": 5.84517421,
+            "mean_dc": 12800.0
+          },
+          "qps_change_percent": -22.090210710701395,
+          "recall_change_pp": 0.13374999999999915,
+          "severe_change": -16
+        },
+        {
+          "reference": {
+            "parameter": 1024,
+            "queries": 8000,
+            "recall": 0.9959374999999999,
+            "severe": 13,
+            "zero": 5,
+            "qps": 236.83392440395244,
+            "mean_ms": 4.2221192,
+            "p99_ms": 6.11391704,
+            "mean_dc": 13871.842875
+          },
+          "candidate": {
+            "parameter": 12800,
+            "queries": 8000,
+            "recall": 0.99595,
+            "severe": 5,
+            "zero": 0,
+            "qps": 213.5536801275519,
+            "mean_ms": 4.67880306375,
+            "p99_ms": 5.84517421,
+            "mean_dc": 12800.0
+          },
+          "qps_change_percent": -9.829776006537362,
+          "recall_change_pp": 0.001250000000008189,
+          "severe_change": -8
+        }
+      ],
+      "F_references_to_native": [
+        {
+          "reference": {
+            "parameter": 4096,
+            "queries": 8000,
+            "recall": 0.9623875,
+            "severe": 120,
+            "zero": 48,
+            "qps": 737.9218138189024,
+            "mean_ms": 1.3576463662499998,
+            "p99_ms": 1.69554277,
+            "mean_dc": 4096.0
+          },
+          "candidate": {
+            "parameter": 256,
+            "queries": 8000,
+            "recall": 0.9733625,
+            "severe": 88,
+            "zero": 39,
+            "qps": 931.34170705689,
+            "mean_ms": 1.0732649600000002,
+            "p99_ms": 1.6430227999999998,
+            "mean_dc": 4581.389125
+          },
+          "qps_change_percent": 26.21143454710988,
+          "recall_change_pp": 1.0975000000000068,
+          "severe_change": -32
+        },
+        {
+          "reference": {
+            "parameter": 6400,
+            "queries": 8000,
+            "recall": 0.9816625,
+            "severe": 52,
+            "zero": 20,
+            "qps": 453.52270544275973,
+            "mean_ms": 2.2027205825,
+            "p99_ms": 2.74197408,
+            "mean_dc": 6400.0
+          },
+          "candidate": {
+            "parameter": 512,
+            "queries": 8000,
+            "recall": 0.98855,
+            "severe": 41,
+            "zero": 15,
+            "qps": 487.93312948674486,
+            "mean_ms": 2.04853179375,
+            "p99_ms": 3.09681438,
+            "mean_dc": 7943.746625
+          },
+          "qps_change_percent": 7.5873652258251045,
+          "recall_change_pp": 0.6887500000000046,
+          "severe_change": -11
+        },
+        {
+          "reference": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.9898125,
+            "severe": 12,
+            "zero": 1,
+            "qps": 340.7810836107739,
+            "mean_ms": 2.93345163125,
+            "p99_ms": 3.65084037,
+            "mean_dc": 8192.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 9600,
+            "queries": 8000,
+            "recall": 0.9928874999999999,
+            "severe": 9,
+            "zero": 1,
+            "qps": 289.1904755543432,
+            "mean_ms": 3.4600533637499997,
+            "p99_ms": 4.28233007,
+            "mean_dc": 9600.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 10240,
+            "queries": 8000,
+            "recall": 0.9935124999999999,
+            "severe": 9,
+            "zero": 1,
+            "qps": 269.6429489556794,
+            "mean_ms": 3.7014166425000004,
+            "p99_ms": 4.57836117,
+            "mean_dc": 10240.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 11264,
+            "queries": 8000,
+            "recall": 0.9945875,
+            "severe": 8,
+            "zero": 0,
+            "qps": 243.75603654778436,
+            "mean_ms": 4.09221783125,
+            "p99_ms": 5.0731303599999995,
+            "mean_dc": 11264.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 12800,
+            "queries": 8000,
+            "recall": 0.99595,
+            "severe": 5,
+            "zero": 0,
+            "qps": 213.5536801275519,
+            "mean_ms": 4.67880306375,
+            "p99_ms": 5.84517421,
+            "mean_dc": 12800.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 16000,
+            "queries": 8000,
+            "recall": 0.9972875,
+            "severe": 3,
+            "zero": 0,
+            "qps": 168.83649893640066,
+            "mean_ms": 5.9245582575,
+            "p99_ms": 7.69383221,
+            "mean_dc": 16000.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        }
+      ]
+    },
+    "Imported-s42": {
+      "native_references_to_F": [
+        {
+          "reference": {
+            "parameter": 256,
+            "queries": 8000,
+            "recall": 0.950075,
+            "severe": 177,
+            "zero": 88,
+            "qps": 1169.9573496435528,
+            "mean_ms": 0.8552262737499998,
+            "p99_ms": 1.2930154199999997,
+            "mean_dc": 3387.823
+          },
+          "candidate": {
+            "parameter": 4096,
+            "queries": 8000,
+            "recall": 0.9548,
+            "severe": 151,
+            "zero": 64,
+            "qps": 691.0606605212905,
+            "mean_ms": 1.4470805412499999,
+            "p99_ms": 1.81182701,
+            "mean_dc": 4096.0
+          },
+          "qps_change_percent": -40.93283308730581,
+          "recall_change_pp": 0.4724999999999979,
+          "severe_change": -26
+        },
+        {
+          "reference": {
+            "parameter": 512,
+            "queries": 8000,
+            "recall": 0.9747625,
+            "severe": 87,
+            "zero": 42,
+            "qps": 606.4202679492058,
+            "mean_ms": 1.64742811375,
+            "p99_ms": 2.39036333,
+            "mean_dc": 5862.323625
+          },
+          "candidate": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.982775,
+            "severe": 37,
+            "zero": 7,
+            "qps": 322.14508954246054,
+            "mean_ms": 3.10323657875,
+            "p99_ms": 3.94443739,
+            "mean_dc": 8192.0
+          },
+          "qps_change_percent": -46.8775853036885,
+          "recall_change_pp": 0.8012499999999978,
+          "severe_change": -50
+        },
+        {
+          "reference": {
+            "parameter": 896,
+            "queries": 8000,
+            "recall": 0.985625,
+            "severe": 49,
+            "zero": 27,
+            "qps": 331.4942284919722,
+            "mean_ms": 3.0140613300000005,
+            "p99_ms": 4.19199983,
+            "mean_dc": 9220.077375
+          },
+          "candidate": {
+            "parameter": 9600,
+            "queries": 8000,
+            "recall": 0.9873625,
+            "severe": 25,
+            "zero": 6,
+            "qps": 273.10353333066143,
+            "mean_ms": 3.65725646125,
+            "p99_ms": 4.61469785,
+            "mean_dc": 9600.0
+          },
+          "qps_change_percent": -17.614392693031398,
+          "recall_change_pp": 0.17375000000000584,
+          "severe_change": -24
+        },
+        {
+          "reference": {
+            "parameter": 1024,
+            "queries": 8000,
+            "recall": 0.98765,
+            "severe": 39,
+            "zero": 22,
+            "qps": 284.94218642000897,
+            "mean_ms": 3.5103456600000005,
+            "p99_ms": 4.82223169,
+            "mean_dc": 10285.801875
+          },
+          "candidate": {
+            "parameter": 10240,
+            "queries": 8000,
+            "recall": 0.9884124999999999,
+            "severe": 22,
+            "zero": 4,
+            "qps": 255.0958483971444,
+            "mean_ms": 3.9141847962500003,
+            "p99_ms": 4.8773024199999995,
+            "mean_dc": 10240.0
+          },
+          "qps_change_percent": -10.474524112365247,
+          "recall_change_pp": 0.07624999999998883,
+          "severe_change": -17
+        },
+        {
+          "reference": {
+            "parameter": 1280,
+            "queries": 8000,
+            "recall": 0.9904125,
+            "severe": 27,
+            "zero": 15,
+            "qps": 218.21501449797782,
+            "mean_ms": 4.57965333875,
+            "p99_ms": 6.16602887,
+            "mean_dc": 12354.97825
+          },
+          "candidate": {
+            "parameter": 12800,
+            "queries": 8000,
+            "recall": 0.9915875,
+            "severe": 11,
+            "zero": 1,
+            "qps": 201.62841184502662,
+            "mean_ms": 4.950994885,
+            "p99_ms": 6.29906236,
+            "mean_dc": 12800.0
+          },
+          "qps_change_percent": -7.6010363865704145,
+          "recall_change_pp": 0.11749999999999261,
+          "severe_change": -16
+        },
+        {
+          "reference": {
+            "parameter": 1536,
+            "queries": 8000,
+            "recall": 0.9924625,
+            "severe": 19,
+            "zero": 10,
+            "qps": 173.6753403073966,
+            "mean_ms": 5.7546790450000005,
+            "p99_ms": 7.5595370399999995,
+            "mean_dc": 14350.687
+          },
+          "candidate": {
+            "parameter": 16000,
+            "queries": 8000,
+            "recall": 0.9938499999999999,
+            "severe": 8,
+            "zero": 1,
+            "qps": 159.33287240285173,
+            "mean_ms": 6.26991293,
+            "p99_ms": 8.198815269999999,
+            "mean_dc": 16000.0
+          },
+          "qps_change_percent": -8.258206305604132,
+          "recall_change_pp": 0.1387499999999875,
+          "severe_change": -11
+        }
+      ],
+      "F_references_to_native": [
+        {
+          "reference": {
+            "parameter": 4096,
+            "queries": 8000,
+            "recall": 0.9548,
+            "severe": 151,
+            "zero": 64,
+            "qps": 691.0606605212905,
+            "mean_ms": 1.4470805412499999,
+            "p99_ms": 1.81182701,
+            "mean_dc": 4096.0
+          },
+          "candidate": {
+            "parameter": 512,
+            "queries": 8000,
+            "recall": 0.9747625,
+            "severe": 87,
+            "zero": 42,
+            "qps": 606.4202679492058,
+            "mean_ms": 1.64742811375,
+            "p99_ms": 2.39036333,
+            "mean_dc": 5862.323625
+          },
+          "qps_change_percent": -12.247896227841649,
+          "recall_change_pp": 1.9962499999999994,
+          "severe_change": -64
+        },
+        {
+          "reference": {
+            "parameter": 6400,
+            "queries": 8000,
+            "recall": 0.973725,
+            "severe": 84,
+            "zero": 39,
+            "qps": 425.6174234715227,
+            "mean_ms": 2.34901374375,
+            "p99_ms": 2.9973897800000002,
+            "mean_dc": 6400.0
+          },
+          "candidate": {
+            "parameter": 896,
+            "queries": 8000,
+            "recall": 0.985625,
+            "severe": 49,
+            "zero": 27,
+            "qps": 331.4942284919722,
+            "mean_ms": 3.0140613300000005,
+            "p99_ms": 4.19199983,
+            "mean_dc": 9220.077375
+          },
+          "qps_change_percent": -22.114507017086005,
+          "recall_change_pp": 1.1900000000000022,
+          "severe_change": -35
+        },
+        {
+          "reference": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.982775,
+            "severe": 37,
+            "zero": 7,
+            "qps": 322.14508954246054,
+            "mean_ms": 3.10323657875,
+            "p99_ms": 3.94443739,
+            "mean_dc": 8192.0
+          },
+          "candidate": {
+            "parameter": 1280,
+            "queries": 8000,
+            "recall": 0.9904125,
+            "severe": 27,
+            "zero": 15,
+            "qps": 218.21501449797782,
+            "mean_ms": 4.57965333875,
+            "p99_ms": 6.16602887,
+            "mean_dc": 12354.97825
+          },
+          "qps_change_percent": -32.26188398280215,
+          "recall_change_pp": 0.7637500000000075,
+          "severe_change": -10
+        },
+        {
+          "reference": {
+            "parameter": 9600,
+            "queries": 8000,
+            "recall": 0.9873625,
+            "severe": 25,
+            "zero": 6,
+            "qps": 273.10353333066143,
+            "mean_ms": 3.65725646125,
+            "p99_ms": 4.61469785,
+            "mean_dc": 9600.0
+          },
+          "candidate": {
+            "parameter": 1536,
+            "queries": 8000,
+            "recall": 0.9924625,
+            "severe": 19,
+            "zero": 10,
+            "qps": 173.6753403073966,
+            "mean_ms": 5.7546790450000005,
+            "p99_ms": 7.5595370399999995,
+            "mean_dc": 14350.687
+          },
+          "qps_change_percent": -36.4067765109731,
+          "recall_change_pp": 0.5099999999999993,
+          "severe_change": -6
+        },
+        {
+          "reference": {
+            "parameter": 10240,
+            "queries": 8000,
+            "recall": 0.9884124999999999,
+            "severe": 22,
+            "zero": 4,
+            "qps": 255.0958483971444,
+            "mean_ms": 3.9141847962500003,
+            "p99_ms": 4.8773024199999995,
+            "mean_dc": 10240.0
+          },
+          "candidate": {
+            "parameter": 1536,
+            "queries": 8000,
+            "recall": 0.9924625,
+            "severe": 19,
+            "zero": 10,
+            "qps": 173.6753403073966,
+            "mean_ms": 5.7546790450000005,
+            "p99_ms": 7.5595370399999995,
+            "mean_dc": 14350.687
+          },
+          "qps_change_percent": -31.917613948380996,
+          "recall_change_pp": 0.4050000000000109,
+          "severe_change": -3
+        },
+        {
+          "reference": {
+            "parameter": 11264,
+            "queries": 8000,
+            "recall": 0.9900375,
+            "severe": 16,
+            "zero": 2,
+            "qps": 230.71438685370507,
+            "mean_ms": 4.32546301625,
+            "p99_ms": 5.3971586,
+            "mean_dc": 11264.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 12800,
+            "queries": 8000,
+            "recall": 0.9915875,
+            "severe": 11,
+            "zero": 1,
+            "qps": 201.62841184502662,
+            "mean_ms": 4.950994885,
+            "p99_ms": 6.29906236,
+            "mean_dc": 12800.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 16000,
+            "queries": 8000,
+            "recall": 0.9938499999999999,
+            "severe": 8,
+            "zero": 1,
+            "qps": 159.33287240285173,
+            "mean_ms": 6.26991293,
+            "p99_ms": 8.198815269999999,
+            "mean_dc": 16000.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        }
+      ]
+    },
+    "Imported-s777": {
+      "native_references_to_F": [
+        {
+          "reference": {
+            "parameter": 256,
+            "queries": 8000,
+            "recall": 0.948325,
+            "severe": 189,
+            "zero": 99,
+            "qps": 1173.40339459031,
+            "mean_ms": 0.85121124,
+            "p99_ms": 1.2734939,
+            "mean_dc": 3385.88375
+          },
+          "candidate": {
+            "parameter": 4096,
+            "queries": 8000,
+            "recall": 0.953125,
+            "severe": 164,
+            "zero": 81,
+            "qps": 690.3363064182232,
+            "mean_ms": 1.4471566587500002,
+            "p99_ms": 1.8213872499999997,
+            "mean_dc": 4096.0
+          },
+          "qps_change_percent": -41.168032272545794,
+          "recall_change_pp": 0.48000000000000265,
+          "severe_change": -25
+        },
+        {
+          "reference": {
+            "parameter": 512,
+            "queries": 8000,
+            "recall": 0.9745375,
+            "severe": 86,
+            "zero": 43,
+            "qps": 604.113756574671,
+            "mean_ms": 1.65339897125,
+            "p99_ms": 2.46924665,
+            "mean_dc": 5865.813125
+          },
+          "candidate": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.9845750000000001,
+            "severe": 22,
+            "zero": 6,
+            "qps": 322.9721291859175,
+            "mean_ms": 3.09313407625,
+            "p99_ms": 3.92075305,
+            "mean_dc": 8192.0
+          },
+          "qps_change_percent": -46.53786217066607,
+          "recall_change_pp": 1.0037500000000144,
+          "severe_change": -64
+        },
+        {
+          "reference": {
+            "parameter": 768,
+            "queries": 8000,
+            "recall": 0.9824875000000001,
+            "severe": 60,
+            "zero": 31,
+            "qps": 393.1746858109509,
+            "mean_ms": 2.5408738012499996,
+            "p99_ms": 3.54891426,
+            "mean_dc": 8135.523125
+          },
+          "candidate": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.9845750000000001,
+            "severe": 22,
+            "zero": 6,
+            "qps": 322.9721291859175,
+            "mean_ms": 3.09313407625,
+            "p99_ms": 3.92075305,
+            "mean_dc": 8192.0
+          },
+          "qps_change_percent": -17.855309397713548,
+          "recall_change_pp": 0.208750000000002,
+          "severe_change": -38
+        },
+        {
+          "reference": {
+            "parameter": 896,
+            "queries": 8000,
+            "recall": 0.9851625,
+            "severe": 52,
+            "zero": 27,
+            "qps": 331.32512838184005,
+            "mean_ms": 3.0187262887500004,
+            "p99_ms": 4.177719239999999,
+            "mean_dc": 9227.55525
+          },
+          "candidate": {
+            "parameter": 9600,
+            "queries": 8000,
+            "recall": 0.988325,
+            "severe": 15,
+            "zero": 4,
+            "qps": 273.3640677374783,
+            "mean_ms": 3.6563317025,
+            "p99_ms": 4.58773139,
+            "mean_dc": 9600.0
+          },
+          "qps_change_percent": -17.493711064849794,
+          "recall_change_pp": 0.3162499999999957,
+          "severe_change": -37
+        },
+        {
+          "reference": {
+            "parameter": 1024,
+            "queries": 8000,
+            "recall": 0.9870875,
+            "severe": 43,
+            "zero": 25,
+            "qps": 283.93368938085604,
+            "mean_ms": 3.5169412425,
+            "p99_ms": 4.81185566,
+            "mean_dc": 10292.313
+          },
+          "candidate": {
+            "parameter": 9600,
+            "queries": 8000,
+            "recall": 0.988325,
+            "severe": 15,
+            "zero": 4,
+            "qps": 273.3640677374783,
+            "mean_ms": 3.6563317025,
+            "p99_ms": 4.58773139,
+            "mean_dc": 9600.0
+          },
+          "qps_change_percent": -3.722566936817462,
+          "recall_change_pp": 0.12375000000000025,
+          "severe_change": -28
+        },
+        {
+          "reference": {
+            "parameter": 1280,
+            "queries": 8000,
+            "recall": 0.9897375,
+            "severe": 31,
+            "zero": 18,
+            "qps": 217.18419160097108,
+            "mean_ms": 4.59554797125,
+            "p99_ms": 6.192771499999999,
+            "mean_dc": 12357.759
+          },
+          "candidate": {
+            "parameter": 11264,
+            "queries": 8000,
+            "recall": 0.9900499999999999,
+            "severe": 14,
+            "zero": 4,
+            "qps": 231.03751094935137,
+            "mean_ms": 4.3253815425,
+            "p99_ms": 5.41061807,
+            "mean_dc": 11264.0
+          },
+          "qps_change_percent": 6.378603915073522,
+          "recall_change_pp": 0.03124999999998268,
+          "severe_change": -17
+        },
+        {
+          "reference": {
+            "parameter": 1536,
+            "queries": 8000,
+            "recall": 0.9920125000000001,
+            "severe": 22,
+            "zero": 11,
+            "qps": 173.20510346377844,
+            "mean_ms": 5.7761759425,
+            "p99_ms": 7.567468979999999,
+            "mean_dc": 14355.45325
+          },
+          "candidate": {
+            "parameter": 16000,
+            "queries": 8000,
+            "recall": 0.9935499999999999,
+            "severe": 9,
+            "zero": 2,
+            "qps": 159.30488727066842,
+            "mean_ms": 6.2709088049999995,
+            "p99_ms": 8.215956879999998,
+            "mean_dc": 16000.0
+          },
+          "qps_change_percent": -8.02529250878391,
+          "recall_change_pp": 0.15374999999998584,
+          "severe_change": -13
+        }
+      ],
+      "F_references_to_native": [
+        {
+          "reference": {
+            "parameter": 4096,
+            "queries": 8000,
+            "recall": 0.953125,
+            "severe": 164,
+            "zero": 81,
+            "qps": 690.3363064182232,
+            "mean_ms": 1.4471566587500002,
+            "p99_ms": 1.8213872499999997,
+            "mean_dc": 4096.0
+          },
+          "candidate": {
+            "parameter": 512,
+            "queries": 8000,
+            "recall": 0.9745375,
+            "severe": 86,
+            "zero": 43,
+            "qps": 604.113756574671,
+            "mean_ms": 1.65339897125,
+            "p99_ms": 2.46924665,
+            "mean_dc": 5865.813125
+          },
+          "qps_change_percent": -12.48993411499878,
+          "recall_change_pp": 2.1412499999999945,
+          "severe_change": -78
+        },
+        {
+          "reference": {
+            "parameter": 6400,
+            "queries": 8000,
+            "recall": 0.9737500000000001,
+            "severe": 82,
+            "zero": 39,
+            "qps": 426.2697024946948,
+            "mean_ms": 2.34419423,
+            "p99_ms": 3.01083613,
+            "mean_dc": 6400.0
+          },
+          "candidate": {
+            "parameter": 768,
+            "queries": 8000,
+            "recall": 0.9824875000000001,
+            "severe": 60,
+            "zero": 31,
+            "qps": 393.1746858109509,
+            "mean_ms": 2.5408738012499996,
+            "p99_ms": 3.54891426,
+            "mean_dc": 8135.523125
+          },
+          "qps_change_percent": -7.763867919783907,
+          "recall_change_pp": 0.8737499999999954,
+          "severe_change": -22
+        },
+        {
+          "reference": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.9845750000000001,
+            "severe": 22,
+            "zero": 6,
+            "qps": 322.9721291859175,
+            "mean_ms": 3.09313407625,
+            "p99_ms": 3.92075305,
+            "mean_dc": 8192.0
+          },
+          "candidate": {
+            "parameter": 1536,
+            "queries": 8000,
+            "recall": 0.9920125000000001,
+            "severe": 22,
+            "zero": 11,
+            "qps": 173.20510346377844,
+            "mean_ms": 5.7761759425,
+            "p99_ms": 7.567468979999999,
+            "mean_dc": 14355.45325
+          },
+          "qps_change_percent": -46.371501497556864,
+          "recall_change_pp": 0.7437499999999986,
+          "severe_change": 0
+        },
+        {
+          "reference": {
+            "parameter": 9600,
+            "queries": 8000,
+            "recall": 0.988325,
+            "severe": 15,
+            "zero": 4,
+            "qps": 273.3640677374783,
+            "mean_ms": 3.6563317025,
+            "p99_ms": 4.58773139,
+            "mean_dc": 9600.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 10240,
+            "queries": 8000,
+            "recall": 0.9891500000000001,
+            "severe": 14,
+            "zero": 4,
+            "qps": 255.4395908772228,
+            "mean_ms": 3.9130605575000006,
+            "p99_ms": 4.8700322300000005,
+            "mean_dc": 10240.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 11264,
+            "queries": 8000,
+            "recall": 0.9900499999999999,
+            "severe": 14,
+            "zero": 4,
+            "qps": 231.03751094935137,
+            "mean_ms": 4.3253815425,
+            "p99_ms": 5.41061807,
+            "mean_dc": 11264.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 12800,
+            "queries": 8000,
+            "recall": 0.9914875000000001,
+            "severe": 12,
+            "zero": 3,
+            "qps": 201.85177949499766,
+            "mean_ms": 4.94956026,
+            "p99_ms": 6.34475347,
+            "mean_dc": 12800.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 16000,
+            "queries": 8000,
+            "recall": 0.9935499999999999,
+            "severe": 9,
+            "zero": 2,
+            "qps": 159.30488727066842,
+            "mean_ms": 6.2709088049999995,
+            "p99_ms": 8.215956879999998,
+            "mean_dc": 16000.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        }
+      ]
+    },
+    "Imported-s1234": {
+      "native_references_to_F": [
+        {
+          "reference": {
+            "parameter": 256,
+            "queries": 8000,
+            "recall": 0.94895,
+            "severe": 185,
+            "zero": 95,
+            "qps": 1159.8275725521767,
+            "mean_ms": 0.86193535125,
+            "p99_ms": 1.4294119899999997,
+            "mean_dc": 3399.344875
+          },
+          "candidate": {
+            "parameter": 4096,
+            "queries": 8000,
+            "recall": 0.9535625,
+            "severe": 159,
+            "zero": 72,
+            "qps": 691.1591848494837,
+            "mean_ms": 1.450019735,
+            "p99_ms": 1.84863259,
+            "mean_dc": 4096.0
+          },
+          "qps_change_percent": -40.408453704148265,
+          "recall_change_pp": 0.46125000000000194,
+          "severe_change": -26
+        },
+        {
+          "reference": {
+            "parameter": 512,
+            "queries": 8000,
+            "recall": 0.9742749999999999,
+            "severe": 87,
+            "zero": 45,
+            "qps": 601.6631870240859,
+            "mean_ms": 1.6602772449999998,
+            "p99_ms": 2.42591792,
+            "mean_dc": 5878.174875
+          },
+          "candidate": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.9822625,
+            "severe": 38,
+            "zero": 14,
+            "qps": 322.0432712926203,
+            "mean_ms": 3.1088572475,
+            "p99_ms": 3.91677995,
+            "mean_dc": 8192.0
+          },
+          "qps_change_percent": -46.474492999065895,
+          "recall_change_pp": 0.7987500000000147,
+          "severe_change": -49
+        },
+        {
+          "reference": {
+            "parameter": 768,
+            "queries": 8000,
+            "recall": 0.982075,
+            "severe": 65,
+            "zero": 34,
+            "qps": 391.5579476087263,
+            "mean_ms": 2.5509531475,
+            "p99_ms": 3.56669704,
+            "mean_dc": 8146.149
+          },
+          "candidate": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.9822625,
+            "severe": 38,
+            "zero": 14,
+            "qps": 322.0432712926203,
+            "mean_ms": 3.1088572475,
+            "p99_ms": 3.91677995,
+            "mean_dc": 8192.0
+          },
+          "qps_change_percent": -17.75335598233603,
+          "recall_change_pp": 0.01875000000000071,
+          "severe_change": -27
+        },
+        {
+          "reference": {
+            "parameter": 896,
+            "queries": 8000,
+            "recall": 0.9849500000000001,
+            "severe": 55,
+            "zero": 28,
+            "qps": 330.268597897651,
+            "mean_ms": 3.0294219312500004,
+            "p99_ms": 4.19045937,
+            "mean_dc": 9235.911875
+          },
+          "candidate": {
+            "parameter": 9600,
+            "queries": 8000,
+            "recall": 0.9869875,
+            "severe": 21,
+            "zero": 9,
+            "qps": 272.51518406915477,
+            "mean_ms": 3.6736204062499995,
+            "p99_ms": 4.5801865799999995,
+            "mean_dc": 9600.0
+          },
+          "qps_change_percent": -17.486801408347574,
+          "recall_change_pp": 0.20374999999999144,
+          "severe_change": -34
+        },
+        {
+          "reference": {
+            "parameter": 1024,
+            "queries": 8000,
+            "recall": 0.9873125,
+            "severe": 42,
+            "zero": 22,
+            "qps": 283.68866918348823,
+            "mean_ms": 3.52353569375,
+            "p99_ms": 4.803771299999999,
+            "mean_dc": 10299.877375
+          },
+          "candidate": {
+            "parameter": 10240,
+            "queries": 8000,
+            "recall": 0.9881,
+            "severe": 20,
+            "zero": 8,
+            "qps": 254.48382284351706,
+            "mean_ms": 3.93129932625,
+            "p99_ms": 4.8765389,
+            "mean_dc": 10240.0
+          },
+          "qps_change_percent": -10.294681992068444,
+          "recall_change_pp": 0.0787499999999941,
+          "severe_change": -22
+        },
+        {
+          "reference": {
+            "parameter": 1280,
+            "queries": 8000,
+            "recall": 0.9897500000000001,
+            "severe": 33,
+            "zero": 18,
+            "qps": 217.30470145637324,
+            "mean_ms": 4.6011459200000004,
+            "p99_ms": 6.1599321499999995,
+            "mean_dc": 12366.402375
+          },
+          "candidate": {
+            "parameter": 12800,
+            "queries": 8000,
+            "recall": 0.9908125,
+            "severe": 15,
+            "zero": 7,
+            "qps": 201.20423703628714,
+            "mean_ms": 4.9736966225,
+            "p99_ms": 6.35000336,
+            "mean_dc": 12800.0
+          },
+          "qps_change_percent": -7.409165246854299,
+          "recall_change_pp": 0.10624999999998552,
+          "severe_change": -18
+        },
+        {
+          "reference": {
+            "parameter": 1536,
+            "queries": 8000,
+            "recall": 0.9920625,
+            "severe": 23,
+            "zero": 12,
+            "qps": 172.5086038321144,
+            "mean_ms": 5.79402559375,
+            "p99_ms": 7.6190440299999995,
+            "mean_dc": 14363.7125
+          },
+          "candidate": {
+            "parameter": 16000,
+            "queries": 8000,
+            "recall": 0.9934625,
+            "severe": 8,
+            "zero": 4,
+            "qps": 158.75962253160532,
+            "mean_ms": 6.3020310825,
+            "p99_ms": 8.255984530000001,
+            "mean_dc": 16000.0
+          },
+          "qps_change_percent": -7.970026419024068,
+          "recall_change_pp": 0.14000000000000679,
+          "severe_change": -15
+        }
+      ],
+      "F_references_to_native": [
+        {
+          "reference": {
+            "parameter": 4096,
+            "queries": 8000,
+            "recall": 0.9535625,
+            "severe": 159,
+            "zero": 72,
+            "qps": 691.1591848494837,
+            "mean_ms": 1.450019735,
+            "p99_ms": 1.84863259,
+            "mean_dc": 4096.0
+          },
+          "candidate": {
+            "parameter": 512,
+            "queries": 8000,
+            "recall": 0.9742749999999999,
+            "severe": 87,
+            "zero": 45,
+            "qps": 601.6631870240859,
+            "mean_ms": 1.6602772449999998,
+            "p99_ms": 2.42591792,
+            "mean_dc": 5878.174875
+          },
+          "qps_change_percent": -12.948680967740833,
+          "recall_change_pp": 2.071249999999991,
+          "severe_change": -72
+        },
+        {
+          "reference": {
+            "parameter": 6400,
+            "queries": 8000,
+            "recall": 0.973025,
+            "severe": 86,
+            "zero": 42,
+            "qps": 424.6079889142836,
+            "mean_ms": 2.355564615,
+            "p99_ms": 3.01504818,
+            "mean_dc": 6400.0
+          },
+          "candidate": {
+            "parameter": 768,
+            "queries": 8000,
+            "recall": 0.982075,
+            "severe": 65,
+            "zero": 34,
+            "qps": 391.5579476087263,
+            "mean_ms": 2.5509531475,
+            "p99_ms": 3.56669704,
+            "mean_dc": 8146.149
+          },
+          "qps_change_percent": -7.783659791721254,
+          "recall_change_pp": 0.9050000000000002,
+          "severe_change": -21
+        },
+        {
+          "reference": {
+            "parameter": 8192,
+            "queries": 8000,
+            "recall": 0.9822625,
+            "severe": 38,
+            "zero": 14,
+            "qps": 322.0432712926203,
+            "mean_ms": 3.1088572475,
+            "p99_ms": 3.91677995,
+            "mean_dc": 8192.0
+          },
+          "candidate": {
+            "parameter": 1280,
+            "queries": 8000,
+            "recall": 0.9897500000000001,
+            "severe": 33,
+            "zero": 18,
+            "qps": 217.30470145637324,
+            "mean_ms": 4.6011459200000004,
+            "p99_ms": 6.1599321499999995,
+            "mean_dc": 12366.402375
+          },
+          "qps_change_percent": -32.52313560716434,
+          "recall_change_pp": 0.7487500000000091,
+          "severe_change": -5
+        },
+        {
+          "reference": {
+            "parameter": 9600,
+            "queries": 8000,
+            "recall": 0.9869875,
+            "severe": 21,
+            "zero": 9,
+            "qps": 272.51518406915477,
+            "mean_ms": 3.6736204062499995,
+            "p99_ms": 4.5801865799999995,
+            "mean_dc": 9600.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 10240,
+            "queries": 8000,
+            "recall": 0.9881,
+            "severe": 20,
+            "zero": 8,
+            "qps": 254.48382284351706,
+            "mean_ms": 3.93129932625,
+            "p99_ms": 4.8765389,
+            "mean_dc": 10240.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 11264,
+            "queries": 8000,
+            "recall": 0.9894000000000001,
+            "severe": 18,
+            "zero": 8,
+            "qps": 230.28112326899364,
+            "mean_ms": 4.3462706925,
+            "p99_ms": 5.45536089,
+            "mean_dc": 11264.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 12800,
+            "queries": 8000,
+            "recall": 0.9908125,
+            "severe": 15,
+            "zero": 7,
+            "qps": 201.20423703628714,
+            "mean_ms": 4.9736966225,
+            "p99_ms": 6.35000336,
+            "mean_dc": 12800.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        },
+        {
+          "reference": {
+            "parameter": 16000,
+            "queries": 8000,
+            "recall": 0.9934625,
+            "severe": 8,
+            "zero": 4,
+            "qps": 158.75962253160532,
+            "mean_ms": 6.3020310825,
+            "p99_ms": 8.255984530000001,
+            "mean_dc": 16000.0
+          },
+          "candidate": null,
+          "status": "No qualifying point in the measured grid; not an impossibility result."
+        }
+      ]
+    }
+  }
+}

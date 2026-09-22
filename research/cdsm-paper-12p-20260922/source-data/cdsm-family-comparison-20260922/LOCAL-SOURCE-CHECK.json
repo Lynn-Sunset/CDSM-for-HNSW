@@ -1,0 +1,165 @@
+{
+  "utc": "2026-09-22T07:25:03.837321+00:00",
+  "passed": true,
+  "verified_local_source_count": 36,
+  "verified": [
+    {
+      "path": "research/cdsm-family-comparison-20260922/bench.cpp",
+      "sha256": "3a0c24de8ea6b20979bbd63673d0c9936ae4f8cfcb1111904240c455bf40288c"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/family_adapter.h",
+      "sha256": "c84b5c96902faa0f6985d78a90285edc3b9213b1247ebf1f89724aa3db1516ba"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/family_check.cpp",
+      "sha256": "da9b44c9870f3256a79285189b0196cf185661c84d49be5671eb77ec71b77cf8"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/fanng_search.h",
+      "sha256": "d4757f65feceea24ae8eaed34a99e2c494a06b90989e6f44f28c1f533a7e61e1"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/compile.sh",
+      "sha256": "659ca2c33573a5930d5543667889af6a486744ff2e74ee33f90718b39ae054f7"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/run_server.py",
+      "sha256": "a2e5fb1a5ed120eca2624f716f5a7a5eeca3d0963ab0ea16b0c239a1b731b0ae"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/preflight.py",
+      "sha256": "ffb0c4730528866dea92c3462c6cb1720f78f66e82f0a56061754d1c1df28d1a"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/analyze.py",
+      "sha256": "aa9f46c23ae5d40fafbbdb5c262d1f155c6884c2b3fe078f7f21320553ae5ff8"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/PLAN.json",
+      "sha256": "818600a28d4ac396b54a9f53d3373872ae0c95afb39e5372abeea7689648a012"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/PROTOCOL.zh-CN.md",
+      "sha256": "7808f575df23607e139ce72876be1025c80df33a4a3f131c76ea29be101470c6"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/FAMILY-SEMANTICS.md",
+      "sha256": "860b4816ed3b23831a678d43a1ef3b4303c08097781c0f0977710ab801749361"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/DEPENDENCIES.json",
+      "sha256": "1c2bb53d494f55b046689ec472ee062eeb9e13ca45f79bf645214d6c0c9fcef4"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/action-space-v10-20260920/space.cpp",
+      "sha256": "c12373500f012737d90158c3fd2df4b32dc288f4ddb8a0f1621ea0eb9aa393d9"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/action-space-v10-20260920/v9_reference.inc",
+      "sha256": "714b7cfa1d03e38c4f8ecc7c2d0119056c88ee0b1a3415bb302ba4366369f58b"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/action-space-v10-20260920/space_body.inc",
+      "sha256": "bcf3a5c20da6276ba1f007f92b681c88085ea07b3af8b992bea5506cba7e8f64"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/adaptive-selector-v1-20260920/frozen_reference.inc",
+      "sha256": "02f2003c90246255745d6bf11b66574f2b11821476492af132ef8e3eb8f17563"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/diverse-resume-v3-20260920/v2_reference.inc",
+      "sha256": "467f15d855fc42047dfcacd39460273d40de4f571839d3cae728bd8eca98680c"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/entrance-coverage-v5-20260920/v4_reference.inc",
+      "sha256": "05fb9e37cea7d380475c19c224329f0f852c32dc74da9a5f991556c2f1a8506a"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/frontier-fast-v7-20260920/fast_checkpoint.inc",
+      "sha256": "25bddd567b978bbb4b09f2940fd2ab5dbe91bde47a892e12b61975fd8e8b5bf7"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/frontier-fast-v7-20260920/v6_reference.inc",
+      "sha256": "96ba9138e760ced9ee2ddffc234c77a6538f8bb57232ba35cf022c59f169dec5"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/main-compete-v8-20260920/v7_reference.inc",
+      "sha256": "c70d2e00eb2c9de785413473d67c87e3359616b9ee15d385d8b6038aeeff712d"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/probe-gate-v6-20260920/v5_reference.inc",
+      "sha256": "06c99a2592bc1aaeaa8c8b58215d3093b8c99f960d7c4c6f91019f1711bff227"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/scout-progress-v2-20260920/v1_reference.inc",
+      "sha256": "5199746ede038f8efae5113f14787888c8bd13efc6139aef04a6425b461b9f84"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/scout-stop-audit-v4-20260920/v3_reference.inc",
+      "sha256": "ef9254efdc016589a1a51307eeca87a7f9345c1ae2c6621090df4a21dd5e9e08"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/scout-value-v9-20260920/v8_reference.inc",
+      "sha256": "9e2836614c27d5b115a955362cef18e3a6811fb7f9f8641da03215b7d36544b3"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/scout-value-v9-20260920/value_model.inc",
+      "sha256": "c2f99823f8b132cc2be6b6cedc6e8e0e76053895e514efa6fc46a0fa61c5497b"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/unfiltered-value-audit-20260920/bench_io.h",
+      "sha256": "77a4e872f46fe124432bc80cf73a7aa28d7b96fb632f76d4b246355fd34dc0b1"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/unfiltered-value-audit-20260920/paid.h",
+      "sha256": "f6cd012686b5b89d28a61490cb2a800591799deac22b9289ec363acd6b17063f"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/unfiltered-value-audit-20260920/reference/cdsm.h",
+      "sha256": "657bc48d41f16171ed1a470484f987a5210b44419df10849942ff3ba18aeac3f"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/vendor/unfiltered-value-audit-20260920/reference/common.h",
+      "sha256": "86f25ac1aa3a2b152ac1c1c0503150d493513bcc11d63bcd09ebdb269387167a"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/compat/Windows.h",
+      "sha256": "67d66c5243e3a74dcddece20e5e54c0f193c81b8ec427959e4fd52df4ad35624"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/queries/engineering.txt",
+      "sha256": "4bf193805b7b08fcfdc781f8693189bb1ab31652a710ff12fb158c67cd9a6b33"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/queries/evaluation.txt",
+      "sha256": "a856267adc260991a5b85aa703daf01977e335cafeafcb4bc617c009d2c75604"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/queries/prefix.txt",
+      "sha256": "4db4d22e4fe898f42a864437aa80e228d857e7795a6698a7415ae90f47dc63a4"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/queries/timing-evaluation.txt",
+      "sha256": "11e5c7b906073bc7c2ae3ae6ab52e68e3bf03fd71fb9554d54457cb0a4f7fe10"
+    },
+    {
+      "path": "research/hnsw-adaptive-baselines-20260920/resource_runner.py",
+      "sha256": "d5f3770b8023d682d934a1d269719c234e3feed14575f00fda65c09a82f5bb32"
+    }
+  ],
+  "server_only_compiled_dependencies": [
+    {
+      "path": "research/cdsm-family-comparison-20260922/runtime/family_bench",
+      "sha256": "ce79dcc66a6126b885a127c4194aeb1b5facd675fe039981b20f4b3faefe8641"
+    },
+    {
+      "path": "research/cdsm-family-comparison-20260922/runtime/family_check",
+      "sha256": "2f482a3ada2fa5ffb2d13907000f9516a6bae695952ea06de4107bc6772d4f12"
+    },
+    {
+      "path": "research/ann-systematic-comparison-20260919/build/faiss/libfaiss_avx2.a",
+      "sha256": "e8a251cfa10cfd3052dd22bdb0734a1adb1ad30982ef2b3a4b82c50eafe0f040"
+    }
+  ]
+}

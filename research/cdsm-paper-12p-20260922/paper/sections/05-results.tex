@@ -1,0 +1,85 @@
+\section{Evaluation}\label{sec:results}
+\subsection{Same graph, same actual distance work}\label{sec:fixed}
+Figure~\ref{fig:budget} compares C, F, development-selected MEP, and FRONTIER across four T2I graphs and three budgets. Table~\ref{tab:fixed} includes every MEP size at the primary budget. All 736,000 evaluation records, including the two neighboring depths, spend exactly their cap; shared initial states are checked per query. The 192,000 C/F records reproduce archived scoring-sequence hashes, answers, and counters, adding no independent C/F evidence.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{t2i-budget.pdf}
+\Description{Eight panels show mean recall and severe-failure counts at three equal distance budgets on four T2I graphs for C, CDSM-F, development-selected MEP, and scouts launched from the existing frontier.}
+\caption{Budget response on four fixed T2I graphs, sharing 8,000 query identities. Every query spends exactly the indicated distance count. MEP-DEV selects one entrance count per graph and budget on disjoint development queries; the chosen count may change between points. Lines connect measured points, not confidence bounds. Table~\ref{tab:fixed} exposes the complete primary MEP grid.}
+\label{fig:budget}
+\end{figure*}
+\input{tables/fixed}
+
+At 10,240, F increases mean recall over C by 0.214--0.398 percentage points and reduces severe failures by 44--72\%. Faiss M32's severe risk falls from $32/8{,}000=0.400\%$ to $9/8{,}000=0.1125\%$. C/F rescues/harms are 26/3, 19/2, 35/0, and 33/2; all four pass the earlier 28-test correction. The latest same-wave QPS differences are \rTwoQpsC{}. Queue work and reintegration have real time costs despite equal scoring work.
+
+\paragraph{Beyond shared-queue multiple entrances.}
+At the primary budget, F has higher mean recall than every MEP size on all four graphs. MEP-DEV selects $m=8,4,4,16$ in graph order. Relative to those choices, F gains 0.115/0.110/0.195/0.02625 percentage points and changes severe counts from 16/28/30/24 to 9/22/14/20. The four-graph mean gain is \rTwoDevCluster{}; this interval preserves the same query across graphs and is not multiplicity-adjusted. F's QPS differences from MEP-DEV are \rTwoQpsDev{}.
+
+\input{tables/closest-tests}
+
+Table~\ref{tab:closest} limits the severe-failure claim: F beats MEP-4 after Holm correction on seeds 777/1234, but beats MEP-DEV significantly only on seed 777. Moreover, MEP-16 has fewer severe failures than F on Faiss M32 (6 versus 9) and seed 42 (18 versus 22), while having lower mean recall on both. Giving extra entrances a bounded local interval therefore improves average quality here, but does not uniformly dominate a larger entrance count on the tail endpoint.
+
+\paragraph{Starting scouts from the current frontier.}
+F raises mean recall over FRONTIER by 0.195--0.391 percentage points. Severe counts change from 29/35/46/45 to 9/22/14/20; all four primary tests pass Holm correction. QPS differences are \rTwoQpsFrontier{}; FRONTIER builds a sorted candidate set, so this time result does not represent an optimized frontier scheduler. Existing candidates do not reproduce F's quality gains here. Actual local expenditure and later eligibility also differ: this is a complete-policy comparison, not isolated proof that upper entrances alone cause the gain.
+
+Budget changes reveal further tradeoffs. At 8,192, MEP-DEV has higher mean recall than F on seeds 42/1234, although F has fewer severe failures; at 12,800, it has four severe events versus F's five on Faiss M32. The primary-budget benefit is not whole-grid dominance. In the separate earlier FANNG wave, F raises mean recall by 0.210--0.379 points, passes all four severe-failure tests, and achieves 2.09--2.14 times the QPS of the specified reconstruction. That ratio is not a native FANNG system claim or part of the latest timing wave.
+
+\subsection{Can the original search simply run longer?}\label{sec:longer}
+Giving C 11,264 evaluations while F retains 10,240 leaves F with higher mean recall, fewer severe failures, and 7.50--8.30\% higher QPS on every graph (Table~\ref{tab:more}). At these points, another 10\% on the original route is less effective than allocating the smaller budget differently. These retrospectively identified points from the earlier native wave neither equalize elapsed time nor establish dominance at all budgets. Their QPS must not be mixed with Table~\ref{tab:fixed}'s latest timing.
+
+\input{tables/more-continuation}
+
+\subsection{Previously unused queries and simple multi-entry search}\label{sec:newqueries}
+Earlier validation used 7,999 identities absent from its recorded development, on three graphs. F reduces severe graph--query events from 65 to 26 (41 rescues, two harms), distinct severely affected queries from 35 to 20, and zero events from 25 to ten. Mean recall rises from 99.02654\% to 99.18240\%. All 23,997 pairs match actual work, averaging 11,203.23 evaluations. Separate timing (300 queries, three graphs, twelve rounds) gives C/F 8.64604/8.72712\,ms, or about $-0.93\%$ inverse-mean-time throughput. This descriptive comparison does not inherit that study's conditional-policy primary test.
+
+Of 41 rescues, 37 reach at least eight hits; only two cross from four to five. F also reduces events below one, three, seven, nine, and ten hits (Appendix~\ref{app:thresholds}). These retrospective checks do not redefine the original endpoint.
+
+A separate cohort of 1,600 newly admitted queries, following 400 development queries, compares F with the older four-entry MEP on Faiss M32 and imported seeds 42/777. At $E=3{,}200$, recall rises from 98.7583\% to 98.8729\%, and severe events fall from 15 to seven out of 4,800; at $E=6{,}400$, recall rises from 99.2125\% to 99.2625\%, and severe events fall from nine to four. Neither allowance creates severe harm. The unadjusted query-cluster recall interval excludes zero only at the lower allowance. Separate local timing (80 queries per graph, five rounds) gives MEP-to-F QPS of 181.4 to 177.8 and 116.8 to 114.2; these times are not mixed with the server wave. The expanded latest MEP grid tests whether that historical advantage survives a stronger entrance-count choice.
+
+\subsection{Paid entrance selection and scheduling}\label{sec:family}
+Four extensions charge selection to the same $B_q$. \textbf{SCORE} spends up to 800 evaluations previewing upper descents, selects distinct completed endpoints by distance, then runs four 400-evaluation scouts. \textbf{DIVERSE} instead prefers endpoints with more undiscovered neighbors not covered by earlier selections. \textbf{KEEP} uses DIVERSE selection, gives each scout 300, and allocates 100-evaluation continuations by frontier distance, capped at 800 per route and 1,600 total. After KEEP, \textbf{E64\_RAW} takes at most 800 from the remaining main budget to score eligible table entrances and start one direct bottom route. Selection and that route share the window.
+
+\input{tables/family}
+
+At the primary $E=3{,}200$, F improves mean recall over C by 0.201--0.415 percentage points and lowers the severe count on every graph (Table~\ref{tab:family}). QPS is 2.40--2.77\% lower. Of the twenty adjacent primary tests, only the four C-to-F comparisons pass Holm correction. Subsequent transitions are descriptive.
+
+SCORE lowers the severe count versus F on all graphs, but raises mean recall on only two. Its QPS differences from C are $-4.746/-1.607/-1.220/-1.374\%$; only the last two point estimates are within tolerance. DIVERSE and KEEP have identical severe event sets. E64\_RAW lowers mean recall versus KEEP everywhere and reduces severe counts on only two graphs; on each tied graph, one rescue offsets one harm. Thus the family offers quality--cost alternatives, not monotonic improvements. Appendix~\ref{app:secondary} retains the secondary allowance.
+
+\subsection{Native quality--time alternatives}\label{sec:native}
+Figure~\ref{fig:native} enlarges the high-recall operating region of the earlier native/ABS timing wave. The full range appears in Appendix~\ref{app:nativegrid}. The selected four-graph comparison in Table~\ref{tab:native} uses highest development recall with mean time at most 4\,ms, breaking ties by faster time. Evaluation uses 8,000 queries. This common selection target does not equalize evaluation latency or impose a per-query deadline.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{native-tradeoff.pdf}
+\Description{Four panels enlarge the high-recall, 190 to 340 queries per second region on two T2I graphs for C, CDSM-F, native HNSW, ABS, and capped ABS.}
+\caption{High-recall operating region on Faiss M32 and imported seed 777. This is an axis zoom of the complete measured grid, with no Pareto filtering. Uncapped ABS uses $\gamma<0.06$; ABS\_CAP retains its independent grid. All timing belongs to the earlier native wave. Figure~\ref{fig:nativefull} retains the full range; Table~\ref{tab:native} gives four-graph selected points.}
+\label{fig:native}
+\end{figure*}
+
+At those selected points, F has fewer severe failures than native Faiss on all four graphs, with adjusted evidence on seeds 777/1234 in the original 28-test family. Mean recall is higher on the imported graphs and lower on Faiss M32; QPS is lower everywhere. Restricting uncapped ABS retrospectively to $\gamma<0.06$ selects 0.058 from its recorded development grid on every graph. F then has higher recall, fewer severe failures, and shorter p99 than ABS, but lower QPS. Earlier unrestricted-ABS tests are not transferred to this comparison.
+
+The complete native grid also contains joint quality--time advantages. We match every native point to the fastest measured F point with no lower mean recall and no more severe failures, and perform the reverse match; all unmatched points remain in the artifact. On seed 777, native ef 1,280 versus F at 11,264 gives recall 98.97375\% versus 99.00500\%, severe counts 31 versus 14, and QPS 217.18 versus 231.04 ($+6.38\%$). The p99 query-median latency falls from 6.193 to 5.411\,ms. This is a local advantage in an exposed evaluation grid, not a development-selected deployment choice, an equal-work comparison, or evidence of whole-grid dominance.
+
+ABS\_CAP offers a further tradeoff, often with higher mean recall or speed than F but an equal or larger severe count. Its selected cap is 12,800, versus F's 10,240; actual work can stop early. C's p99 is already close to F's (4.596--4.926 versus 4.578--4.877\,ms across these graphs). Consequently, the hard cap explains part of the tail-time advantage over uncapped ABS; it cannot all be attributed to scouts.
+
+\paragraph{Why disclose a restricted ABS range?}
+The current uncapped range $\gamma<0.06$ was adopted after inspecting costs, rather than preregistered as a universal cutoff. Table~\ref{tab:abscost} retains the cost evidence. On LAION, $\gamma=0.06$ averages 74,096 distance evaluations and 44.969\,ms; $\gamma=0.09$ averages 352,969 and 271.292\,ms. The latter's p99 approaches 1.27\,s despite normal distance-rule termination. These points are cost context outside the current ranking, not equal-resource competitors to F at 10,240. Growth depends on the workload and already occurs below 0.06; the parameter bound itself is not a resource guarantee. We therefore report actual work, caps, and observed tail time separately, without introducing a post-hoc service deadline.
+
+\input{tables/abs-cost}
+
+\subsection{Frozen transfer to LAION and WebVid}\label{sec:transfer}
+Frozen binaries, settings, and analysis transfer without re-selection. All three caps and both family allowances match actual work; repeated C/F quality agrees with prior measurements. These cohorts were previously used.
+
+\input{tables/transfer}
+
+At 10,240, F lowers mean recall on every graph (Table~\ref{tab:transfer}): LAION changes are $-0.16750/-0.11000/-0.12625$ percentage points; WebVid changes are $-0.09375/-0.05375/-0.07500$. Rescues/harms are 3/1, 3/3, 2/6 and 4/5, 6/1, 3/4, respectively; more queries lose hits than gain them everywhere. QPS decreases by 1.82/1.06/1.28\% and 1.12/0.89/1.37\%; five of six differences are within tolerance. F is faster than FANNG but has lower mean recall; none of the primary severe tests passes Holm.
+
+At the family primary allowance, WebVid's C/F severe counts are 24/23, 27/21, and 23/23, with QPS decreases of 1.015--1.127\% and lower mean recall. Across both datasets and allowances, F's mean recall is lower than C in all twelve configurations; each extension is lower than F in all twelve. KEEP matches DIVERSE's severe counts, and E64\_RAW lowers mean recall versus KEEP everywhere. Neither dataset has an adjacent primary contrast passing Holm.
+
+As a secondary outcome, F lowers zero failures in eight of WebVid's nine absolute cells (one tie); LAION has six decreases, two ties, and one increase. Some family configurations instead increase zero failures. These outcomes do not replace the primary severe endpoint. Transfer supplies no online rule predicting beneficial queries.
+
+\subsection{Applicability from a T2I reference configuration}\label{sec:scope}
+The settings in Table~\ref{tab:parameters} define a reference, not a universal optimum. T2I evidence covers previously unused queries, four graph constructions, three absolute budgets from 8,192 to 12,800, and two $p+E$ allowances. Table~\ref{tab:fixed} adds a current-implementation depth check at 10,240: limits 200, 400, and 800 all improve mean recall and severe counts over C on every graph. At 200, recall gains are 0.188--0.309 percentage points, severe counts are 11/23/21/24, and QPS decreases by only 0.07--0.77\%, within practical tolerance. At 800, severe counts are 8/20/14/20, while mean recall rises versus F on two graphs and falls on two. These descriptive results support neighboring configurations without changing the frozen primary F or establishing pure entrance-count superiority. Appendix~\ref{app:secondary} separates the older Java depth evidence.
+
+Applying the same settings to another embedding collection is a testable extrapolation. LAION and WebVid show that the cross-modal label alone does not predict a joint quality gain: some tail outcomes improve while mean recall falls. The present method is therefore useful on the demonstrated T2I workloads, with measured external boundaries. Larger collections, different graph families, and automatic selection of beneficial queries remain unestablished; the negative transfer does not justify claiming that an untested parameter scaling would repair it.

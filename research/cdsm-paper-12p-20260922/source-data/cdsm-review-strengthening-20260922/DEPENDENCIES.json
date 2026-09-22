@@ -1,0 +1,22 @@
+[
+  {
+    "path": "vendor/paid.h",
+    "origin": "fannbench-t2i-20260919\\paid.h",
+    "sha256": "f6cd012686b5b89d28a61490cb2a800591799deac22b9289ec363acd6b17063f"
+  },
+  {
+    "path": "vendor/bench_io.h",
+    "origin": "fannbench-t2i-20260919\\bench_io.h",
+    "sha256": "77a4e872f46fe124432bc80cf73a7aa28d7b96fb632f76d4b246355fd34dc0b1"
+  },
+  {
+    "path": "vendor/reference/common.h",
+    "origin": "fannbench-t2i-20260919\\reference\\common.h",
+    "sha256": "86f25ac1aa3a2b152ac1c1c0503150d493513bcc11d63bcd09ebdb269387167a"
+  },
+  {
+    "path": "vendor/reference/cdsm.h",
+    "origin": "fannbench-t2i-20260919\\reference\\cdsm.h",
+    "sha256": "657bc48d41f16171ed1a470484f987a5210b44419df10849942ff3ba18aeac3f"
+  }
+]

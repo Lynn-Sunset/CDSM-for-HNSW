@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "phase": "engineering",
+  "legacy_CF_identical_records": 192,
+  "legacy_compared_fields": [
+    "hits",
+    "dc",
+    "primary",
+    "scout",
+    "upper_dc",
+    "logical",
+    "edges",
+    "expansions",
+    "stop",
+    "sequence",
+    "ids",
+    "distances"
+  ],
+  "maximum_FANNG_upper_distance_calls": 156,
+  "upper_prefix_cap_compatible": true
+}

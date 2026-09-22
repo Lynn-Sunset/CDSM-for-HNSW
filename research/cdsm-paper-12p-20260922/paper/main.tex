@@ -1,0 +1,45 @@
+% CDSM method paper. Author fields are intentionally blank at the user's request.
+% Unmodified official acmart/pvldb styles; no compressed margins or body fonts.
+\documentclass[sigconf,nonacm]{acmart}
+\usepackage{pvldb}
+\usepackage{amsmath,tabularx,array,xurl}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\settopmatter{printacmref=false}
+\graphicspath{{figures/}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\cdsm}{\textsc{CDSM}}
+\newcommand{\severe}{\mathrm{Severe}}
+\newcommand{\recall}{\mathrm{Recall}}
+\newcommand{\dc}{\mathrm{DC}}
+\input{tables/r2-values}
+\hypersetup{pdftitle={CDSM: Budgeted Multi-Entry Search for Reducing Severe Recall Failures},pdfauthor={},pdfsubject={Method paper with frozen T2I, LAION and WebVid evaluation}}
+\begin{document}
+\title{CDSM: Budgeted Multi-Entry Search for Reducing Severe Recall Failures}
+\begin{abstract}
+Graph-based approximate nearest-neighbor search can achieve high average recall while missing most true neighbors for some queries. We present CDSM, which uses bounded exploration from alternative entrances to redirect a continuing main search. Short local searches, called scouts, share scores and traversal progress, then return unfinished executable work to the main frontier. Every stage consumes one query budget. On four T2I graphs at exactly 10,240 distance evaluations per query, the original four-scout policy reduces severe recall failures by 44--72\% and raises mean Recall@10 by 0.214--0.398 percentage points over direct continuation, with QPS changes of \rTwoQpsC{}. It also raises mean recall over all tested 1/4/8/16-entry shared-queue controls at this budget, while larger entrance counts offer competing tail-quality tradeoffs. Starting scouts from the existing frontier does not reproduce its quality gains. At measured points giving continuation 10\% more work, CDSM still has higher recall, fewer severe failures, and 7.50--8.30\% higher throughput. Neighboring scout depths and separate query cohorts support its T2I applicability; frozen LAION and WebVid transfer lowers mean recall. CDSM improves limited-budget search on the demonstrated workloads without rebuilding the graph or predicting query recall.
+\end{abstract}
+\maketitle
+\pagestyle{plain}
+% Publication metadata and the author block are deliberately not fabricated.
+% Fill the official \vldbtopmatter fields when preparing an actual submission.
+\input{sections/01-introduction}
+\input{sections/02-problem}
+\input{sections/03-method}
+\input{sections/04-design}
+\input{sections/05-results}
+\input{sections/06-explanation}
+\input{sections/07-related}
+\input{sections/08-conclusion}
+\appendix
+\section{Execution and Evaluation Details}\label{app:details}
+% Queue the wide appendix table early enough to precede the references.
+\input{tables/secondary}
+\input{tables/transfer-family}
+\input{sections/appendix-native-floats}
+\input{sections/appendix-method}
+\input{sections/appendix-evaluation}
+\balance
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

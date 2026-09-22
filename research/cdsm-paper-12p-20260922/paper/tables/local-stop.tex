@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Scout stopping rules on 7,999 queries and three graphs (23,997 events). All policies match actual work per event. Bottom DC is mean new bottom-layer scoring in the scout phase; it excludes upper descent.}
+\label{tab:stop}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Policy & Recall (\%) & Severe & Zero & Bottom DC \\
+\midrule
+C & 99.02654 & 65 & 25 & 0.00 \\
+L\_GLOBAL & 99.09739 & 46 & 15 & 0.36 \\
+L\_LOCAL (F) & 99.18240 & 26 & 10 & 1098.68 \\
+L\_NONE & 99.17031 & 24 & 10 & 1342.70 \\
+\bottomrule
+\end{tabular}
+\end{table}

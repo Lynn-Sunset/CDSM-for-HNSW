@@ -1,0 +1,298 @@
+{
+  "scope": "Frozen T2I FANNG and CDSM-family supplement transferred to existing LAION-CLIP1M and WebVid1M HNSW graphs",
+  "datasets": [
+    {
+      "name": "laion",
+      "label": "LAION-CLIP1M",
+      "graphs": [
+        {
+          "name": "Rebuilt-s42",
+          "index": "research/hnsw-adaptive-laion-rebuild-20260921/data/graph-s42.faiss",
+          "seed": 42,
+          "M": 16,
+          "efConstruction": 100,
+          "construction_threads": 1,
+          "origin": "New Faiss HNSWFlat build; original canonical row order; frozen normalized LAION-CLIP1M vectors"
+        },
+        {
+          "name": "Rebuilt-s777",
+          "index": "research/hnsw-adaptive-laion-rebuild-20260921/data/graph-s777.faiss",
+          "seed": 777,
+          "M": 16,
+          "efConstruction": 100,
+          "construction_threads": 1,
+          "origin": "New Faiss HNSWFlat build; original canonical row order; frozen normalized LAION-CLIP1M vectors"
+        },
+        {
+          "name": "Rebuilt-s1234",
+          "index": "research/hnsw-adaptive-laion-rebuild-20260921/data/graph-s1234.faiss",
+          "seed": 1234,
+          "M": 16,
+          "efConstruction": 100,
+          "construction_threads": 1,
+          "origin": "New Faiss HNSWFlat build; original canonical row order; frozen normalized LAION-CLIP1M vectors"
+        }
+      ],
+      "data": {
+        "base": "research/hnsw-adaptive-laion-rebuild-20260921/data/base.fbin",
+        "queries": "research/hnsw-adaptive-laion-rebuild-20260921/data/query.fbin",
+        "gt": "research/hnsw-adaptive-laion-rebuild-20260921/data/gt.ivecs"
+      },
+      "legacy_study": "research/hnsw-adaptive-laion-abs-lt006-20260922",
+      "query_files": {
+        "engineering": "research/hnsw-adaptive-laion-abs-lt006-20260922/queries/engineering.txt",
+        "evaluation": "research/hnsw-adaptive-laion-abs-lt006-20260922/queries/evaluation.txt",
+        "timing-evaluation": "research/hnsw-adaptive-laion-abs-lt006-20260922/queries/timing-evaluation.txt",
+        "prefix": "research/cdsm-crossmodal-supplement-20260922/inputs/laion/prefix.txt"
+      },
+      "dimension": 512,
+      "base_count": 1000000,
+      "query_count": 10000,
+      "distance": "existing normalized float32 squared L2",
+      "rebuild_graph": false
+    },
+    {
+      "name": "webvid",
+      "label": "WebVid1M",
+      "graphs": [
+        {
+          "name": "WebVid-s42",
+          "index": "research/hnsw-adaptive-webvid-20260921/data/graph-s42.faiss",
+          "seed": 42,
+          "M": 16,
+          "efConstruction": 100,
+          "construction_threads": 1,
+          "origin": "New Faiss HNSWFlat; canonical WebVid video order; frozen normalized 1M video vectors"
+        },
+        {
+          "name": "WebVid-s777",
+          "index": "research/hnsw-adaptive-webvid-20260921/data/graph-s777.faiss",
+          "seed": 777,
+          "M": 16,
+          "efConstruction": 100,
+          "construction_threads": 1,
+          "origin": "New Faiss HNSWFlat; canonical WebVid video order; frozen normalized 1M video vectors"
+        },
+        {
+          "name": "WebVid-s1234",
+          "index": "research/hnsw-adaptive-webvid-20260921/data/graph-s1234.faiss",
+          "seed": 1234,
+          "M": 16,
+          "efConstruction": 100,
+          "construction_threads": 1,
+          "origin": "New Faiss HNSWFlat; canonical WebVid video order; frozen normalized 1M video vectors"
+        }
+      ],
+      "data": {
+        "base": "research/hnsw-adaptive-webvid-20260921/data/base.fbin",
+        "queries": "research/hnsw-adaptive-webvid-20260921/data/query.fbin",
+        "gt": "research/hnsw-adaptive-webvid-20260921/data/gt.ivecs"
+      },
+      "legacy_study": "research/hnsw-adaptive-webvid-abs-lt006-20260922",
+      "query_files": {
+        "engineering": "research/hnsw-adaptive-webvid-abs-lt006-20260922/queries/engineering.txt",
+        "evaluation": "research/hnsw-adaptive-webvid-abs-lt006-20260922/queries/evaluation.txt",
+        "timing-evaluation": "research/hnsw-adaptive-webvid-abs-lt006-20260922/queries/timing-evaluation.txt",
+        "prefix": "research/cdsm-crossmodal-supplement-20260922/inputs/webvid/prefix.txt"
+      },
+      "dimension": 512,
+      "base_count": 1000000,
+      "query_count": 10000,
+      "distance": "existing normalized float32 squared L2",
+      "rebuild_graph": false
+    }
+  ],
+  "inputs": [
+    {
+      "path": "research/hnsw-adaptive-laion-rebuild-20260921/data/base.fbin",
+      "bytes": 2048000008,
+      "sha256": "91457b82c7d39724a9ddc53d97b99e749414ce417d4e0a3de2d89c70dc6bd89b"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-rebuild-20260921/data/graph-s1234.faiss",
+      "bytes": 2192254074,
+      "sha256": "91d2573312db3c38a5b195c14c726da62f51da60a770bb81454b77b8e29a4830"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-rebuild-20260921/data/graph-s42.faiss",
+      "bytes": 2192255738,
+      "sha256": "fd979ec09267beac8edc2e26faaee3f5ab8c31c893a5e7431d94a3e0b0dcb942"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-rebuild-20260921/data/graph-s777.faiss",
+      "bytes": 2192257210,
+      "sha256": "f615d6c937bbb9575eca977b7c99b2362cd686c15ffd57eb9779d35e7abb0594"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-rebuild-20260921/data/gt.ivecs",
+      "bytes": 440000,
+      "sha256": "888e3e3bd6c3f577edca71c9774836e704a2ccef282dbbf7255b081d827ce9da"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-rebuild-20260921/data/query.fbin",
+      "bytes": 20480008,
+      "sha256": "429f739186c260055e19daf3846f298ebc71b4d0a3cee63baec57ac913096733"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-abs-lt006-20260922/queries/engineering.txt",
+      "bytes": 40,
+      "sha256": "38c0fd5e1a9e92b6cc91b27af222243786b1aa4261873e4e24b68439afb262da"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-abs-lt006-20260922/queries/evaluation.txt",
+      "bytes": 40000,
+      "sha256": "c5840f0ec50f3c371ac13fdc3c03aa569b68d0e61273a7c94f4d3e6008ad19d1"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-abs-lt006-20260922/queries/timing-evaluation.txt",
+      "bytes": 4000,
+      "sha256": "d657c949d723103d3d5281783df9f36c585d94c27402eae91775cc39456b802f"
+    },
+    {
+      "path": "research/cdsm-crossmodal-supplement-20260922/inputs/laion/prefix.txt",
+      "bytes": 40040,
+      "sha256": "c6ef61493fe0ebde46ccbd3d4e0f1d9da4ac6b848ed55cd462659fcd7cfeb0c5"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-abs-lt006-20260922/PLAN.json",
+      "bytes": 166441,
+      "sha256": "9e9b5816571c8b9e53fb899888fbe221725e3800f81fd61073f9cd0400bdc7f6"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-abs-lt006-20260922/FROZEN.json",
+      "bytes": 4640,
+      "sha256": "be1d9674191f8bf67f338e4cbf8808ffabbab44af71cb2de5b98f86ce9ff6aab"
+    },
+    {
+      "path": "research/hnsw-adaptive-laion-abs-lt006-20260922/COMPLETION.json",
+      "bytes": 401,
+      "sha256": "16c5fb0f3242310533fe332f1966df01704c632af0252057ba3d16a7ce9183c8"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-20260921/data/base.fbin",
+      "bytes": 2048000008,
+      "sha256": "d189f18e6b45d2874d592f2ed89cd22ced93d4712171c6d5780c168072529d8c"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-20260921/data/graph-s1234.faiss",
+      "bytes": 2192254074,
+      "sha256": "41a692575bf656126d1e692003d6b9c6b307b0f530cab543467d2fe712fd2e8a"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-20260921/data/graph-s42.faiss",
+      "bytes": 2192255738,
+      "sha256": "22c7f2808b6eb03a29cfc6af176d0bb228c45cff2e7b0552aa1b9c9dbfb8fd9f"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-20260921/data/graph-s777.faiss",
+      "bytes": 2192257210,
+      "sha256": "9d3370a569632c976d7a216257b70c521ca81ff6532ff3443b5e96ba7fda7f8a"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-20260921/data/gt.ivecs",
+      "bytes": 440000,
+      "sha256": "cfbc25ec7bf3ef9ae060b75b247e47a05e9853dabf7fd3beec1e3034b4660314"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-20260921/data/query.fbin",
+      "bytes": 20480008,
+      "sha256": "f999310a1df936e3fb283f68dbf6b8e2d35ef196298ea920bc584325bcc010a7"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-abs-lt006-20260922/queries/engineering.txt",
+      "bytes": 40,
+      "sha256": "38c0fd5e1a9e92b6cc91b27af222243786b1aa4261873e4e24b68439afb262da"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-abs-lt006-20260922/queries/evaluation.txt",
+      "bytes": 40000,
+      "sha256": "c5840f0ec50f3c371ac13fdc3c03aa569b68d0e61273a7c94f4d3e6008ad19d1"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-abs-lt006-20260922/queries/timing-evaluation.txt",
+      "bytes": 4000,
+      "sha256": "d657c949d723103d3d5281783df9f36c585d94c27402eae91775cc39456b802f"
+    },
+    {
+      "path": "research/cdsm-crossmodal-supplement-20260922/inputs/webvid/prefix.txt",
+      "bytes": 40040,
+      "sha256": "c6ef61493fe0ebde46ccbd3d4e0f1d9da4ac6b848ed55cd462659fcd7cfeb0c5"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-abs-lt006-20260922/PLAN.json",
+      "bytes": 166040,
+      "sha256": "b7fc29ec55af502d4cc0b9ac00d56a28f35f71f3494767f1cf2dc082703d132c"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-abs-lt006-20260922/FROZEN.json",
+      "bytes": 4810,
+      "sha256": "e31b933a9ecd0445099cc8d79685662ecfdb13c00dafa4a3ecbb53a9518b1f2e"
+    },
+    {
+      "path": "research/hnsw-adaptive-webvid-abs-lt006-20260922/COMPLETION.json",
+      "bytes": 96,
+      "sha256": "26745a29a9b36fc38fa3ad645f83d6c057ddbe80aafda6e54df04d5778800a6d"
+    }
+  ],
+  "frozen_studies": {
+    "absolute": "research/fanng-search-comparison-20260922",
+    "family": "research/cdsm-family-comparison-20260922"
+  },
+  "quality_cpus": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "timing_cpu": 22,
+  "timing_repetitions": 5,
+  "quality_count": 8000,
+  "timing_count": 800,
+  "caps": [
+    8192,
+    10240,
+    12800
+  ],
+  "extras": [
+    3200,
+    6400
+  ],
+  "absolute_policies": [
+    "C",
+    "F",
+    "FANNG"
+  ],
+  "family_policies": [
+    "C",
+    "FANNG",
+    "F",
+    "SCORE",
+    "DIVERSE",
+    "KEEP",
+    "E64_RAW"
+  ],
+  "primary_evaluation_cap": 10240,
+  "primary_extra": 3200,
+  "CDSM_initial_stage_cap": 6400,
+  "CDSM_initial_gamma": 0.075,
+  "query_exposure": "Existing evaluation queries exposed by earlier ANN experiments; fixed cross-dataset transfer with no tuning",
+  "parameter_selection": "None; all inherited fixed methods and budget points retained",
+  "interpret_qps_tolerance_percent": 1.5,
+  "resource_policy": "At most six single-core quality/preparation workers; one globally serial timing worker; nice19, idle IO, 8 GiB per process, inherited resource interference checks",
+  "expected_records": {
+    "absolute_quality": 432000,
+    "family_quality": 672000,
+    "absolute_timing": 216000,
+    "family_timing": 336000
+  },
+  "blockers": [
+    "research/fanng-search-comparison-20260922",
+    "research/cdsm-family-comparison-20260922",
+    "research/hnsw-adaptive-laion-rebuild-20260921",
+    "research/laion-hnsw-rebuild-20260921",
+    "research/webvid-hnsw-scaleup-20260921",
+    "research/hnsw-adaptive-webvid-abs-lt006-20260922"
+  ]
+}

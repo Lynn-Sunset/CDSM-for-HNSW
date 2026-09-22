@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "evaluation_rows": 2928000,
+  "graphs": 3,
+  "selected_parameter_points": 366,
+  "configurations_selected_before_evaluation": false,
+  "scope_amendment": {
+    "utc": "2026-09-22T02:30:18.944325+00:00",
+    "requested_by_user": true,
+    "original": "/home/testsv/cdsm-ann-20260920/research/hnsw-adaptive-webvid-20260921",
+    "dataset": "webvid",
+    "excluded_policy": "ABS",
+    "gamma_must_be_less_than": 0.06,
+    "allowed_abs_parameters": [
+      30,
+      40,
+      50,
+      55,
+      58
+    ],
+    "ABS_CAP_unchanged": true,
+    "CDSM_implementation_unchanged": true,
+    "original_results_preserved": true,
+    "scope_decision_informed_by_LAION_cost_analysis": true,
+    "evaluation_precomputed_before_scope_change": true,
+    "selection_rule": "Apply user scope; select from allowed development results only; disclose retrospective scope change.",
+    "previous_parameter_points": 399,
+    "parameter_points": 366,
+    "evaluation_rows": 2928000,
+    "original_frozen_sha256": "db7853c5654b23868e75f1c2111e0f8a0bbc7197df1966a6f097219ba4e0ca73"
+  },
+  "selection_uses_evaluation_metrics": false,
+  "graph_change": false,
+  "repeated_outputs_identical": true,
+  "primary_family": 21
+}

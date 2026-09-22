@@ -1,0 +1,41 @@
+{
+  "scope": "Before integrating completed LAION/WebVid transfer; EVIDENCE-MAP archive is owned by evidence reviewer.",
+  "files": [
+    {
+      "file": "MANUSCRIPT-DRAFT.md",
+      "sha256": "4019336298460a3de41aab94a071dd1ff7485a768ec81bb9b18336bbe71a3886"
+    },
+    {
+      "file": "REPORT.zh-CN.md",
+      "sha256": "b90ea4d0288e3b8a96b4b746a2d1ea4b82498f3a7350219eb749de952978c4f7"
+    },
+    {
+      "file": "METHOD-SPEC.md",
+      "sha256": "a990d7f898d3ed7f9d06806956f15438d662241bb22c20e8612b3663fbdf4c75"
+    },
+    {
+      "file": "RELATED-WORK-DELTA.md",
+      "sha256": "f1a63429e700d3110ecff5822cb835e95ab8fd7a9bcdb85a13c24e9b27a9e1f8"
+    },
+    {
+      "file": "PAPER-CLAIM-REVIEW.md",
+      "sha256": "4ecd64853f0e4e9916f83ed7358ac792bc07caa1f910937689bb31ba1cfd59d4"
+    },
+    {
+      "file": "PAPER-TABLES.md",
+      "sha256": "16863000d040062930779874326dc8cd8ec5558fa646b4932db5ca95203dde0c"
+    },
+    {
+      "file": "SOURCE-CHECK.json",
+      "sha256": "8f1d9c99ebde5b257815d7ed96c6f200c388bc7870f86e33cf82c4bd38b56f9a"
+    },
+    {
+      "file": "integrate_completed_evidence.py",
+      "sha256": "7ec058da87686d7a0ad0e0ad70c4b3b3cbe7f0f0fee2a61f06d0442b2042f157"
+    },
+    {
+      "file": "verify_sources.py",
+      "sha256": "daec43c7c696a9c31e3cec09c407a8175d5e7e04c323bdea2f0421b75e7c44bf"
+    }
+  ]
+}

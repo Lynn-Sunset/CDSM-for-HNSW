@@ -1,0 +1,381 @@
+{
+  "status": "passed",
+  "created_utc": "2026-09-12T15:06:33.257058+00:00",
+  "events": 60,
+  "qids": 42,
+  "totals": {
+    "events": 60,
+    "C": 96,
+    "F": 524,
+    "oracle": 540,
+    "best_six": 539,
+    "severe_at_oracle": 3
+  },
+  "by_seed": {
+    "42": {
+      "events": 16,
+      "C": 19,
+      "F": 136,
+      "oracle": 141,
+      "best_six": 141,
+      "severe_at_oracle": 0
+    },
+    "777": {
+      "events": 24,
+      "C": 34,
+      "F": 221,
+      "oracle": 222,
+      "best_six": 221,
+      "severe_at_oracle": 2
+    },
+    "1234": {
+      "events": 20,
+      "C": 43,
+      "F": 167,
+      "oracle": 177,
+      "best_six": 177,
+      "severe_at_oracle": 1
+    }
+  },
+  "by_kind": {
+    "rescue": {
+      "events": 55,
+      "C": 58,
+      "F": 519,
+      "oracle": 522,
+      "best_six": 521,
+      "severe_at_oracle": 0
+    },
+    "harm": {
+      "events": 5,
+      "C": 38,
+      "F": 5,
+      "oracle": 18,
+      "best_six": 18,
+      "severe_at_oracle": 3
+    }
+  },
+  "prior_policies": {
+    "Fonly": {
+      "hits": 524,
+      "severe": 5,
+      "rescue_retained": 55,
+      "harm_repaired": 0
+    },
+    "Conly": {
+      "hits": 311,
+      "severe": 25,
+      "rescue_retained": 33,
+      "harm_repaired": 2
+    },
+    "C25_CF": {
+      "hits": 522,
+      "severe": 5,
+      "rescue_retained": 55,
+      "harm_repaired": 0
+    },
+    "C25_FC": {
+      "hits": 513,
+      "severe": 6,
+      "rescue_retained": 54,
+      "harm_repaired": 0
+    },
+    "C50_CF": {
+      "hits": 520,
+      "severe": 5,
+      "rescue_retained": 55,
+      "harm_repaired": 0
+    },
+    "C50_FC": {
+      "hits": 489,
+      "severe": 9,
+      "rescue_retained": 51,
+      "harm_repaired": 0
+    }
+  },
+  "goals": {
+    "severe5": {
+      "covered_by_prior_six": 57,
+      "infeasible_at_B": 3
+    },
+    "original_F": {
+      "covered_by_prior_six": 60
+    },
+    "original_C": {
+      "covered_by_prior_six": 55,
+      "infeasible_at_B": 5
+    },
+    "severe5_and_F": {
+      "covered_by_prior_six": 57,
+      "infeasible_at_B": 3
+    },
+    "best_original": {
+      "covered_by_prior_six": 55,
+      "infeasible_at_B": 5
+    }
+  },
+  "target_feasibility": [
+    {
+      "target": 0,
+      "within_B": 60,
+      "over_B": 0,
+      "absent_from_domain": 0
+    },
+    {
+      "target": 1,
+      "within_B": 59,
+      "over_B": 1,
+      "absent_from_domain": 0
+    },
+    {
+      "target": 2,
+      "within_B": 58,
+      "over_B": 2,
+      "absent_from_domain": 0
+    },
+    {
+      "target": 3,
+      "within_B": 58,
+      "over_B": 2,
+      "absent_from_domain": 0
+    },
+    {
+      "target": 4,
+      "within_B": 57,
+      "over_B": 3,
+      "absent_from_domain": 0
+    },
+    {
+      "target": 5,
+      "within_B": 57,
+      "over_B": 3,
+      "absent_from_domain": 0
+    },
+    {
+      "target": 6,
+      "within_B": 56,
+      "over_B": 3,
+      "absent_from_domain": 1
+    },
+    {
+      "target": 7,
+      "within_B": 54,
+      "over_B": 3,
+      "absent_from_domain": 3
+    },
+    {
+      "target": 8,
+      "within_B": 53,
+      "over_B": 2,
+      "absent_from_domain": 5
+    },
+    {
+      "target": 9,
+      "within_B": 50,
+      "over_B": 2,
+      "absent_from_domain": 8
+    },
+    {
+      "target": 10,
+      "within_B": 38,
+      "over_B": 1,
+      "absent_from_domain": 21
+    }
+  ],
+  "harms": [
+    {
+      "seed": 42,
+      "qid": 103229,
+      "C": 6,
+      "F": 1,
+      "maximum": 5,
+      "severe5": {
+        "target": 5,
+        "feasible": true,
+        "minimum": {
+          "c": 11512,
+          "f": 7722,
+          "native": 12725,
+          "hits": 5,
+          "mask": 94
+        },
+        "margin_to_B": 75,
+        "covered_policies": [
+          "Conly"
+        ],
+        "status": "covered_by_prior_six"
+      },
+      "restore_C": {
+        "target": 6,
+        "feasible": false,
+        "minimum": {
+          "c": 11615,
+          "f": 7722,
+          "native": 12827,
+          "hits": 6,
+          "mask": 606
+        },
+        "margin_to_B": -27,
+        "covered_policies": [],
+        "status": "infeasible_at_B"
+      }
+    },
+    {
+      "seed": 777,
+      "qid": 110149,
+      "C": 8,
+      "F": 1,
+      "maximum": 1,
+      "severe5": {
+        "target": 5,
+        "feasible": false,
+        "minimum": {
+          "c": 12725,
+          "f": 7567,
+          "native": 13859,
+          "hits": 5,
+          "mask": 348
+        },
+        "margin_to_B": -1059,
+        "covered_policies": [],
+        "status": "infeasible_at_B"
+      },
+      "restore_C": {
+        "target": 8,
+        "feasible": false,
+        "minimum": {
+          "c": 12751,
+          "f": 7567,
+          "native": 13885,
+          "hits": 8,
+          "mask": 989
+        },
+        "margin_to_B": -1085,
+        "covered_policies": [],
+        "status": "infeasible_at_B"
+      }
+    },
+    {
+      "seed": 777,
+      "qid": 116953,
+      "C": 5,
+      "F": 3,
+      "maximum": 3,
+      "severe5": {
+        "target": 5,
+        "feasible": false,
+        "minimum": {
+          "c": 12249,
+          "f": 7804,
+          "native": 13298,
+          "hits": 5,
+          "mask": 724
+        },
+        "margin_to_B": -498,
+        "covered_policies": [],
+        "status": "infeasible_at_B"
+      },
+      "restore_C": {
+        "target": 5,
+        "feasible": false,
+        "minimum": {
+          "c": 12249,
+          "f": 7804,
+          "native": 13298,
+          "hits": 5,
+          "mask": 724
+        },
+        "margin_to_B": -498,
+        "covered_policies": [],
+        "status": "infeasible_at_B"
+      }
+    },
+    {
+      "seed": 1234,
+      "qid": 122651,
+      "C": 9,
+      "F": 0,
+      "maximum": 0,
+      "severe5": {
+        "target": 5,
+        "feasible": false,
+        "minimum": {
+          "c": 12295,
+          "f": 7699,
+          "native": 13268,
+          "hits": 5,
+          "mask": 107
+        },
+        "margin_to_B": -468,
+        "covered_policies": [],
+        "status": "infeasible_at_B"
+      },
+      "restore_C": {
+        "target": 9,
+        "feasible": false,
+        "minimum": {
+          "c": 12410,
+          "f": 7699,
+          "native": 13383,
+          "hits": 9,
+          "mask": 1019
+        },
+        "margin_to_B": -583,
+        "covered_policies": [],
+        "status": "infeasible_at_B"
+      }
+    },
+    {
+      "seed": 1234,
+      "qid": 129045,
+      "C": 10,
+      "F": 0,
+      "maximum": 9,
+      "severe5": {
+        "target": 5,
+        "feasible": true,
+        "minimum": {
+          "c": 9619,
+          "f": 7742,
+          "native": 10872,
+          "hits": 5,
+          "mask": 426
+        },
+        "margin_to_B": 1928,
+        "covered_policies": [
+          "Conly"
+        ],
+        "status": "covered_by_prior_six"
+      },
+      "restore_C": {
+        "target": 10,
+        "feasible": false,
+        "minimum": {
+          "c": 11631,
+          "f": 7742,
+          "native": 12884,
+          "hits": 10,
+          "mask": 1023
+        },
+        "margin_to_B": -84,
+        "covered_policies": [],
+        "status": "infeasible_at_B"
+      }
+    }
+  ],
+  "uncovered_capacity": [
+    {
+      "seed": 777,
+      "qid": 108897,
+      "maximum": 10,
+      "best_six": 9,
+      "witness": {
+        "c": 11671,
+        "f": 7715,
+        "native": 12648,
+        "hits": 10,
+        "mask": 1023
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+graph,method,actual_policy,cap,cap_k,recall_pct,severe,queries
+Imported-s1234,MEP_DEV,MEP8,8192,8.192,98.28375,40,8000
+Imported-s1234,MEP_DEV,MEP16,10240,10.24,98.78375,24,8000
+Imported-s1234,MEP_DEV,MEP4,12800,12.8,98.98375,23,8000

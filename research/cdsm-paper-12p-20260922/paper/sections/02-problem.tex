@@ -1,0 +1,12 @@
+\section{Problem and Resource Model}\label{sec:problem}
+Let $G=(V,E)$ be a fixed graph over stored vectors, $q$ a query, and $N_k(q)$ the exact nearest-neighbor set. We return $A_k(q)$ and evaluate
+\[
+ \recall@k(q)=\frac{|A_k(q)\cap N_k(q)|}{k}.
+\]
+We use $k=10$. A \emph{severe failure} has fewer than five true neighbors, and a \emph{zero-recall failure} has none. A rescue crosses from severe to non-severe; a harm crosses in the opposite direction. These are outcomes computed from exact ground truth, not signals available to the search policy.
+
+The controlled resource is actual query--vector distance evaluation. All new scores---including upper descent, entrance selection, scouts, and final continuation---consume one common allowance $B_q$. A cached score does not execute another distance computation and incurs no additional unit, although its lookup and queue processing still take CPU time. Equal distance work therefore does not imply equal latency. We report both resources.
+
+Two contracts are evaluated separately. Under an \emph{absolute cap}, $B_q=B$ for every query. Under the \emph{additional-allowance contract}, $B_q=P_q+E$, where $P_q$ is the actual initial-stage expenditure and $E$ is fixed. The initial stage can stop early, so $P_q+E$ is not generally $6{,}400+E$. An execution may finish below its cap if all recoverable work is exhausted; the strict comparisons reported here verify equality of actual work query by query instead of inferring it from matching configured caps.
+
+A \emph{frontier} comprises discovered candidates with unfinished expansion work. It includes waiting active or deferred candidates and a current node whose adjacency list has been only partly processed. An empty active queue alone does not imply an empty recoverable frontier. Storing only the best $k$ answers cannot represent these continuation opportunities.
