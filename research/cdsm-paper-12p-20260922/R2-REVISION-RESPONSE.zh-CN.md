@@ -57,4 +57,4 @@ FRONTIER 从主搜索已经发现、尚未展开完的候选中选最多四个�
 
 论文的主张继续是：CDSM 是一种通过有限局部探索及状态回流改善预算使用的方法，已有严格同实际距离的正向竞争证据。本文没有宣称入口和保存状态本身首创，也没有把 iQAN 的文献区别当作实测性能胜利。
 
-完整最新数值见 `source-data/cdsm-review-strengthening-20260922/SUMMARY.json`；协议、源码、选参、审计与术语说明同目录保留。单独的服务器原始归档身份见 `SERVER-BUNDLE.json`。旧稿在 `revisions/pre-r2-strengthening/` 保存，正式交付页数和文件哈希以 `QA.json` 为准。
+完整最新数值见 `source-data/cdsm-review-strengthening-20260922/SUMMARY.json`；协议、源码、选参、审计与术语说明同目录保留。单独的服务器原始归档身份见 `SERVER-BUNDLE.json`。过时稿件说明与修订计划可从 Git 历史查阅；正式交付页数和 PDF 文件哈希以 `QA.json` 为准。

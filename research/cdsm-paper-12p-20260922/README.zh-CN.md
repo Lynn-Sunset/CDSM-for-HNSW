@@ -1,6 +1,6 @@
 # CDSM 英文论文稿
 
-论文题目为 **CDSM: Budgeted Multi-Entry Search for Reducing Severe Recall Failures**。交付稿限制为 **12 页，包含正文、附录和参考文献**，作者留空。主贡献仍是 **CDSM 搜索方法**：备用入口先进行有限局部探索，再将未完成搜索状态反馈到主前沿，改变剩余预算下的展开方向。各阶段共享距离缓存、访问状态和邻接扫描进度，并遵守同一个查询预算。上一轮修订记录保留在 `REVISION-RESPONSE.zh-CN.md`；最新补强及完成证据见 `R2-REVISION-RESPONSE.zh-CN.md` 与 `QA.json`。
+论文题目为 **CDSM: Budgeted Multi-Entry Search for Reducing Severe Recall Failures**。交付稿限制为 **12 页，包含正文、附录和参考文献**，作者留空。主贡献仍是 **CDSM 搜索方法**：备用入口先进行有限局部探索，再将未完成搜索状态反馈到主前沿，改变剩余预算下的展开方向。各阶段共享距离缓存、访问状态和邻接扫描进度，并遵守同一个查询预算。最新补强及完成证据见 `R2-REVISION-RESPONSE.zh-CN.md` 与 `QA.json`。
 
 主方法使用原始四 scout 策略 **F**。付费入口选择与后续调度变体作为扩展单独报告，不将扩展结果归到原始 F 名下。论文同时保留 T2I 上的正面结果，以及 LAION、WebVid 上的迁移边界；后两者不支持“跨数据集普遍提高平均召回率”的结论。直接续搜 C、共享队列多入口搜索和同图移植的 FANNG 搜索各有明确身份，不能与原生数据库或原生索引的完整系统性能混为一谈。
 
@@ -31,3 +31,5 @@
 `package_delivery.py` 是可选的交付核验与打包脚本，另需 `pypdf`。它要求先重建PDF、将全部页面渲染为 `qa/final-page-XX.png` 并完成逐页目视检查，再传入 `--visual-review-confirmed`；该参数是人工检查声明，脚本本身不替代视觉审阅。`BASELINE-EDITION.json` 保留修订前的源数据与样式身份，便于检查历史材料未被改写。
 
 作者按用户要求留空，出版元数据也有意留空，没有虚构作者、单位、卷期、DOI 或正式发表信息。这是一份可审阅、可继续修改的论文稿，**不是 camera-ready 版本**；采用官方样式并控制页数，不等于已经完成特定投稿轮次的全部合规检查。
+
+GitHub 当前目录已清理早期代码包、旧审稿意见与已执行完的修订计划。当前论文 PDF、论文与图表源码、110 份冻结实验材料及其哈希均保持不变。源码 ZIP 按清理后的内容重新打包，新的成员清单见 `PACKAGE-MANIFEST.json`；旧内容仍可通过 Git 历史恢复。

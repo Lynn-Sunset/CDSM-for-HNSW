@@ -14,8 +14,8 @@
     },
     {
       "path": "build_r2_response.py",
-      "bytes": 8475,
-      "sha256": "1849d48680994e9d21926f78a5ef6587187d2bd7d07bdee5243e7736fd0c47d4"
+      "bytes": 8486,
+      "sha256": "48aae9f8b6aa7ed159c5ca7d5cbfb3a7606ad0a8e86a725a0abd1bf92936b2b1"
     },
     {
       "path": "build_r2_values.py",
@@ -41,11 +41,6 @@
       "path": "derive_revision_data.py",
       "bytes": 4106,
       "sha256": "92ea1a95dbe1aad0cdcc8b67624e8553a6afb5fc6aa3ca4675a4c0569434b1cc"
-    },
-    {
-      "path": "import_r2_evidence.py",
-      "bytes": 2131,
-      "sha256": "d7fce8ae4ea2a805f4b358c8aee87577e110f311138677f7889909854617d68c"
     },
     {
       "path": "package_delivery.py",
@@ -449,38 +444,18 @@
     },
     {
       "path": "R2-REVISION-RESPONSE.zh-CN.md",
-      "bytes": 6764,
-      "sha256": "8bcd518052d963f2853c8b2c5ded1bec3ba42389e0ccb27ec8f47c62dc7cebd3"
+      "bytes": 6775,
+      "sha256": "959aecd994fef7f7d4f70d8a4342c34295cfe29260fd6b0ee8650418a75f0d65"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 5036,
-      "sha256": "874d6986bdb74a768bcafbeedbc46c456d791835789f34c96a3bb2acda621a6e"
-    },
-    {
-      "path": "REVIEW-CF-WORKPOINTS.json",
-      "bytes": 2156,
-      "sha256": "361aed4ed0e9100d6d31c47160f74c849a6752142222ec13ac8f55abb995de51"
-    },
-    {
-      "path": "REVIEW-R2-STRENGTHENING-PLAN.zh-CN.md",
-      "bytes": 10696,
-      "sha256": "26e0f28afe31ed57414930cff2a7e6465091f5ec68f3769ffa681227133dfe9b"
+      "bytes": 5304,
+      "sha256": "a02340b9e1d170fb8e922a8627bada5083008e2901b67e4baf7eef92a0f792eb"
     },
     {
       "path": "REVISION-DATA.json",
       "bytes": 14883,
       "sha256": "86c1d18111b1f7b3c6733bea51cf9843f8f4cffe71937f66bd43c1e90e092596"
-    },
-    {
-      "path": "REVISION-PLAN.zh-CN.md",
-      "bytes": 14837,
-      "sha256": "9873a0e8b2e83f3ef9f8ea95aed32444dd8be71bdacb0053c70f917c06874f85"
-    },
-    {
-      "path": "REVISION-RESPONSE.zh-CN.md",
-      "bytes": 6007,
-      "sha256": "4839d2f0fc2b76163929c9ea51376e80ff1ea18a08ce355cfc2c2bb0f5eece72"
     },
     {
       "path": "source-data/action-space-v10-20260920/space.cpp",
@@ -1041,16 +1016,20 @@
       "path": "TABLE-SOURCES.json",
       "bytes": 1439,
       "sha256": "a607e935681a5d44a1cb09e38b0b736aa774a9ee555ea18b21dccc06799232e1"
-    },
-    {
-      "path": "VLDB-REVIEW-R2.zh-CN.md",
-      "bytes": 10134,
-      "sha256": "47b95abe1642870932648651174e984143a12bfde16009f2d84da65ecdd578e0"
-    },
-    {
-      "path": "VLDB-REVIEW.zh-CN.md",
-      "bytes": 12065,
-      "sha256": "e09db3898a27460349fe91dc1e8a9936fe81ac5a5fb9b50d7347f73f3e0f98f3"
     }
-  ]
+  ],
+  "repository_cleanup": {
+    "based_on_commit": "63de357f0334ddcac4b2692df6272a5b732241da",
+    "removed_superseded_files": [
+      "REVIEW-CF-WORKPOINTS.json",
+      "REVIEW-R2-STRENGTHENING-PLAN.zh-CN.md",
+      "REVISION-PLAN.zh-CN.md",
+      "REVISION-RESPONSE.zh-CN.md",
+      "VLDB-REVIEW-R2.zh-CN.md",
+      "VLDB-REVIEW.zh-CN.md",
+      "import_r2_evidence.py"
+    ],
+    "previous_source_archive_sha256": "4b0eebb60296b18f006f98134f423d8606dac48b34ba9b17bc31cbea1bc96ee3",
+    "manuscript_and_frozen_evidence_unchanged": true
+  }
 }

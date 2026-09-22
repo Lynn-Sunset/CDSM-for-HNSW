@@ -6,9 +6,9 @@ the main search expands next. Scouts and the main search share distance caches,
 visited state, adjacency-scan progress, and one query budget. Entrance scoring
 and upper-layer descent are charged.
 
-This repository contains the current 12-page manuscript, frozen evidence and
-server experiment sources, alongside the earlier Java/Faiss artifact. Authors
-and publication metadata remain blank; the manuscript is a draft.
+This repository contains the current 12-page manuscript, its frozen evidence,
+and server experiment sources. Authors and publication metadata remain blank;
+the manuscript is a draft.
 
 ## Current manuscript and results — 2026-09-23
 
@@ -63,7 +63,6 @@ LAION and WebVid. It does not claim universal gains across datasets or budgets.
 | `research/cdsm-paper-12p-20260922/source-data/` | 110 frozen source/evidence files and provenance |
 | `research/cdsm-paper-12p-20260922/source-data/cdsm-review-strengthening-20260922/` | Latest C++ executor and controls, analysis, query IDs, protocol, selection freeze, results, and audits |
 | `tools/verify_artifact.py` | Standard-library verification of package and evidence hashes |
-| `java/`, `faiss/`, `data_prep/`, `figs_gen/`, `run_scripts/`, `analysis/`, `evidence/` | Preserved earlier artifact; see its [original documentation](docs/legacy-artifact.md) |
 
 ## Rebuild the paper and verify the artifact
 
@@ -83,8 +82,10 @@ To build the paper, run PowerShell in `research/cdsm-paper-12p-20260922/`:
 
 Building needs `pdflatex`, `bibtex`, and the required LaTeX packages. Figure
 regeneration also needs TikZ/PGFPlots and `standalone`. These commands do not run
-ANN. The delivered PDF and source package retain their original SHA-256
-identities. Git attributes preserve evidence bytes across operating systems.
+ANN. The delivered PDF, manuscript/figure sources, and all 110 frozen evidence
+files retain their reviewed bytes. The source archive was repackaged after
+removing obsolete notes; its current hash is checked by `verify_artifact.py`.
+Git attributes preserve evidence bytes across operating systems.
 
 ## Reproduce the server experiments
 
@@ -108,7 +109,8 @@ records all 1,818 archived files. Raw archive SHA-256:
 268f08847ce4fec5890d9a19bcb9491fb55f0d4eb3b4026992100565ceacfb4d
 ```
 
-The legacy dependencies remain documented in the [earlier artifact README](docs/legacy-artifact.md)
-and `requirements.txt`; they do not alone describe the current C++ environment.
+The earlier gate-focused Java/Faiss artifact and superseded review plans are
+available in [Git history](https://github.com/Lynn-Sunset/CDSM-for-HNSW/tree/63de357f0334ddcac4b2692df6272a5b732241da).
+Current build and replay dependencies are documented above and in the runbook.
 
 Special thanks to 上海深至信息科技有限公司，especially engineer Chen Jiuxu.

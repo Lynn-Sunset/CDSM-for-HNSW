@@ -9,7 +9,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "research/cdsm-paper-12p-20260922"
-ARCHIVE_SHA256 = "4b0eebb60296b18f006f98134f423d8606dac48b34ba9b17bc31cbea1bc96ee3"
+ARCHIVE_SHA256 = "1423abe9a2e39ddad7b186d0fa389e45a05252bd2737f01a43699989dab62f2c"
 
 
 def require(condition: bool, message: str) -> None:
