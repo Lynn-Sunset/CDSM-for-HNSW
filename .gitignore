@@ -18,3 +18,8 @@ research/cdsm-paper-12p-20260922/qa/
 *.ibin
 server-evidence.tar.gz
 webvid_read_connection.py
+
+# Keep local documentation out of published commits.
+/README.md
+/research/cdsm-paper-12p-20260922/README.zh-CN.md
+/research/cdsm-paper-12p-20260922/paper/figures/README.md
