@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.18)
+project(cdsm_method LANGUAGES CXX)
+# Requires a CPU Faiss installation exporting the faiss CMake target.
+find_package(OpenMP REQUIRED)
+find_package(faiss CONFIG REQUIRED)
+add_library(cdsm INTERFACE)
+target_compile_features(cdsm INTERFACE cxx_std_17)
+target_include_directories(cdsm INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(cdsm INTERFACE faiss OpenMP::OpenMP_CXX)
+add_executable(cdsm_example examples/search.cpp)
+target_link_libraries(cdsm_example PRIVATE cdsm)

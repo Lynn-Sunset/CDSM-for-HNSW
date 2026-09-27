@@ -1,0 +1,14 @@
+# Publish only the explicitly listed method sources and build entry point.
+/*
+!/.gitignore
+!/CMakeLists.txt
+!/include/
+/include/*
+!/include/cdsm/
+/include/cdsm/*
+!/include/cdsm/common.h
+!/include/cdsm/cdsm.h
+!/include/cdsm/paid.h
+!/examples/
+/examples/*
+!/examples/search.cpp
