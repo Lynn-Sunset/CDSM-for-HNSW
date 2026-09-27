@@ -1,6 +1,7 @@
-# Publish only the explicitly listed method sources and build entry point.
+# Publish only the explicitly listed method sources and technical documentation.
 /*
 !/.gitignore
+!/README.md
 !/CMakeLists.txt
 !/include/
 /include/*
